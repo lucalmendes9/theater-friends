@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Esse arquivo é usado pelo processo de publicação/pacote do seu projeto Web. É possível personalizar o comportamento deste processo
+ao editar este arquivo MSBuild. Para saber mais sobre isso, visite https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAuuqVmX9ZvUWCsSw4Yu4AFwAAAAACAAAAAAAQZgAAAAEAACAAAABFQppH5I5tSXc2dBcH7amepQ4f8Znsyarzas5pn6yNVQAAAAAOgAAAAAIAACAAAAAMe3ESNFOCC7ejTCgUGSntATI4MiaSizsLPug8+GGTriAAAACMNqPiTNXlCUEKFBQJTdSGwr3pvsDD8Mxzq2Axsm/cBUAAAAD0GFuXZLguPTIhrhx4JS4H00iZIzGSVSXP2+EbYIDpZcl5px6HwoivTRoGqQfuTK/fsA18fTJHlGraCtu1jDgo</EncryptedPassword>
+    <_PublishTargetUrl>ftp://FTP.SITE4NOW.NET/theaterfriends</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="appsettings.Development.json">
+      <publishTime>11/16/2020 19:22:24</publishTime>
+    </File>
+    <File Include="appsettings.json">
+      <publishTime>11/16/2020 19:22:24</publishTime>
+    </File>
+    <File Include="theaterFriends.deps.json">
+      <publishTime>11/16/2020 20:35:17</publishTime>
+    </File>
+    <File Include="theaterFriends.dll">
+      <publishTime>11/16/2020 20:34:56</publishTime>
+    </File>
+    <File Include="theaterFriends.pdb">
+      <publishTime>11/16/2020 20:34:56</publishTime>
+    </File>
+    <File Include="theaterFriends.runtimeconfig.json">
+      <publishTime>11/16/2020 20:35:03</publishTime>
+    </File>
+    <File Include="theaterFriends.Views.dll">
+      <publishTime>11/16/2020 20:35:02</publishTime>
+    </File>
+    <File Include="theaterFriends.Views.pdb">
+      <publishTime>11/16/2020 20:35:02</publishTime>
+    </File>
+    <File Include="web.config">
+      <publishTime>11/16/2020 20:35:17</publishTime>
+    </File>
+    <File Include="wwwroot/css/site.css">
+      <publishTime>11/16/2020 19:22:25</publishTime>
+    </File>
+    <File Include="wwwroot/css/site.min.css">
+      <publishTime>11/16/2020 19:22:25</publishTime>
+    </File>
+    <File Include="wwwroot/favicon.ico">
+      <publishTime>11/16/2020 19:22:25</publishTime>
+    </File>
+    <File Include="wwwroot/images/banner1.svg">
+      <publishTime>11/16/2020 19:22:25</publishTime>
+    </File>
+    <File Include="wwwroot/images/banner2.svg">
+      <publishTime>11/16/2020 19:22:25</publishTime>
+    </File>
+    <File Include="wwwroot/images/banner3.svg">
+      <publishTime>11/16/2020 19:22:25</publishTime>
+    </File>
+    <File Include="wwwroot/js/site.js">
+      <publishTime>11/16/2020 19:22:25</publishTime>
+    </File>
+    <File Include="wwwroot/js/site.min.js">
+      <publishTime>11/16/2020 19:22:25</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/.bower.json">
+      <publishTime>11/16/2020 19:22:25</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/dist/css/bootstrap-theme.css">
+      <publishTime>11/16/2020 19:22:25</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/dist/css/bootstrap-theme.css.map">
+      <publishTime>11/16/2020 19:22:25</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/dist/css/bootstrap-theme.min.css">
+      <publishTime>11/16/2020 19:22:25</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/dist/css/bootstrap-theme.min.css.map">
+      <publishTime>11/16/2020 19:22:25</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/dist/css/bootstrap.css">
+      <publishTime>11/16/2020 19:22:25</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/dist/css/bootstrap.css.map">
+      <publishTime>11/16/2020 19:22:25</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/dist/css/bootstrap.min.css">
+      <publishTime>11/16/2020 19:22:25</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/dist/css/bootstrap.min.css.map">
+      <publishTime>11/16/2020 19:22:25</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/dist/fonts/glyphicons-halflings-regular.eot">
+      <publishTime>11/16/2020 19:22:25</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/dist/fonts/glyphicons-halflings-regular.svg">
+      <publishTime>11/16/2020 19:22:25</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/dist/fonts/glyphicons-halflings-regular.ttf">
+      <publishTime>11/16/2020 19:22:25</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/dist/fonts/glyphicons-halflings-regular.woff">
+      <publishTime>11/16/2020 19:22:25</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/dist/fonts/glyphicons-halflings-regular.woff2">
+      <publishTime>11/16/2020 19:22:25</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/dist/js/bootstrap.js">
+      <publishTime>11/16/2020 19:22:25</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/dist/js/bootstrap.min.js">
+      <publishTime>11/16/2020 19:22:25</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/dist/js/npm.js">
+      <publishTime>11/16/2020 19:22:25</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/LICENSE">
+      <publishTime>11/16/2020 19:22:25</publishTime>
+    </File>
+    <File Include="wwwroot/lib/jquery-validation-unobtrusive/.bower.json">
+      <publishTime>11/16/2020 19:22:25</publishTime>
+    </File>
+    <File Include="wwwroot/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js">
+      <publishTime>11/16/2020 19:22:25</publishTime>
+    </File>
+    <File Include="wwwroot/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js">
+      <publishTime>11/16/2020 19:22:25</publishTime>
+    </File>
+    <File Include="wwwroot/lib/jquery-validation-unobtrusive/LICENSE.txt">
+      <publishTime>11/16/2020 19:22:25</publishTime>
+    </File>
+    <File Include="wwwroot/lib/jquery-validation/.bower.json">
+      <publishTime>11/16/2020 19:22:25</publishTime>
+    </File>
+    <File Include="wwwroot/lib/jquery-validation/dist/additional-methods.js">
+      <publishTime>11/16/2020 19:22:25</publishTime>
+    </File>
+    <File Include="wwwroot/lib/jquery-validation/dist/additional-methods.min.js">
+      <publishTime>11/16/2020 19:22:25</publishTime>
+    </File>
+    <File Include="wwwroot/lib/jquery-validation/dist/jquery.validate.js">
+      <publishTime>11/16/2020 19:22:25</publishTime>
+    </File>
+    <File Include="wwwroot/lib/jquery-validation/dist/jquery.validate.min.js">
+      <publishTime>11/16/2020 19:22:25</publishTime>
+    </File>
+    <File Include="wwwroot/lib/jquery-validation/LICENSE.md">
+      <publishTime>11/16/2020 19:22:25</publishTime>
+    </File>
+    <File Include="wwwroot/lib/jquery/.bower.json">
+      <publishTime>11/16/2020 19:22:25</publishTime>
+    </File>
+    <File Include="wwwroot/lib/jquery/dist/jquery.js">
+      <publishTime>11/16/2020 19:22:25</publishTime>
+    </File>
+    <File Include="wwwroot/lib/jquery/dist/jquery.min.js">
+      <publishTime>11/16/2020 19:22:25</publishTime>
+    </File>
+    <File Include="wwwroot/lib/jquery/dist/jquery.min.map">
+      <publishTime>11/16/2020 19:22:25</publishTime>
+    </File>
+    <File Include="wwwroot/lib/jquery/LICENSE.txt">
+      <publishTime>11/16/2020 19:22:25</publishTime>
+    </File>
+  </ItemGroup>
+</Project>
