@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\lucal\\Documents\\Lucas\\theater&friends\\project\\theaterFriends\\theaterFriends.csproj": {}
+    "C:\\Users\\fael_\\Desktop\\GitHub\\Cinema\\theater-friends\\project\\theaterFriends\\theaterFriends.csproj": {}
   },
   "projects": {
-    "C:\\Users\\lucal\\Documents\\Lucas\\theater&friends\\project\\theaterFriends\\theaterFriends.csproj": {
+    "C:\\Users\\fael_\\Desktop\\GitHub\\Cinema\\theater-friends\\project\\theaterFriends\\theaterFriends.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\lucal\\Documents\\Lucas\\theater&friends\\project\\theaterFriends\\theaterFriends.csproj",
+        "projectUniqueName": "C:\\Users\\fael_\\Desktop\\GitHub\\Cinema\\theater-friends\\project\\theaterFriends\\theaterFriends.csproj",
         "projectName": "theaterFriends",
-        "projectPath": "C:\\Users\\lucal\\Documents\\Lucas\\theater&friends\\project\\theaterFriends\\theaterFriends.csproj",
-        "packagesPath": "C:\\Users\\lucal\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\lucal\\Documents\\Lucas\\theater&friends\\project\\theaterFriends\\obj\\",
+        "projectPath": "C:\\Users\\fael_\\Desktop\\GitHub\\Cinema\\theater-friends\\project\\theaterFriends\\theaterFriends.csproj",
+        "packagesPath": "C:\\Users\\fael_\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\fael_\\Desktop\\GitHub\\Cinema\\theater-friends\\project\\theaterFriends\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\lucal\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\fael_\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -66,7 +66,7 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.403\\RuntimeIdentifierGraph.json"
         }
       }
     }
