@@ -1,7 +1,7 @@
 # Theater&Friends
 
 Baseado em amigos&Caio.
-
+--------------------
 
 ## Admin
 
