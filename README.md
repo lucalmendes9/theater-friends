@@ -1,6 +1,6 @@
 # Theater&Friends
 
-Baseado em amigos&Caio.
+Baseado em amigos&Caio
 
 
 ## Admin
