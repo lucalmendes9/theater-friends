@@ -2,15 +2,20 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace theaterFriends.Controllers
 {
     public class HelperController : Controller
     {
-        public IActionResult Index()
+        public static Boolean VerificaUserLogado(ISession session)
         {
-            return View();
+            string logado = session.GetString("Logado");
+            if (logado == null)
+                return false;
+            else
+                return true;
         }
     }
 }
