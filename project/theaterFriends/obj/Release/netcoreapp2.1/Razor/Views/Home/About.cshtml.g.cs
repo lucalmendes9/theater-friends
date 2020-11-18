@@ -68,7 +68,7 @@ using theaterFriends.Models;
             WriteLiteral("     \r\n<!DOCTYPE html>\r\n<html lang=\"pt-br\">\r\n");
             EndContext();
             BeginContext(140, 715, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "d3dc32d00b214ae49e1987eefb2f2c9a", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "da28b3388fd34ef4806d01f1581b2202", async() => {
                 BeginContext(146, 654, true);
                 WriteLiteral(@"
     <title>Sobre</title>
@@ -83,7 +83,7 @@ using theaterFriends.Models;
     ");
                 EndContext();
                 BeginContext(800, 46, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("link", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "603b0931f173472195997c6f90eae3ca", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("link", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "b56f7aa1c3ac48e0bd2305ff8d83f98d", async() => {
                 }
                 );
                 __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -117,7 +117,7 @@ using theaterFriends.Models;
             WriteLiteral("\r\n");
             EndContext();
             BeginContext(857, 1591, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "c354e0a7eee54175a3986a29f43ad7cb", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "38d0ccb15ab84508b52b3e85382e08ef", async() => {
                 BeginContext(863, 1478, true);
                 WriteLiteral(@"
     <div class=""botao"" onclick=""iniciar()"">Iniciar</div>
@@ -162,7 +162,7 @@ using theaterFriends.Models;
     ");
                 EndContext();
                 BeginContext(2341, 53, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("audio", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "6bd8c4928f934e19b712c9d9b42221f0", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("audio", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "87c4cbee087f425e97d41670bb9ded63", async() => {
                 }
                 );
                 __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -181,7 +181,7 @@ using theaterFriends.Models;
                 WriteLiteral("\r\n\r\n    ");
                 EndContext();
                 BeginContext(2402, 37, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("script", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "98132facbd7544c39bc9923c982bd6e1", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("script", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "54eac9936c6040359561b1647b5c2980", async() => {
                 }
                 );
                 __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
