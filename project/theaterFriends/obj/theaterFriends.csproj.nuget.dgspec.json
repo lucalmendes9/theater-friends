@@ -1,20 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\fael_\\Desktop\\GitHub\\Cinema\\theater-friends\\project\\theaterFriends\\theaterFriends.csproj": {}
+    "C:\\Users\\heito\\Documents\\GitHub\\theater-friends\\project\\theaterFriends\\theaterFriends.csproj": {}
   },
   "projects": {
-    "C:\\Users\\fael_\\Desktop\\GitHub\\Cinema\\theater-friends\\project\\theaterFriends\\theaterFriends.csproj": {
+    "C:\\Users\\heito\\Documents\\GitHub\\theater-friends\\project\\theaterFriends\\theaterFriends.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\fael_\\Desktop\\GitHub\\Cinema\\theater-friends\\project\\theaterFriends\\theaterFriends.csproj",
+        "projectUniqueName": "C:\\Users\\heito\\Documents\\GitHub\\theater-friends\\project\\theaterFriends\\theaterFriends.csproj",
         "projectName": "theaterFriends",
-        "projectPath": "C:\\Users\\fael_\\Desktop\\GitHub\\Cinema\\theater-friends\\project\\theaterFriends\\theaterFriends.csproj",
-        "packagesPath": "C:\\Users\\fael_\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\fael_\\Desktop\\GitHub\\Cinema\\theater-friends\\project\\theaterFriends\\obj\\",
+        "projectPath": "C:\\Users\\heito\\Documents\\GitHub\\theater-friends\\project\\theaterFriends\\theaterFriends.csproj",
+        "packagesPath": "C:\\Users\\heito\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\heito\\Documents\\GitHub\\theater-friends\\project\\theaterFriends\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\fael_\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\heito\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -66,7 +69,7 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.403\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.301\\RuntimeIdentifierGraph.json"
         }
       }
     }
