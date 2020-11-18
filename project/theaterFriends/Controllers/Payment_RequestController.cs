@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace theaterFriends.Controllers
 {
-    public class PaymentController : Controller
+    public class Payment_RequestController : Controller
     {
         public IActionResult Index()
         {
