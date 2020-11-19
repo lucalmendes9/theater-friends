@@ -29,10 +29,10 @@ namespace theaterFriends.DAO
                 Id = Convert.ToInt32(registro["id"]),
                 Name = registro["name"].ToString(),
                 Email = registro["email"].ToString(),
-                Password = Convert.ToInt32(registro["password"]),
+                Password = registro["password"].ToString(),
                 Hired_At = Convert.ToDateTime(registro["hired_at"])
             };
-            return location;
+            return Employer;
         }
 
         protected override void SetTabela()

@@ -24,16 +24,8 @@ namespace theaterFriends.DAO
             parameters.Add(new SqlParameter("language", model.Language));
             parameters.Add(new SqlParameter("subtitle", model.Subtitle));
             parameters.Add(new SqlParameter("image", imgByte));
-
-            if (model.Min_age == null)
-                parameters.Add(new SqlParameter("min_age", DBNull.Value));
-            else
-                parameters.Add(new SqlParameter("min_age", model.Min_age));
-
-            if (model.Length == null)
-                parameters.Add(new SqlParameter("length", DBNull.Value));
-            else
-                parameters.Add(new SqlParameter("length", model.Length));
+            parameters.Add(new SqlParameter("min_age", model.Min_age));
+            parameters.Add(new SqlParameter("length", model.Length));
 
             return parameters.ToArray();
         }
@@ -53,7 +45,7 @@ namespace theaterFriends.DAO
             };
 
             if (registro["image"] != DBNull.Value)
-                c.ImagemEmByte = registro["image"] as byte[];
+                movie.ImagemEmByte = registro["image"] as byte[];
 
             return movie;
         }

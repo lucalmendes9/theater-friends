@@ -16,11 +16,7 @@ namespace theaterFriends.DAO
             parameters.Add(new SqlParameter("id", model.Id));
             parameters.Add(new SqlParameter("type", model.Type));
             parameters.Add(new SqlParameter("credit_card", model.Credit_card));
-
-            if (model.Parcels == null)
-                parameters.Add(new SqlParameter("parcels", DBNull.Value));
-            else
-                parameters.Add(new SqlParameter("parcels", model.Parcels));
+            parameters.Add(new SqlParameter("parcels", model.Parcels));
 
 
             return parameters.ToArray();
