@@ -5,6 +5,7 @@
 
 project/theaterFriends/obj/*
 project/theaterFriends/.vs/*
+project/theaterFriends/.vs/theaterFriends/v16/.suo
 
 # User-specific files
 *.rsuser
