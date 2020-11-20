@@ -3,14 +3,52 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
+using theaterFriends.DAO;
+using theaterFriends.Models;
 
 namespace theaterFriends.Controllers
 {
-    public class RoomsController : Controller
+    public class RoomsController : PadraoController<RoomsViewModel>
     {
-        public IActionResult Index()
+        public RoomsController()
         {
-            return View();
+            DAO = new RoomsDAO();
+        }
+
+        protected override void PreencheDadosParaView(string Operacao, RoomsViewModel model)
+        {
+            base.PreencheDadosParaView(Operacao, model);
+            FillComboBoxTheaters();
+        }
+
+        private void FillComboBoxTheaters()
+        {
+            var daoTheaters = new TheatersDAO();
+            ViewBag.Theaters = new List<SelectListItem>();
+            ViewBag.Theaters.Add(new SelectListItem("Selecione uma cinema...", "0"));
+            foreach (TheatersViewModel t in daoTheaters.Listagem())
+            {
+                var elemento = new SelectListItem(t.Description, t.Id.ToString());
+                ViewBag.Theaters.Add(elemento);
+            }
+        }
+        
+
+        protected override void ValidaDados(RoomsViewModel model, string operacao)
+        {
+            base.ValidaDados(model, operacao);
+            if (string.IsNullOrEmpty(model.Name))
+                ModelState.AddModelError("Name", "Nome inválido!");
+
+            if (model.Seats < 10 || model.Seats > 100)
+                ModelState.AddModelError("Seats", "Quantidade de assentos inválidos (Mínimo 10 assentos, Máximo 100!");
+
+            if (model.Theaters_id <= 0)
+            {
+                ModelState.AddModelError("Theaters_id", "Código de cinema inválido!");
+            }
+                
         }
     }
 }
