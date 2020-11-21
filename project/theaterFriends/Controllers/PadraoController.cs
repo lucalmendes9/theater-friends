@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Filters;
 using theaterFriends.DAO;
 using theaterFriends.Models;
 
@@ -17,10 +18,6 @@ namespace theaterFriends.Controllers
         protected string ViewParaCadastro { get; set; } = "Form";
 
 
-        public virtual IActionResult Form()
-        {
-            return View();
-        }
         public virtual IActionResult Index()
         {
             var lista = DAO.Listagem();
@@ -108,5 +105,19 @@ namespace theaterFriends.Controllers
                 return RedirectToAction(ViewParaListagem);
             }
         }
+
+
+        //Colocar em Controllers que não possam ser acessada sem login
+
+        /*public override void OnActionExecuting(ActionExecutingContext context)
+        {
+            if (!HelperController.VerificaUserLogado(HttpContext.Session))
+                context.Result = RedirectToAction("Index", "Login");
+            else
+            {
+                ViewBag.Logado = true;
+                base.OnActionExecuting(context);
+            }
+        }*/
     }
 }
