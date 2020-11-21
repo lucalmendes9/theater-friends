@@ -7,6 +7,7 @@ namespace theaterFriends.Models
 {
     public class PaymentViewModel : PadraoViewModel
     {
+
         public string Type { get; set; }
         public string Credit_card { get; set; }
         public int Parcels { get; set; }

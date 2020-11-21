@@ -39,7 +39,7 @@ namespace theaterFriends.DAO
 
         protected override void SetTabela()
         {
-            Tabela = "theaters";
+            Tabela = "Theaters";
         }
        
     }

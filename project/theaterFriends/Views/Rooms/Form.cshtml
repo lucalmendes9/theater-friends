@@ -6,7 +6,7 @@
 <html lang="pt">
 <head>
     <meta charset="UTF-8">
-    <TITLE>Registro de Salas </TITLE>
+    <TITLE>Registro de Salas</TITLE>
     <link href="asserts/stylesheets/stilize/stilize.min.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="~/css/client_func_login.css">
 </head>
@@ -24,14 +24,15 @@
                 <input asp-for="Id" readonly class="form-control disabled" />
             }
 
-            <div class="form-group">
-                <input class="form-control" name="Name" type="text" id="Name" placeholder="Nome">
-                <span asp-validation-for="Name" class="text-danger"></span>
-            </div><br>
+        <div class="form-group">
+            <label for="Name" class="control-label">Nome</label>
+            <input class="form-control" name="Name" type="text" id="Name" placeholder="Nome">
+            <span asp-validation-for="Name" class="text-danger"></span>
+        </div><br>
 
 
             <div class="form-group">
-                <label for="Seats" class="control-label">Quantidade de Lugares</label>
+                <label for="Seats" class="control-label">Quantidade de Assentos</label>
                 <input asp-for="Seats" class="form-control" />
                 <span asp-validation-for="Seats" class="text-danger"></span>
             </div><br>

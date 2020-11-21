@@ -1,5 +1,58 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
+﻿@model TheatersViewModel
 @{
+    Layout = null;
 }
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <TITLE>Registro de Salas</TITLE>
+    <link href="asserts/stylesheets/stilize/stilize.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="~/css/client_func_login.css">
+</head>
+<body>
+    <header class="showcase">
+        <div class="showcase-top">
+            <img src="~/imagens/logo.png" alt="" />
+        </div>
+        <form action="/Theaters/Salvar" method="post" class="showcase-content ">
+            <input type="hidden" name="Operacao" value="@ViewBag.Operacao" />
+
+            @if (ViewBag.Operacao == "A")
+            {
+                <input class="form-control" name="Id" type="text" id="Id" placeholder="Id">
+                <input asp-for="Id" readonly class="form-control disabled" />
+            }
+
+            <div class="form-group">
+                <label for="Description" class="control-label">Descrição</label>
+                <input class="form-control" name="Description" type="text" id="Description">
+                <span asp-validation-for="Description" class="text-danger"></span>
+            </div><br>
+
+            <div class="form-group">
+                <label for="Theaters_id" class="control-label">Código do Local</label>
+                <select asp-for="Location_id" asp-items="@ViewBag.location" class="form-control"></select>
+                <span asp-validation-for="Location_id" class="text-danger"></span>
+            </div><br>
+
+
+            <div class="form-group">
+                <label for="Open_hour" class="control-label">Hora de Abertura</label>
+                <input asp-for="Open_hour" class="form-control" />
+                <span asp-validation-for="Open_hour" class="text-danger"></span>
+            </div><br>
+
+            <div class="form-group">
+                <label for="Close_hour" class="control-label">Hora de Fechamento</label>
+                <input asp-for="Close_hour" class="form-control" />
+                <span asp-validation-for="Close_hour" class="text-danger"></span>
+            </div><br>
+
+            <input type="submit" class="btn btn-lg" value="Enviar" />
+            <a href="/Employer/Index" class="btn btn-lg">Voltar</a>
+        </form>
+    </header>
+    <script type="text/javascript" src="~/js/cadastroFunc.js"></script>
+</body>
+</html>
