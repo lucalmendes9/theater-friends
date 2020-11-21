@@ -4,19 +4,24 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using theaterFriends.DAO;
+using theaterFriends.Models;
 
 namespace theaterFriends.Controllers
 {
-    public class LoginController : Controller
+    public class LoginController : PadraoController<PadraoViewModel>
     {
-        public IActionResult Index()
+
+        public override IActionResult Index()
         {
             return View();
         }
         public IActionResult FazLogin(string usuario, string senha)
         {
-            //Consultar na tabela se existe usuario e senha 
-            if (usuario == "admin" && senha == "1234")
+            var loginDAO = new LoginDAO();
+            var respUser = loginDAO.Login(usuario, senha);
+
+            if (respUser != null)
             {
                 HttpContext.Session.SetString("Logado", "true");
                 return RedirectToAction("index", "Home");
