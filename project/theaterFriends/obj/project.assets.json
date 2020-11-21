@@ -12653,24 +12653,25 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\heito\\.nuget\\packages\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\Dell\\.nuget\\packages\\": {},
+    "C:\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\heito\\Documents\\GitHub\\theater-friends\\project\\theaterFriends\\theaterFriends.csproj",
+      "projectUniqueName": "C:\\Users\\Dell\\theater-friends\\project\\theaterFriends\\theaterFriends.csproj",
       "projectName": "theaterFriends",
-      "projectPath": "C:\\Users\\heito\\Documents\\GitHub\\theater-friends\\project\\theaterFriends\\theaterFriends.csproj",
-      "packagesPath": "C:\\Users\\heito\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\heito\\Documents\\GitHub\\theater-friends\\project\\theaterFriends\\obj\\",
+      "projectPath": "C:\\Users\\Dell\\theater-friends\\project\\theaterFriends\\theaterFriends.csproj",
+      "packagesPath": "C:\\Users\\Dell\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Dell\\theater-friends\\project\\theaterFriends\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        "C:\\Microsoft\\Xamarin\\NuGet\\"
       ],
       "configFilePaths": [
-        "C:\\Users\\heito\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Users\\Dell\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp2.1"
@@ -12768,7 +12769,7 @@
       "code": "Undefined",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "Problema ao ler o arquivo de cache C:\\Users\\heito\\Documents\\GitHub\\theater-friends\\project\\theaterFriends\\obj\\project.nuget.cache: Invalid property identifier character: <. Path 'version', line 3, position 0."
+      "message": "Problema ao ler o arquivo de cache C:\\Users\\Dell\\theater-friends\\project\\theaterFriends\\obj\\project.nuget.cache: Invalid property identifier character: <. Path 'version', line 3, position 0."
     }
   ]
 }

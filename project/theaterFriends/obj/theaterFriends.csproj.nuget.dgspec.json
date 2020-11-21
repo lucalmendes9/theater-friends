@@ -1,24 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\heito\\Documents\\GitHub\\theater-friends\\project\\theaterFriends\\theaterFriends.csproj": {}
+    "C:\\Users\\Dell\\theater-friends\\project\\theaterFriends\\theaterFriends.csproj": {}
   },
   "projects": {
-    "C:\\Users\\heito\\Documents\\GitHub\\theater-friends\\project\\theaterFriends\\theaterFriends.csproj": {
+    "C:\\Users\\Dell\\theater-friends\\project\\theaterFriends\\theaterFriends.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\heito\\Documents\\GitHub\\theater-friends\\project\\theaterFriends\\theaterFriends.csproj",
+        "projectUniqueName": "C:\\Users\\Dell\\theater-friends\\project\\theaterFriends\\theaterFriends.csproj",
         "projectName": "theaterFriends",
-        "projectPath": "C:\\Users\\heito\\Documents\\GitHub\\theater-friends\\project\\theaterFriends\\theaterFriends.csproj",
-        "packagesPath": "C:\\Users\\heito\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\heito\\Documents\\GitHub\\theater-friends\\project\\theaterFriends\\obj\\",
+        "projectPath": "C:\\Users\\Dell\\theater-friends\\project\\theaterFriends\\theaterFriends.csproj",
+        "packagesPath": "C:\\Users\\Dell\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Dell\\theater-friends\\project\\theaterFriends\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+          "C:\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\heito\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\Dell\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp2.1"
