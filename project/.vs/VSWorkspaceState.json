@@ -1,0 +1,11 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\theaterFriends",
+    "\\theaterFriends\\Controllers",
+    "\\theaterFriends\\DAO",
+    "\\theaterFriends\\Models"
+  ],
+  "SelectedNode": "\\theaterFriends\\Models\\RoomsViewModel.cs",
+  "PreviewInSolutionExplorer": false
+}
