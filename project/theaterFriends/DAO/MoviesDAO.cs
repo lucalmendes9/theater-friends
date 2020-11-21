@@ -52,7 +52,7 @@ namespace theaterFriends.DAO
 
         protected override void SetTabela()
         {
-            Tabela = "Movie";
+            Tabela = "Movies";
         }
     }
 }

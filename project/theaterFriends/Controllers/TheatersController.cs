@@ -13,13 +13,14 @@ namespace theaterFriends.Controllers
     {
         public TheatersController()
         {
-           //DAO = new TheatersDAO();
+           DAO = new TheatersDAO();
         }
 
         protected override void PreencheDadosParaView(string Operacao, TheatersViewModel model)
         {
             base.PreencheDadosParaView(Operacao, model);
-            PreencheComboBoxLocalizacao();
+            //PreencheComboBoxLocalizacao();
+            model.Work_days = 0;
         }
 
         private void PreencheComboBoxLocalizacao()
@@ -32,7 +33,7 @@ namespace theaterFriends.Controllers
             foreach (LocalizationViewModel loc in daoLocation.Listagem())
             {
                 var elemento = new SelectListItem(loc.City, loc.Id.ToString());
-                ViewBag.cidades.Add(elemento);
+                ViewBag.location.Add(elemento);
             }
         }
 
