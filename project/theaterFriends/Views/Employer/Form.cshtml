@@ -1,0 +1,58 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <TITLE>Registro de Funcionário</TITLE>
+    <link href="asserts/stylesheets/stilize/stilize.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="~/css/client_func_login.css">
+</head>
+<body>
+    <header class="showcase">
+        <div class="showcase-top">
+            <img src="~/imagens/logo.png" alt="" />
+        </div>
+        
+        <form class="showcase-content">
+            <div class="form-group">
+                <input class="form-control" name="#" type="text" id="#" placeholder="Nome">
+            </div><br>
+            <div class="form-group">
+                <input class="form-control" name="#" type="text" id="#" placeholder="E-mail">
+            </div><br>
+            <div class="form-group">
+                <input class="form-control" name="cep" type="text" id="cep" value="" maxlength="9" onchange="pesquisacep(this.value);" placeholder="CEP">
+            </div><br>
+            <div class="form-group">
+                <input class="form-control" name="rua" type="text" id="rua" placeholder="Rua">
+            </div><br>
+            <div class="form-group">
+                <input class="form-control" name="#" type="text" id="#" placeholder="Número">
+            </div><br>
+            <div class="form-group">
+                <input class="form-control" name="bairro" type="text" id="bairro" placeholder="Bairro">
+            </div><br>
+            <div class="form-group">
+                <input class="form-control" name="cidade" type="text" id="cidade" placeholder="Cidade">
+            </div><br>
+            <div class="form-group">
+                <input class="form-control" name="uf" type="text" id="uf" placeholder="UF">
+            </div><br>
+            <div class="form-group">
+                <input class="form-control" name="#" type="password" id="#" placeholder="Senha">
+            </div><br>
+            <div class="form-group">
+                <input class="form-control" name="#" type="password" id="#" placeholder="Confirme a senha">
+            </div><br>
+            <a href="#" type="submit" class="btn btn-lg">Enviar</a>
+            <a href="/Home/Index" class="btn btn-lg">Voltar</a>
+        </form>
+
+    </header>
+    <script type="text/javascript" src="~/js/cadastroFunc.js"></script>
+</body>
+</html>

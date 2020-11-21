@@ -1,7 +1,64 @@
-﻿@{
-    ViewData["Title"] = "About";
+﻿
+@{
+    Layout = null;
 }
-<h2>@ViewData["Title"]</h2>
-<h3>@ViewData["Message"]</h3>
 
-<p>Use this area to provide additional information.</p>
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>Sobre</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1" name="viewport" />
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <link href="~/css/sobre.css" rel="stylesheet">
+</head>
+<body>
+    <div class="botao" onclick="iniciar()">Iniciar</div>
+    <a href="/Home/Index" class="botao" >Voltar</a>
+    <canvas id="snow"></canvas>
+
+    <section class="intro intro_texto">
+        A Long Time Ago, in a galaxy far,<br> far away ...
+    </section>
+
+    <section class="paragrafos">
+        <div class="historia historia_texto">
+            <p class="text-center">Teather Friends Episode I</p>
+            <p class="text-center">Ultimate FTT</p>
+            <br>
+            <p class="text-center">
+                São tempos muito difíceis!
+                Por isso, Amigos & Caio precisam de seu sabre de luz
+                para que possam combater o coronga vírus
+                e voltar as telinhas do cinema.
+                E com isso, eles iniciam sua batalha no mundo da programação.
+            </p>
+
+            <p class="text-center">
+                Durante a sua busca,
+                Amigos & Caio se deparam com a ordem
+                Pinguços do Mal liderados por
+                Eduardo e Viotti.
+                E é justamente ali que eles iniciarão todo
+                o seu treinamento para conseguir seus poderes.
+            </p>
+        </div>
+    </section>
+    <p style="float: right; color: yellow;">
+        Rafael - 082170026<br />
+        João  &nbsp&nbsp - 082180011<br />
+        Caio   &nbsp&nbsp&nbsp- 082180015<br />
+        Heitor &nbsp- 082180016<br />
+        Lucas  &nbsp- 082180017<br />
+        Junior &nbsp- 082180035<br />
+    </p>
+    <audio src="~/Music/Star Wars_.mp3" id="som"></audio>
+
+    <script src="~/js/sobre.js"></script>
+</body>
+</html>
