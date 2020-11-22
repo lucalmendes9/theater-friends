@@ -40,6 +40,20 @@ namespace theaterFriends.DAO
             };
             HelperDAO.ExecutaProc("spDelete", p);
         }
+        public virtual T Login(string email, string pass)
+        {
+            var p = new SqlParameter[]
+            {
+                new SqlParameter("email", email != null ? email : ""),
+                new SqlParameter("pass", pass != null ? pass : ""),
+                new SqlParameter("tabela", Tabela)
+            };
+            var tabela = HelperDAO.ExecutaProcSelect("spLogin", p);
+            if (tabela.Rows.Count == 0)
+                return null;
+            else
+                return MontaModel(tabela.Rows[0]);
+        }
         public virtual T Consulta(int id)
         {
             var p = new SqlParameter[]
