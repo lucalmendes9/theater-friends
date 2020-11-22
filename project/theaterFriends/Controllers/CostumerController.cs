@@ -18,35 +18,26 @@ namespace theaterFriends.Controllers
         protected override void PreencheDadosParaView(string Operacao, CostumerViewModel model)
         {
             base.PreencheDadosParaView(Operacao, model);
-            if (Operacao == "I")
-                model.Created_At = DateTime.Now;
         }
-
-        /*private void PreencheComboBoxCidade()
-        {
-            var daoCidade = new CidadeDAO();
-
-            ViewBag.cidades = new List<SelectListItem>();
-            ViewBag.cidades.Add(new SelectListItem("Selecione uma cidade...", "0"));
-
-            foreach (CidadeViewModel cid in daoCidade.Listagem())
-            {
-                var elemento = new SelectListItem(cid.Nome, cid.Id.ToString());
-                ViewBag.cidades.Add(elemento);
-            }
-        }*/
 
         protected override void ValidaDados(CostumerViewModel model, string operacao)
         {
-            base.ValidaDados(model, operacao);
+            model.Created_At = DateTime.Now;
+
             if (string.IsNullOrEmpty(model.Name))
                 ModelState.AddModelError("Name", "Nome inválido!");
 
             if (string.IsNullOrEmpty(model.Email))
                 ModelState.AddModelError("Email", "Email inválido!");
 
-            if (model.Password.Length < 7 || string.IsNullOrEmpty(model.Password))
+            if (string.IsNullOrEmpty(model.Password) || model.Password.Length < 7 )
                 ModelState.AddModelError("Password", "Senha inválido (tamanho mínimo de 8 caracteres!");
+
+            if (string.IsNullOrEmpty(model.ConfirmPassword) || model.ConfirmPassword.Length < 7 )
+                ModelState.AddModelError("ConfirmPassword", "Senha inválido (tamanho mínimo de 8 caracteres!");
+
+            if (model.Password != model.ConfirmPassword )
+                ModelState.AddModelError("Password", "As senhas não batem!");
         }
     }
 }
