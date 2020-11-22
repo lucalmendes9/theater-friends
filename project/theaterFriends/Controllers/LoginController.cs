@@ -24,6 +24,7 @@ namespace theaterFriends.Controllers
             if (respUser != null)
             {
                 HttpContext.Session.SetString("Logado", "true");
+                HttpContext.Session.SetString("Name", respUser.Name);
                 return RedirectToAction("index", "Home");
             }
             else
@@ -35,7 +36,7 @@ namespace theaterFriends.Controllers
         public IActionResult LogOff()
         {
             HttpContext.Session.Clear();
-            return RedirectToAction("Index");
+            return RedirectToAction("index", "Home");
         }
     }
 }

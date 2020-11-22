@@ -23,7 +23,9 @@ namespace theaterFriends.Controllers
 
         protected override void ValidaDados(EmployerViewModel model, string operacao)
         {
-            base.ValidaDados(model, operacao);
+            if (operacao != "I")
+                base.ValidaDados(model, operacao);
+
             if (string.IsNullOrEmpty(model.Name))
                 ModelState.AddModelError("Name", "Nome inválido!");
 
