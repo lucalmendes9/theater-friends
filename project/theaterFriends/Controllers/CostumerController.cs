@@ -39,5 +39,34 @@ namespace theaterFriends.Controllers
             if (model.Password != model.ConfirmPassword )
                 ModelState.AddModelError("Password", "As senhas não batem!");
         }
+
+        public override IActionResult Salvar(CostumerViewModel model, string Operacao)
+        {
+            try
+            {
+                ValidaDados(model, Operacao);
+                if (ModelState.IsValid == false)
+                {
+                    ViewBag.Operacao = Operacao;
+                    PreencheDadosParaView(Operacao, model);
+                    return View(ViewParaCadastro, model);
+                }
+                else
+                {
+                    if (Operacao == "I")
+                        DAO.Insert(model);
+                    else
+                        DAO.Update(model);
+                    return RedirectToAction("Index", "Login");
+                }
+            }
+            catch (Exception erro)
+            {
+                ViewBag.Erro = "Ocorreu um erro: " + erro.Message;
+                ViewBag.Operacao = Operacao;
+                PreencheDadosParaView(Operacao, model);
+                return View(ViewParaCadastro, model);
+            }
+        }
     }
 }
