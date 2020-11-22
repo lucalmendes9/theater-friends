@@ -1,0 +1,32 @@
+﻿@model List<RoomsViewModel>
+@{
+}
+<h1>Listagem de Salas</h1>
+
+<a href="/Rooms/create">Novo Registro</a>
+<br />
+
+<table class="table table-bordered table-responsive">
+    <tr>
+        <td>Id</td>
+        <td>Name</td>
+        <td>Assentos</td>
+        <td>Cinema ID</td>
+    </tr>
+
+    @foreach (var Salas in Model)
+    {
+        <tr>
+            <td>
+                <a href="/Employer/Edit?id=@Salas.Id">Editar</a> &nbsp;&nbsp;
+                <a href="javascript:apagar(@Salas.Id, 'Employer')">Apagar</a>
+            </td>
+            <td>@Salas.Id</td>
+            <td>@Salas.Name</td>
+            <td>@Salas.Seats</td>
+            <td>@Salas.Theaters_id</td>
+        </tr>
+
+    }
+
+</table>

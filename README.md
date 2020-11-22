@@ -1,12 +1,7 @@
 # Theater&Friendsssss
 
-<<<<<<< HEAD
-Baseado em amigos&Caio.
---------------------
-=======
 Baseado em amigos&Caio
 
->>>>>>> origin/homolog
 
 ## Admin
 
