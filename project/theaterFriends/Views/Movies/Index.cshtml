@@ -1,4 +1,4 @@
-﻿@model MoviesViewModel
+﻿@model MoviesViewModel;
 @{
     Layout = null;
 }
@@ -46,15 +46,12 @@
                         </div>
                     </div>
                     <div class="col-md-3 text-center" style="background-color: rgb(37, 36, 36)" ;>
-                        <img class="media-object" max-height="50%" max-width="100%" src="data:image/jpeg;base64,@Model.ImagemEmBase64" " alt="... ">
+                        <img class="media-object" max-height="50%" max-width="100%" src="data:image/jpeg;base64,@Model.ImagemEmBase64"  >
                         <p><br> </p>
                     </div>
                     <div class="col-md-6 " style="color: blanchedalmond;   background-color: rgb(37, 36, 36) ">
-                 
-                        <p>
                         <p>
                             @Model.Description;
-                        </p>
                         </p>
                         <p>Duração: <span class="color-destaque "><i class="fa fa-clock-o "></i>@Model.Length</span></p>
                         <p>Genero: <span class="color-destaque ">@Model.Type</span></p>
@@ -64,7 +61,6 @@
 
                 </div>
             </div>
-        </section>
         </section>
     </div>
 
@@ -82,7 +78,7 @@
                     <td>Horário de Término</td>
                 </tr>
 
-                @foreach (var m in Model)
+                @*@foreach (var m in Model)
                 {
                     <tr>
                         <td></td>
@@ -90,7 +86,7 @@
                         <td</td>
                         <td></td>
                     <tr>
-                }
+                }*@
 
                 </table>
 
