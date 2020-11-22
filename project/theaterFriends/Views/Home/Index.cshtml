@@ -1,4 +1,7 @@
-﻿@{
+﻿@model List<MoviesViewModel>
+
+
+@{
     Layout = null;
 }
 
@@ -30,9 +33,9 @@
             }
         </div>
         <div class="showcase-content">
-            <img src="~/imagens/bobesponja.jpg" />
+            <img src="~/imagens/harakiri.jpg" />
             <img src="~/imagens/devoltaprofuturo.jpeg" />
-            <img src="~/imagens/instintoPredador.jpg" />
+            <img src="~/imagens/pierrot.jpg" />
             <img src="~/imagens/edward.jpg" />
             <img src="~/imagens/exorcista.jpg" />
         </div>
@@ -49,7 +52,7 @@
             </div>
             <div id="tab-3" class="tab-item">
                 <i class="fas fa-tags fa-3x"></i>
-                <p class="hide-sm">Cadastro</p>
+                <p class="hide-sm">Catálogo de Filmes</p>
             </div>
         </div>
     </section>
@@ -123,22 +126,46 @@
             <div id="tab-3-content" class="tab-content-item">
                 <div class="text-center">
                     <p class="text-lg">
-                        Preencha as informações para realizar seu cadastro.
+                        Lista de Filmes em Cartaz
                     </p>
 
                 </div>
                 <form>
-                    <div class="form-group">
-                        <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Coloque seu e-mail">
-                        <small id="emailHelp" class="form-text" style="font-size: small;">Nós nunca compartilharemos suas informações com outras pessoas.</small>
-                    </div><br>
-                    <div class="form-group">
-                        <input type="password" class="form-control" id="Senha" placeholder="Senha">
-                    </div><br>
-                    <div class="form-group">
-                        <input type="password" class="form-control" id="ConfirmeSenha" placeholder="Confirme a senha">
-                    </div><br>
-                    <a href="#" type="submit" class="btn btn-lg">Enviar</a>
+                    <table style="table-layout:auto" class="table table-responsive">
+                        <tr>
+                            <td>Título</td>
+                            <td>Duração</td>
+                            <td>Idioma</td>
+                            <td>Legenda</td>
+                        </tr>
+
+                        @if (Model != null)
+                        {
+
+                            @foreach (var m in Model)
+                            {
+                                <tr>
+                                    <td>
+                                        <a href="theaterFriends/Views/Movies/Index?id=@m.Id">@m.Name</a>
+                                    </td>
+                                    <td>@m.Type</td>
+                                    <td>@m.Length.ToString()</td>
+                                    <td>@m.Language</td>
+                                    <td>
+                                        @if (m.Subtitle == true)
+                                        {
+                                            <p>LEGENDADO</p>
+                                        }
+                                        else
+                                        {
+                                            <p>SEM LEGENDA</p>
+                                        }
+                                    </td>
+                                </tr>
+                            }
+                        }
+                    </table>
+
                 </form>
             </div>
 
@@ -216,4 +243,3 @@
     </style>
 </body>
 </html>
-
