@@ -42,9 +42,9 @@ namespace theaterFriends.DAO
             return location;
         }
 
-        protected override void SetTabela()
+        protected override void SetTabela(string table)
         {
-            Tabela = "Localization";
+            Tabela = (table != null && table != "") ? table : "Localization";
         }
     }
 }

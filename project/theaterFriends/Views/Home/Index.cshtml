@@ -4,6 +4,10 @@
 @{
     Layout = null;
 }
+
+@using Microsoft.AspNetCore.Http
+@inject IHttpContextAccessor HttpContextAccessor
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -18,7 +22,15 @@
     <header class="showcase">
         <div class="showcase-top">
             <img src="~/imagens/logo.png" alt="" />
-            <a href="/Login/Index" class="btn btn-rounded">Sign In</a>
+            @if (HttpContextAccessor.HttpContext.Session.GetString("Logado") == "true")
+            {
+                <p style="text-align: right; position: absolute; right: 25px; ">Olá, @HttpContextAccessor.HttpContext.Session.GetString("Name")</p>
+                <a href="/Login/LogOff" class="btn btn-rounded">Sair</a>
+            }
+            else
+            {
+                <a href="/Login/Index?table=Costumer" class="btn btn-rounded">Sign In</a>
+            }
         </div>
         <div class="showcase-content">
             <img src="~/imagens/harakiri.jpg" />
@@ -165,7 +177,14 @@
             <ul>
                 <li>Perguntas? Ligue o Viotti</li>
                 <li><a href="/Home/About">Sobre</a></li>
-                <li><a href="/Administracao/Index">Administrativo</a></li>
+                @if (HttpContextAccessor.HttpContext.Session.GetString("Logado") == "true")
+                {
+                    <li><a href="/Administracao/Index">Administrativo</a></li>
+                }
+                else
+                {
+                    <li><a href="/Login/Index?table=Employer">Administrativo</a></li>
+                }
             </ul>
             <ul>
                 <li>Entre em contato: </li>

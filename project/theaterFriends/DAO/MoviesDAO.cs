@@ -50,9 +50,9 @@ namespace theaterFriends.DAO
             return movie;
         }
 
-        protected override void SetTabela()
+        protected override void SetTabela(string table)
         {
-            Tabela = "Movies";
+            Tabela = (table != null && table != "") ? table : "Movies";
         }
     }
 }
