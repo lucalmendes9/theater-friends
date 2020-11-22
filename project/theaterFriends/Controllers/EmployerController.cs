@@ -32,8 +32,14 @@ namespace theaterFriends.Controllers
             if (string.IsNullOrEmpty(model.Email))
                 ModelState.AddModelError("Email", "Email inválido!");
 
-            if (string.IsNullOrEmpty(model.Password))
-                ModelState.AddModelError("Password", "Senha inválida!");
+            if (string.IsNullOrEmpty(model.Password) || model.Password.Length < 7)
+                ModelState.AddModelError("Password", "Senha inválido (tamanho mínimo de 8 caracteres!");
+
+            if (string.IsNullOrEmpty(model.ConfirmPassword) || model.ConfirmPassword.Length < 7)
+                ModelState.AddModelError("ConfirmPassword", "Senha inválido (tamanho mínimo de 8 caracteres!");
+
+            if (model.Password != model.ConfirmPassword)
+                ModelState.AddModelError("Password", "As senhas não batem!");
 
             if (string.IsNullOrEmpty(model.Employer_role))
                 ModelState.AddModelError("Employer_role", "Cargo Inválido!");
@@ -48,7 +54,31 @@ namespace theaterFriends.Controllers
 
         public override IActionResult Salvar(EmployerViewModel model, string Operacao)
         {
-            return base.Salvar(model, Operacao);
+            try
+            {
+                ValidaDados(model, Operacao);
+                if (ModelState.IsValid == false)
+                {
+                    ViewBag.Operacao = Operacao;
+                    PreencheDadosParaView(Operacao, model);
+                    return View(ViewParaCadastro, model);
+                }
+                else
+                {
+                    if (Operacao == "I")
+                        DAO.Insert(model);
+                    else
+                        DAO.Update(model);
+                    return RedirectToAction("Index", "Administracao");
+                }
+            }
+            catch (Exception erro)
+            {
+                ViewBag.Erro = "Ocorreu um erro: " + erro.Message;
+                ViewBag.Operacao = Operacao;
+                PreencheDadosParaView(Operacao, model);
+                return View(ViewParaCadastro, model);
+            }
         }
     }
 }

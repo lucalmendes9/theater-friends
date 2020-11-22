@@ -10,6 +10,7 @@ namespace theaterFriends.Models
         public string Name { get; set; }
         public string Email { get; set; }
         public string Password { get; set; }
+        public string ConfirmPassword { get; set; }
         public string Employer_role { get; set; }
         public DateTime Hired_At { get; set; }
     }

@@ -35,9 +35,9 @@ namespace theaterFriends.DAO
             return c;
         }
 
-        protected override void SetTabela()
+        protected override void SetTabela(string table)
         {
-            Tabela = "Schedules Exhibition";
+            Tabela = (table != null && table != "") ? table : "Schedules Exhibition";
         }
 
     }

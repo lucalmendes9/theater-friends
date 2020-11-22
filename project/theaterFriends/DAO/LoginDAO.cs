@@ -26,15 +26,14 @@ namespace theaterFriends.DAO
                 Id = Convert.ToInt32(registro["id"]),
                 Name = registro["name"].ToString(),
                 Email = registro["email"].ToString(),
-                Password = registro["password"].ToString(),
-                Created_At = Convert.ToDateTime(registro["created_at"])
+                Password = registro["password"].ToString()
             };
             return c;
         }
 
-        protected override void SetTabela()
+        protected override void SetTabela(string table)
         {
-            Tabela = "Costumer";
+            Tabela = (table != null && table != "") ? table : "Costumer";
         }
     }
 }

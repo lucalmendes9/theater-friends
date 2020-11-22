@@ -29,7 +29,7 @@
             }
             else
             {
-                <a href="/Login/Index" class="btn btn-rounded">Sign In</a>
+                <a href="/Login/Index?table=Costumer" class="btn btn-rounded">Sign In</a>
             }
         </div>
         <div class="showcase-content">
@@ -177,7 +177,14 @@
             <ul>
                 <li>Perguntas? Ligue o Viotti</li>
                 <li><a href="/Home/About">Sobre</a></li>
-                <li><a href="/Administracao/Index">Administrativo</a></li>
+                @if (HttpContextAccessor.HttpContext.Session.GetString("Logado") == "true")
+                {
+                    <li><a href="/Administracao/Index">Administrativo</a></li>
+                }
+                else
+                {
+                    <li><a href="/Login/Index?table=Employer">Administrativo</a></li>
+                }
             </ul>
             <ul>
                 <li>Entre em contato: </li>
