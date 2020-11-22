@@ -1,5 +1,43 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
+﻿@model List<MoviesViewModel>
 @{
 }
+<h1>Listagem de Filmes</h1>
+
+<a href="/Movies/create">Novo Registro</a>
+<br />
+
+<table class="table table-bordered table-responsive">
+    <tr>
+        <td>Ações</td>
+        <td>Id</td>
+        <td>Name</td>
+        <td>Descrição</td>
+        <td>Genero</td>
+        <td>Duração</td>
+        <td>Idade Minima</td>
+        <td>Linguagem</td>
+        <td>Legenda</td>
+
+    </tr>
+
+    @foreach (var Filmes in Model)
+    {
+        <tr>
+            <td>
+                <a href="/Employer/Edit?id=@Filmes.Id" class="glyphicon glyphicon-pencil">Editar</a> &nbsp;&nbsp;
+                <a href="javascript:apagar(@Filmes.Id, 'Employer')" class="glyphicon glyphicon-pencil">Apagar</a>
+            </td>
+            <td>@Filmes.Id</td>
+            <td>@Filmes.Name</td>
+            <td>@Filmes.Description</td>
+            <td>@Filmes.Type</td>
+            <td>@Filmes.Length</td>
+            <td>@Filmes.Min_age.</td>
+            <td>@Filmes.Language</td>
+            <td>@Filmes.Subtitle</td>
+        </tr>
+
+
+    }
+
+</table>

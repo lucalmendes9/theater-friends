@@ -15,37 +15,33 @@
         <div class="showcase-top">
             <img src="~/imagens/logo.png" alt="" />
         </div>
-        <form action="/Costumer/Salvar" method="post" class="showcase-content">
-            <input type="hidden" name="Operacao" value="@ViewBag.Operacao" />
 
-            @if (ViewBag.Operacao == "A")
-            {
-                <input class="form-control" name="Id" type="text" id="Id" placeholder="Id">
-                <input asp-for="Id" readonly class="form-control disabled" />
-            }
+        <form action="/Costumer/Salvar" method="post" class="showcase-content ">
+            <input type="hidden" name="Operacao" value="I" />
+
 
             <div class="form-group">
-                <input class="form-control" name="Name" type="text" id="Name" placeholder="Nome">
+                <input class="form-control" name="Name" type="text" id="Name" placeholder="Nome" value="Alberto Fagundes">
                 <span asp-validation-for="Name" class="text-danger"></span>
             </div><br>
             <div class="form-group">
-                <input class="form-control" name="Email" type="text" id="Email" placeholder="E-mail">
+                <input class="form-control" name="Email" type="text" id="Email" placeholder="E-mail" value="alberto@gmail.com">
                 <span asp-validation-for="Email" class="text-danger"></span>
             </div><br>
             <div class="form-group">
-                <input class="form-control" name="Password" type="password" id="Password" placeholder="Senha">
+                <input class="form-control" name="Password" type="password" id="Password" placeholder="Senha" value="12345678">
                 <span asp-validation-for="Password" class="text-danger"></span>
             </div><br>
             <div class="form-group">
-                <input class="form-control" name="Password" type="password" id="Password" placeholder="Confirme a senha">
-                <span asp-validation-for="Password" class="text-danger"></span>
-            </div><br>
-            <div class="form-group">
-                <label for="Creat-at" class="control-label">Data de Criação</label>
-                <input asp-for="Created_At" type="date" value="@Model.Created_At.ToString("yyyy-MM-dd")" class="form-control"disabled >
+                <input class="form-control" name="ConfirmPassword" type="password" id="ConfirmPassword" placeholder="Confirme a senha" value="12345678">
+                <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
             </div><br>
             <input type="submit" class="btn btn-lg" value="Enviar" />
             <a href="/Login/Index" class="btn btn-lg">Voltar</a>
+            @if (ViewBag.Erro != null)
+            {
+                <p style="background-color: red;text-align: center;color: #FFF;border-radius: 20px;">@ViewBag.Erro</p>
+            }
         </form>
     </header>
     <script type="text/javascript" src="~/js/cadastroFunc.js"></script>

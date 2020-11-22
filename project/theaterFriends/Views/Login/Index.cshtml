@@ -26,11 +26,11 @@
             <input type="submit" class="btn btn-lg" value="Entrar" />
             <a href="/Costumer/Create" class="btn btn-lg">Cadastre-se</a>
             <a href="/Home/Index" class="btn btn-lg">Voltar</a>
+            @if (ViewBag.Erro != null)
+            {
+                <p style="background-color: red;text-align: center;color: #FFF;border-radius: 20px;">@ViewBag.Erro</p>
+            }
         </form>
-        @if (ViewBag.Erro != null)
-        {
-            <p>@ViewBag.Erro</p>
-        }
     </header>
 </body>
 </html>
