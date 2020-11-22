@@ -33,8 +33,6 @@ namespace theaterFriends.Controllers
         }
         protected virtual void PreencheDadosParaView(string Operacao, T model)
         {
-            //if (SugereProximoId && Operacao == "I")
-            //    model.Id = DAO.ProximoId();
         }
         public virtual IActionResult Salvar(T model, string Operacao)
         {
@@ -66,12 +64,12 @@ namespace theaterFriends.Controllers
         }
         protected virtual void ValidaDados(T model, string operacao)
         {
-            if (operacao == "I" && DAO.Consulta(model.Id) != null)
-                ModelState.AddModelError("Id", "Código já está em uso!");
-            if (operacao == "A" && DAO.Consulta(model.Id) == null)
-                ModelState.AddModelError("Id", "Este registro não existe!");
-            if (model.Id <= 0)
-                ModelState.AddModelError("Id", "Id inválido!");
+            //if (operacao == "I" && DAO.Consulta(model.Id) != null)
+            //    ModelState.AddModelError("Id", "Código já está em uso!");
+            //if (operacao == "A" && DAO.Consulta(model.Id) == null)
+            //    ModelState.AddModelError("Id", "Este registro não existe!");
+            //if (model.Id <= 0)
+            //    ModelState.AddModelError("Id", "Id inválido!");
 
         }
         public virtual IActionResult Edit(int id)

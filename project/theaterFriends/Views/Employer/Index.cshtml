@@ -1,34 +1,32 @@
 ﻿@model List<EmployerViewModel>
 @{
 }
-<h1>Listagem de Funcionarios</h1>
+<h1>Lista de Funcionarios</h1>
 
 <a href="/Employer/create">Novo Registro</a>
 <br />
 
-<table class="table table-bordered table-responsive">
+<table class="table table-bordered table-responsive text-center">
     <tr>
-        <td>Id</td>
-        <td>Name</td>
-        <td>Email</td>
-        <td>Cargo</td>
-        <td>Data de Contratação</td>
+        <td><b>Ações</b></td>
+        <td><b>Nome</b></td>
+        <td><b>Email</b></td>
+        <td><b>Cargo/Função</b></td>
+        <td><b>Data de Contratação</b></td>
     </tr>
 
     @foreach (var Empregado in Model)
     {
         <tr>
             <td>
-                <a href="/Employer/Edit?id=@Empregado.Id">Editar</a> &nbsp;&nbsp;
-                <a href="javascript:apagar(@Empregado.Id, 'Employer')">Apagar</a>
+                <a href="/Employer/Edit?id=@Empregado.Id" class="glyphicon glyphicon-pencil"></a> &nbsp;&nbsp;
+                <a href="javascript:apagar(@Empregado.Id, 'Employer')" class="glyphicon glyphicon-trash"></a>
             </td>
-            <td>@Empregado.Id</td>
             <td>@Empregado.Name</td>
             <td>@Empregado.Email</td>
             <td>@Empregado.Employer_role</td>
             <td>@Empregado.Hired_At.ToShortDateString()</td>
         </tr>
-
     }
 
 </table>

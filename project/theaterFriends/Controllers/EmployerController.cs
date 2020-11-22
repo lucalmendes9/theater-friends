@@ -21,18 +21,6 @@ namespace theaterFriends.Controllers
             base.PreencheDadosParaView(Operacao, model);
         }
 
-        /*private void PreencheComboBoxCidade()
-        {
-            var daoCidade = new CidadeDAO();
-            ViewBag.cidades = new List<SelectListItem>();
-            ViewBag.cidades.Add(new SelectListItem("Selecione uma cidade...", "0"));
-            foreach (CidadeViewModel cid in daoCidade.Listagem())
-            {
-                var elemento = new SelectListItem(cid.Nome, cid.Id.ToString());
-                ViewBag.cidades.Add(elemento);
-            }
-        }*/
-
         protected override void ValidaDados(EmployerViewModel model, string operacao)
         {
             base.ValidaDados(model, operacao);
@@ -42,8 +30,8 @@ namespace theaterFriends.Controllers
             if (string.IsNullOrEmpty(model.Email))
                 ModelState.AddModelError("Email", "Email inválido!");
 
-            if (model.Password.Length < 7 || string.IsNullOrEmpty(model.Password))
-                ModelState.AddModelError("Password", "Senha inválido (tamanho mínimo de 8 caracteres!");
+            if (string.IsNullOrEmpty(model.Password))
+                ModelState.AddModelError("Password", "Senha inválida!");
 
             if (string.IsNullOrEmpty(model.Employer_role))
                 ModelState.AddModelError("Employer_role", "Cargo Inválido!");
@@ -54,6 +42,11 @@ namespace theaterFriends.Controllers
                 ModelState.AddModelError("Hired_At", "Data de contratação não pode ser superior à data atual!");
             }
 
+        }
+
+        public override IActionResult Salvar(EmployerViewModel model, string Operacao)
+        {
+            return base.Salvar(model, Operacao);
         }
     }
 }
