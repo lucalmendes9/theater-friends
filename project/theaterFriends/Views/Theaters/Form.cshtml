@@ -20,7 +20,7 @@
 
             @if (ViewBag.Operacao == "A")
             {
-                <input class="form-control" name="Id" type="text" id="Id" placeholder="Id">
+                <label for="Id">Código do Cinema</label>
                 <input asp-for="Id" readonly class="form-control disabled" />
             }
 
@@ -51,6 +51,9 @@
 
             <input type="submit" class="btn btn-lg" value="Enviar" />
             <a href="/Theaters/Index" class="btn btn-lg">Voltar</a>
+
+            <div style="background-color: red;text-align: center;color: #FFF;border-radius: 20px;" asp-validation-summary="All" ></div>
+
         </form>
     </header>
     <script type="text/javascript" src="~/js/cadastroFunc.js"></script>

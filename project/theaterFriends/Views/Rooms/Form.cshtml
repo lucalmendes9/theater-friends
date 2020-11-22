@@ -20,31 +20,31 @@
 
             @if (ViewBag.Operacao == "A")
             {
-                <input class="form-control" name="Id" type="text" id="Id" placeholder="Id">
+                <label for="Id">Código da Sala</label>
                 <input asp-for="Id" readonly class="form-control disabled" />
             }
 
-        <div class="form-group">
-            <label for="Name" class="control-label">Nome</label>
-            <input class="form-control" name="Name" type="text" id="Name" placeholder="Nome">
-            <span asp-validation-for="Name" class="text-danger"></span>
-        </div><br>
+            <div class="form-group">
+                <label for="Name" class="control-label">Nome</label>
+                <input class="form-control" name="Name" type="text" id="Name" placeholder="Xtreme">
+            </div><br>
 
 
             <div class="form-group">
                 <label for="Seats" class="control-label">Quantidade de Assentos</label>
                 <input asp-for="Seats" class="form-control" />
-                <span asp-validation-for="Seats" class="text-danger"></span>
             </div><br>
 
             <div class="form-group">
                 <label for="Theaters_id" class="control-label">Código do Cinema</label>
                 <select asp-for="Theaters_id" asp-items="@ViewBag.Theaters" class="form-control"></select>
-                <span asp-validation-for="Theaters_id" class="text-danger"></span>
             </div><br>
 
             <input type="submit" class="btn btn-lg" value="Enviar" />
             <a href="/Rooms/Index" class="btn btn-lg">Voltar</a>
+
+            <div style="background-color: red;text-align: center;color: #FFF;border-radius: 20px;" asp-validation-summary="All"></div>
+
         </form>
     </header>
     <script type="text/javascript" src="~/js/cadastroFunc.js"></script>

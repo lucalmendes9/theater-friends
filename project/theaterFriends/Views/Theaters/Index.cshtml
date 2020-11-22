@@ -9,21 +9,21 @@
 
 <table class="table table-bordered table-responsive">
     <tr>
-        <td>Ações</td>
-        <td>Id</td>
-        <td>Descrição</td>
-        <td>ID Localização</td>
-        <td>Hora de Abertura</td>
-        <td>Hora de Fechamento</td>
-        <td>Dias de Trabalho</td>
+        <td><b>Ações</b></td>
+        <td><b>Id</b></td>
+        <td><b>Descrição</b></td>
+        <td><b>ID Localização</b></td>
+        <td><b>Hora de Abertura</b></td>
+        <td><b>Hora de Fechamento</b></td>
+        <td><b>Dias de Trabalho</b></td>
     </tr>
 
     @foreach (var Cinema in Model)
     {
         <tr>
             <td>
-                <a href="/Employer/Edit?id=@Cinema.Id" class="glyphicon glyphicon-pencil"></a> &nbsp;&nbsp;
-                <a href="javascript:apagar(@Cinema.Id, 'Employer')" class="glyphicon glyphicon-trash"></a>
+                <a href="/Theaters/Edit?id=@Cinema.Id" class="glyphicon glyphicon-pencil"></a> &nbsp;&nbsp;
+                <a href="javascript:apagar(@Cinema.Id, 'Theaters')" class="glyphicon glyphicon-trash"></a>
             </td>
             <td>@Cinema.Id</td>
             <td>@Cinema.Description</td>
