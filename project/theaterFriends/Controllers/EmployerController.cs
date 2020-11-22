@@ -45,6 +45,9 @@ namespace theaterFriends.Controllers
             if (model.Password.Length < 7 || string.IsNullOrEmpty(model.Password))
                 ModelState.AddModelError("Password", "Senha inválido (tamanho mínimo de 8 caracteres!");
 
+            if (string.IsNullOrEmpty(model.Employer_role))
+                ModelState.AddModelError("Employer_role", "Cargo Inválido!");
+
             if (ModelState["Hired_At"].ValidationState == ModelValidationState.Invalid || model.Hired_At > DateTime.Now)
             {
                 ModelState.Remove("Hired_At");
