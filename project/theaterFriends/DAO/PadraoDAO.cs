@@ -10,7 +10,7 @@ namespace theaterFriends.DAO
 {
     public abstract class PadraoDAO<T> where T : PadraoViewModel
     {
-        protected abstract void SetTabela();
+        protected abstract void SetTabela(string table = "");
         protected PadraoDAO()
         {
             SetTabela();
@@ -40,8 +40,9 @@ namespace theaterFriends.DAO
             };
             HelperDAO.ExecutaProc("spDelete", p);
         }
-        public virtual T Login(string email, string pass)
+        public virtual T Login(string email, string pass, string table)
         {
+            SetTabela(table);
             var p = new SqlParameter[]
             {
                 new SqlParameter("email", email != null ? email : ""),

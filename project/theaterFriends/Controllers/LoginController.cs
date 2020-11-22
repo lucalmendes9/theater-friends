@@ -12,30 +12,39 @@ namespace theaterFriends.Controllers
     public class LoginController : PadraoController<PadraoViewModel>
     {
 
-        public override IActionResult Index()
+        public override IActionResult Index(string table)
         {
+            ViewBag.table = table;
+            if (TempData["table"] != null)
+                ViewBag.table = TempData["table"].ToString();
+            if (TempData["Erro"] != null)
+                ViewBag.Erro = TempData["Erro"].ToString();
+
             return View();
         }
-        public IActionResult FazLogin(string usuario, string senha)
+        public IActionResult FazLogin(string usuario, string senha, string table)
         {
             var loginDAO = new LoginDAO();
-            var respUser = loginDAO.Login(usuario, senha);
+            var respUser = loginDAO.Login(usuario, senha, table);
 
             if (respUser != null)
             {
                 HttpContext.Session.SetString("Logado", "true");
-                return RedirectToAction("index", "Home");
+                HttpContext.Session.SetString("Name", respUser.Name);
+                HttpContext.Session.SetString("Type", table == "Employer" ? "Employer" : "Costumer");
+                return RedirectToAction("index", table == "Employer" ? "Administracao" : "Home");
             }
             else
             {
-                ViewBag.Erro = "Usuário ou senha inválidos!";
-                return View("Index");
+                TempData["Erro"] = "Usuário ou senha inválidos!";
+                TempData["table"] = table;
+                return RedirectToAction("index", "Login");
             }
         }
         public IActionResult LogOff()
         {
             HttpContext.Session.Clear();
-            return RedirectToAction("Index");
+            return RedirectToAction("index", "Home");
         }
     }
 }

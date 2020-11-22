@@ -22,6 +22,9 @@ namespace theaterFriends.Controllers
 
         protected override void ValidaDados(CostumerViewModel model, string operacao)
         {
+            if( operacao != "I" )
+                base.ValidaDados(model, operacao);
+
             model.Created_At = DateTime.Now;
 
             if (string.IsNullOrEmpty(model.Name))

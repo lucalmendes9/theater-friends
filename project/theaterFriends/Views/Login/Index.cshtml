@@ -3,6 +3,9 @@
     Layout = null;
 }
 
+@using Microsoft.AspNetCore.Http
+@inject IHttpContextAccessor HttpContextAccessor
+
 <!DOCTYPE html>
 <html lang="pt">
 <head>
@@ -23,8 +26,12 @@
             <div class="form-group">
                 <input class="form-control" name="senha" type="password" id="senha" placeholder="Senha">
             </div><br>
+            <input class="form-control" name="table" type="hidden" id="table" value="@ViewBag.table">
             <input type="submit" class="btn btn-lg" value="Entrar" />
-            <a href="/Costumer/Create" class="btn btn-lg">Cadastre-se</a>
+            @if (@ViewBag.table != "Employer")
+            {
+                <a href="/Costumer/Create" class="btn btn-lg">Cadastre-se</a>
+            }
             <a href="/Home/Index" class="btn btn-lg">Voltar</a>
             @if (ViewBag.Erro != null)
             {

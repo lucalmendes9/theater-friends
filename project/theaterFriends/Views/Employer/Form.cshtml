@@ -19,52 +19,47 @@
         
         <form action="/Employer/Salvar" method="post" class="showcase-content">
             <div asp-validation-summary="All" class="text-danger"></div>
-            <input type="hidden" name="Operacao" value="@ViewBag.Operacao" />
+            <input type="hidden" name="Operacao" value="I" />
 
-            @if (ViewBag.Operacao == "A")
-            {
-                <label for="Id">Código do Funcionário</label>
-                <input asp-for="Id" readonly class="form-control disabled" />
-            }
             <br />
             <div class="form-group">
                 <label for="Name">Nome do Funcionário</label>
-                <input class="form-control" asp-for="Name" placeholder="ex... Ribamar">
+                <input class="form-control" asp-for="Name" placeholder="Fulano de Tal" required>
                 <span asp-validation-for="Name" class="text-danger"></span>
             </div><br>
 
             <div class="form-group">
                 <label for="Hired_at" class="control-label">Data de Admissão</label>
-                <input asp-for="Hired_At" type="date" class="form-control">
+                <input asp-for="Hired_At" type="date" class="form-control" required value="@DateTime.Now.ToString("yyyy-MM-dd")">
                 <span asp-validation-for="Hired_At" class="text-danger"></span>
             </div><br>
 
             <div class="form-group">
-                <label for="Name">Email</label>
-                <input class="form-control" asp-for="Email" placeholder="zerohora@pg.com">
+                <label for="Email">Email</label>
+                <input class="form-control" asp-for="Email" placeholder="fulano@email.com" required>
                 <span asp-validation-for="Email" class="text-danger"></span>
             </div><br>
 
             <div class="form-group">
-                <label for="Name">Senha</label>
-                <input class="form-control" asp-for="Password" placeholder="">
+                <label for="Password">Senha</label>
+                <input class="form-control" asp-for="Password" type="password" placeholder="" required>
                 <span asp-validation-for="Password" class="text-danger"></span>
             </div><br>
 
-            @*<div class="form-group">
-                <label for="Name">Confirme sua senha</label>
-                <input class="form-control" asp-for="Password" placeholder="">
-                <span asp-validation-for="Password" class="text-danger"></span>
-            </div><br>*@
+            <div class="form-group">
+                <label for="ConfirmPassword">Confirme sua senha</label>
+                <input class="form-control" asp-for="ConfirmPassword" type="password" placeholder="" required>
+                <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+            </div><br>
 
             <div class="form-group">
                 <label for="Employer_role">Cargo/Função</label>
-                <input class="form-control"asp-for="Employer_role" placeholder="Pipoqueiro">
+                <input class="form-control" asp-for="Employer_role" placeholder="Pipoqueiro" required>
                 <span asp-validation-for="Employer_role" class="text-danger"></span>
             </div><br>
 
             <br />
-            <a href="#" type="submit" class="btn btn-lg">Enviar</a>
+            <input type="submit" class="btn btn-lg" value="Enviar" />
             <a href="/Employer/Index" class="btn btn-lg">Voltar</a>
         </form>
 
