@@ -15,7 +15,7 @@ namespace theaterFriends.DAO
             List<SqlParameter> parameters = new List<SqlParameter>();
             parameters.Add(new SqlParameter("id", model.Id));
             parameters.Add(new SqlParameter("description", model.Description));
-            parameters.Add(new SqlParameter("location_id", model.Location_id));
+            parameters.Add(new SqlParameter("localization_id", model.Localization_id));
             parameters.Add(new SqlParameter("work_days", model.Work_days));
             parameters.Add(new SqlParameter("open_hour", model.Open_hour));
             parameters.Add(new SqlParameter("close_hour", model.Close_hour));
@@ -29,7 +29,7 @@ namespace theaterFriends.DAO
             {
                 Id = Convert.ToInt32(registro["id"]),
                 Description = registro["description"].ToString(),
-                Location_id = Convert.ToInt32(registro["location_id"]),
+                Localization_id = Convert.ToInt32(registro["localization_id"]),
                 Work_days = Convert.ToInt32(registro["work_days"]),
                 Open_hour = registro["open_hour"].ToString(),
                 Close_hour = registro["close_hour"].ToString(),

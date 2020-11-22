@@ -1,140 +1,44 @@
-﻿@model MoviesViewModel;
+@model List<MoviesViewModel>
 @{
     Layout = null;
 }
+<h1>Listagem de Filmes</h1>
 
-<!DOCTYPE html>
-<html>
+<a href="/Movies/create">Novo Registro</a>
+<br />
 
-<head>
-    <title>Theater Friends</title>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta content="width=device-width, initial-scale=1, maximum-scale=1" name="viewport" />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="~/css/movie.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-</head>
+<table class="table table-bordered table-responsive">
+    <tr>
+        <td><b>Ações</b></td>
+        <td><b>Id</b></td>
+        <td><b>Name</b></td>
+        <td><b>Descrição</b></td>
+        <td><b>Genero</b></td>
+        <td><b>Duração</b></td>
+        <td><b>Idade Minima</b></td>
+        <td><b>Linguagem</b></td>
+        <td><b>Legenda</b></td>
 
+    </tr>
 
-
-<body style="background-color: black;">
-
-    <header class="showcase" style="margin: 0 0 150px 0;">
-        <div class="showcase-top">
-            <img src="~/imagens/logo.png" alt="" />
-            <a href="/Login/Index" class="btn btn-rounded">Sign In</a>
-        </div>
-    </header>
-
-    <div class="center">
-        <section class="mega-destaque">
-            <div class="container ">
-                <div class="row"> </div>
-            </div>
-        </section>
-        <section class="filme-conteudo animated fadeIn delayp1">
-            <div class="container" style="background-color: rgb(37, 36, 36);">
-                <div class="row">
-                    <div class="col-md-12 col-xs-12">
-                        <div class="page-title" style="color: blanchedalmond; text-align: center; font-family: sans-serif; background-color: rgb(37, 36, 36);">
-                            <br>
-                            <h2>@Model.Name</h2>
-                            <br>
-                        </div>
-                    </div>
-                    <div class="col-md-3 text-center" style="background-color: rgb(37, 36, 36)" ;>
-                        <img class="media-object" max-height="50%" max-width="100%" src="data:image/jpeg;base64,@Model.ImagemEmBase64"  >
-                        <p><br> </p>
-                    </div>
-                    <div class="col-md-6 " style="color: blanchedalmond;   background-color: rgb(37, 36, 36) ">
-                        <p>
-                            @Model.Description;
-                        </p>
-                        <p>Duração: <span class="color-destaque "><i class="fa fa-clock-o "></i>@Model.Length</span></p>
-                        <p>Genero: <span class="color-destaque ">@Model.Type</span></p>
-                        <p>Idade mínima permitida: <span class="color-destaque ">@Model.Min_age</span></p>
-                        <p>Idioma:<span class="color-destaque ">@Model.Language</span></p>
-                    </div>
-
-                </div>
-            </div>
-        </section>
-    </div>
-
-    <div class="container" style="background-color: rgb(37, 36, 36);">
-        <br>
-        <br>
-        <button type="button" class="btn btn-rounded" data-toggle="collapse" data-target="#demo">Sessões</button>
-        <div id="demo" class="collapse" style="color: red">
-
-            <table style="table-layout:auto" class="table table-responsive">
-                <tr>
-                    <td>Cidade</td>
-                    <td>Cinema</td>
-                    <td>Horário de Início</td>
-                    <td>Horário de Término</td>
-                </tr>
-
-                @*@foreach (var m in Model)
-                {
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td</td>
-                        <td></td>
-                    <tr>
-                }*@
-
-                </table>
+    @foreach (var Filmes in Model)
+    {
+        <tr>
+            <td>
+                <a href="/Employer/Edit?id=@Filmes.Id" class="glyphicon glyphicon-pencil"></a> &nbsp;&nbsp;
+                <a href="javascript:apagar(@Filmes.Id, 'Employer')" class="glyphicon glyphicon-pencil"></a>
+            </td>
+            <td>@Filmes.Id</td>
+            <td>@Filmes.Name</td>
+            <td>@Filmes.Description</td>
+            <td>@Filmes.Type</td>
+            <td>@Filmes.Length</td>
+            <td>@Filmes.Min_age.</td>
+            <td>@Filmes.Language</td>
+            <td>@Filmes.Subtitle</td>
+        </tr>
 
 
-            <br>
-            <br>
-            <br>
+    }
 
-        </div>
-
-    </div>
-
-    <footer class="footer">
-        <br>
-        <br>
-        <br>
-        <br>
-        <div class="footer-cols">
-
-
-            <ul>
-                <li>Perguntas? Ligue o Viotti</li>
-                <li><a href="/Home/About">Sobre</a></li>
-                <li><a href="/Employer/Form">Administrativo</a></li>
-            </ul>
-            <ul>
-                <li>Entre em contato: </li>
-                <li>+55 11 4002-8922</li>&nbsp;
-                <li>theaterfriends@theaterfriends.com</li>&nbsp;
-                <li>Rua dos Bobos, Nº0, 09000-584 SP - Brasil</li>
-            </ul>
-            <ul>
-                <li><a href="#">Central de Ajuda</a></li>
-                <li><a href="#">Minha conta</a></li>
-            </ul>
-            <ul>
-                <li><a href="#">Redes Sociais:</a></li>
-                <li>Instagram: theatherfriends</li>
-                <li>Facebook: theatherfriends</li>
-            </ul>
-
-        </div>
-
-
-
-    </footer>
-    <script src="~/js/home.js"></script>
-
-</body>
-
-</html>
+</table>

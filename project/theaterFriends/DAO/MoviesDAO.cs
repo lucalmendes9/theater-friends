@@ -23,7 +23,7 @@ namespace theaterFriends.DAO
             parameters.Add(new SqlParameter("type", model.Type));
             parameters.Add(new SqlParameter("language", model.Language));
             parameters.Add(new SqlParameter("subtitle", model.Subtitle));
-            parameters.Add(new SqlParameter("image", imgByte));
+            parameters.Add(new SqlParameter("cover", imgByte));
             parameters.Add(new SqlParameter("min_age", model.Min_age));
             parameters.Add(new SqlParameter("length", model.Length));
 
@@ -44,8 +44,8 @@ namespace theaterFriends.DAO
                 Subtitle = Convert.ToBoolean(registro["subtitle"])
             };
 
-            if (registro["image"] != DBNull.Value)
-                movie.ImagemEmByte = registro["image"] as byte[];
+            if (registro["cover"] != DBNull.Value)
+                movie.ImagemEmByte = registro["cover"] as byte[];
 
             return movie;
         }

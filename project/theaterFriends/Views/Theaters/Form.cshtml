@@ -1,4 +1,4 @@
-@model TheatersViewModel
+﻿@model TheatersViewModel
 @{
     Layout = null;
 }
@@ -8,7 +8,7 @@
     <meta charset="UTF-8">
     <TITLE>Registro de Salas</TITLE>
     <link href="asserts/stylesheets/stilize/stilize.min.css" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="~/css/client_func_login.css">
+    <link rel="stylesheet" href="~/css/client_func_login.css?v=1.0.2">
 </head>
 <body>
     <header class="showcase">
@@ -20,7 +20,7 @@
 
             @if (ViewBag.Operacao == "A")
             {
-                <input class="form-control" name="Id" type="text" id="Id" placeholder="Id">
+                <label for="Id">Código do Cinema</label>
                 <input asp-for="Id" readonly class="form-control disabled" />
             }
 
@@ -32,8 +32,8 @@
 
             <div class="form-group">
                 <label for="Theaters_id" class="control-label">Código do Local</label>
-                <select asp-for="Location_id" asp-items="@ViewBag.location" class="form-control"></select>
-                <span asp-validation-for="Location_id" class="text-danger"></span>
+                <select asp-for="Localization_id" asp-items="@ViewBag.location" class="form-control"></select>
+                <span asp-validation-for="Localization_id" class="text-danger"></span>
             </div><br>
 
 
@@ -50,7 +50,10 @@
             </div><br>
 
             <input type="submit" class="btn btn-lg" value="Enviar" />
-            <a href="/Employer/Index" class="btn btn-lg">Voltar</a>
+            <a href="/Theaters/Index" class="btn btn-lg">Voltar</a>
+
+            <div style="background-color: red;text-align: center;color: #FFF;border-radius: 20px;" asp-validation-summary="All" ></div>
+
         </form>
     </header>
     <script type="text/javascript" src="~/js/cadastroFunc.js"></script>

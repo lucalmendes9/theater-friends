@@ -19,7 +19,7 @@ namespace theaterFriends.Controllers
         protected override void PreencheDadosParaView(string Operacao, TheatersViewModel model)
         {
             base.PreencheDadosParaView(Operacao, model);
-            //PreencheComboBoxLocalizacao();
+            PreencheComboBoxLocalizacao();
             model.Work_days = 0;
         }
 
@@ -43,8 +43,8 @@ namespace theaterFriends.Controllers
             if (string.IsNullOrEmpty(model.Description))
                 ModelState.AddModelError("Description", "Descrição inválida!");
 
-            if (model.Location_id <= 0)
-                ModelState.AddModelError("Location_id", "Localização inválida!");
+            if (model.Localization_id <= 0)
+                ModelState.AddModelError("Localization_id", "Localização inválida!");
         }
     }
 }

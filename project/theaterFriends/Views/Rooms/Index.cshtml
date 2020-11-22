@@ -8,18 +8,19 @@
 
 <table class="table table-bordered table-responsive">
     <tr>
-        <td>Id</td>
-        <td>Name</td>
-        <td>Assentos</td>
-        <td>Cinema ID</td>
+        <td><b>Ações</b></td>
+        <td><b>Id</b></td>
+        <td><b>Name</b></td>
+        <td><b>Assentos</b></td>
+        <td><b>Cinema ID</b></td>
     </tr>
 
     @foreach (var Salas in Model)
     {
         <tr>
             <td>
-                <a href="/Employer/Edit?id=@Salas.Id">Editar</a> &nbsp;&nbsp;
-                <a href="javascript:apagar(@Salas.Id, 'Employer')">Apagar</a>
+                <a href="/Rooms/Edit?id=@Salas.Id" class="glyphicon glyphicon-pencil"></a> &nbsp;&nbsp;
+                <a href="javascript:apagar(@Salas.Id, 'Rooms')" class="glyphicon glyphicon-trash" ></a>
             </td>
             <td>@Salas.Id</td>
             <td>@Salas.Name</td>
