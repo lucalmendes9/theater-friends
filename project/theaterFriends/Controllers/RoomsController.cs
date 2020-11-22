@@ -26,7 +26,7 @@ namespace theaterFriends.Controllers
         {
             var daoTheaters = new TheatersDAO();
             ViewBag.Theaters = new List<SelectListItem>();
-            ViewBag.Theaters.Add(new SelectListItem("Selecione uma cinema...", "0"));
+            ViewBag.Theaters.Add(new SelectListItem("Selecione um cinema...", "0"));
             foreach (TheatersViewModel t in daoTheaters.Listagem())
             {
                 var elemento = new SelectListItem(t.Description, t.Id.ToString());

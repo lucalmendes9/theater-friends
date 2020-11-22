@@ -19,7 +19,7 @@ namespace theaterFriends.Controllers
         protected override void PreencheDadosParaView(string Operacao, TheatersViewModel model)
         {
             base.PreencheDadosParaView(Operacao, model);
-            //PreencheComboBoxLocalizacao();
+            PreencheComboBoxLocalizacao();
             model.Work_days = 0;
         }
 
