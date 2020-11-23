@@ -16,10 +16,17 @@
         <div class="showcase-top">
             <img src="~/imagens/logo.png" alt="" />
         </div>
-        
+
         <form action="/Employer/Salvar" method="post" class="showcase-content">
             <div asp-validation-summary="All" class="text-danger"></div>
-            <input type="hidden" name="Operacao" value="I" />
+            <input type="hidden" name="Operacao" value="@ViewBag.Operacao" />
+
+            @if (ViewBag.Operacao == "A")
+            {
+                <br />
+                <label for="Id">Código do Funcionário</label>
+                <input asp-for="Id" readonly class="form-control disabled" style="width:358px"/>
+            }
 
             <br />
             <div class="form-group">
@@ -29,33 +36,43 @@
             </div><br>
 
             <div class="form-group">
-                <label for="Hired_at" class="control-label">Data de Admissão</label>
-                <input asp-for="Hired_At" type="date" class="form-control" style="width:358px" required value="@DateTime.Now.ToString("yyyy-MM-dd")">
-
-            </div><br>
-
-            <div class="form-group">
                 <label for="Email">Email</label>
                 <input class="form-control" asp-for="Email" placeholder="fulano@email.com" style="width:358px" required>
 
             </div><br>
 
+
+
+            @if (ViewBag.Operacao == "I")
+            {
+                <div class="form-group">
+                    <label for="Password">Senha</label>
+                    <input class="form-control" asp-for="Password" type="password" placeholder="#$%¨" style="width:358px" required>
+
+                </div><br>
+
+                <div class="form-group">
+                    <label for="ConfirmPassword">Confirme sua senha</label>
+                    <input class="form-control" asp-for="ConfirmPassword" type="password" placeholder="#$%¨" style="width:358px" required>
+
+                </div><br>
+            }
+            @if (ViewBag.Operacao == "A")
+            {
+                <div class="form-group">
+                    <label for="Password">Nova Senha</label>
+                    <input class="form-control" asp-for="Password" type="password" placeholder="#$%¨" style="width:358px" required>
+                </div><br>
+            }
+
             <div class="form-group">
-                <label for="Password">Senha</label>
-                <input class="form-control" asp-for="Password" type="password" placeholder="#$%¨" style="width:358px" required>
-
-            </div><br>
-
-            <div class="form-group">
-                <label for="ConfirmPassword">Confirme sua senha</label>
-                <input class="form-control" asp-for="ConfirmPassword" type="password" placeholder="#$%¨" style="width:358px" required>
-
-            </div><br>
-
-            <div class="form-group">
-                <label for="Employer_role">Cargo/Função</label> 
+                <label for="Employer_role">Cargo/Função</label>
                 <input class="form-control" asp-for="Employer_role" placeholder="Pipoqueiro" style="width:358px" required>
+            </div><br>
 
+            <div class="form-group">
+                <label for="Hired_at" class="control-label">Data de Admissão</label>
+                <input asp-for="Hired_At" type="date" class="form-control" style="width:358px" required value="@DateTime.Now.ToString("yyyy-MM-dd")">
             </div><br>
 
             <br />
