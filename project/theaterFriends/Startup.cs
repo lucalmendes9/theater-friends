@@ -31,6 +31,15 @@ namespace theaterFriends
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
 
+            services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+
+            services.AddSession(options =>
+            {
+                options.Cookie.IsEssential = true; // GDPR mais detalhes em https://andrewlock.net/session-state-gdpr-and-non-essential-cookies/
+                options.IdleTimeout = TimeSpan.FromSeconds(1000);
+            });
+
+
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
         }
@@ -51,6 +60,8 @@ namespace theaterFriends
             app.UseHttpsRedirection();
             app.UseStaticFiles();
             app.UseCookiePolicy();
+            app.UseSession();
+
 
             app.UseMvc(routes =>
             {
