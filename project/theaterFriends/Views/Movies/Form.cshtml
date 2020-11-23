@@ -36,8 +36,10 @@
             <div class="form-group">
                 <label for="Imagem">Capa do Filme</label><br />
                 <input type="file" name="Imagem" id="Imagem" onchange="exibirImagem()" class="btn btn-secondary">
-                <br /> <br />
-                <img id="imgPreview" src="data:imagens/jpeg;base64,@Model.ImagemEmByte" class="img-responsive" width="200">
+                <br />
+                <br />
+                <img id="imgPreview" src="data:imagens/jpeg;base64,@Model.ImagemEmBase64" class="img-responsive" width="200">
+                <span asp-validation-for="Imagem" class="text-danger"></span>
             </div><br>
 
             <div class="form-group">
@@ -95,4 +97,3 @@
         };
     }
 </script>
-

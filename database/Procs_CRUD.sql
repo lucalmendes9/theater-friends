@@ -104,11 +104,11 @@ GO
 
 
 --Alter an employer
-create procedure spUpdate_Employer
-(@id int, @name varchar(max), @email varchar(max), @password varchar(max), @employer_role varchar(max),@created_at date) as
+alter procedure spUpdate_Employer
+(@id int, @name varchar(max), @email varchar(max), @password varchar(max), @employer_role varchar(max),@hired_at date) as
 begin
 	update Employer set
-		"name" = @name, email = @email, "password" = @password, employer_role = @employer_role
+		"name" = @name, email = @email, "password" = @password, employer_role = @employer_role, hired_at = @hired_at
 	where id = @id
 end
 GO
