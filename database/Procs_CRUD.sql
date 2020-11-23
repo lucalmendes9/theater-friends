@@ -52,8 +52,8 @@ GO
 
 
 --insert new Theater
-create procedure spInsert_Theaters
-(@id int, @description varchar, @localization_id int, @open_hour varchar, @close_hour varchar, @work_days int) as
+alter procedure spInsert_Theaters
+(@id int, @description varchar(max), @localization_id int, @open_hour varchar(max), @close_hour varchar(max), @work_days int) as
 begin
 	insert into Theaters ("description", localization_id, open_hour, close_hour, work_days)
 	values (@description, @localization_id, @open_hour, @close_hour, @work_days)
@@ -72,8 +72,8 @@ GO
 
 
 --Insert new Movie
-create procedure spInsert_Movies
-(@id int, @description varchar, @cover varbinary(max), @type varchar, @length int, @min_age int, @language varchar(max), @subtitle bit) as
+alter procedure spInsert_Movies
+(@id int, @description varchar(max), @cover varbinary(max), @type varchar(max), @length int, @min_age int, @language varchar(max), @subtitle bit) as
 begin
 	insert into Movies ("description", cover, "type", "length", min_age, "language", subtitle)
 	values (@description, @cover, @type, @length, @min_age, @language, @subtitle)
