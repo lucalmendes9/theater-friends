@@ -36,6 +36,8 @@
             <div class="form-group">
                 <label for="Imagem">Capa do Filme</label><br />
                 <input type="file" name="Imagem" id="Imagem" onchange="exibirImagem()" class="btn btn-secondary">
+                <br />
+                <br />
                 <img id="imgPreview" src="data:imagens/jpeg;base64,@Model.ImagemEmBase64" class="img-responsive" width="200">
                 <span asp-validation-for="Imagem" class="text-danger"></span>
             </div><br>
@@ -86,3 +88,13 @@
     <script type="text/javascript" src="~/js/cadastroFunc.js"></script>
 </body>
 </html>
+
+<script>
+    function exibirImagem() {
+        var oFReader = new FileReader();
+        oFReader.readAsDataURL(document.getElementById("Imagem").files[0]);
+        oFReader.onload = function (oFREvent) {
+            document.getElementById("imgPreview").src = oFREvent.target.result;
+        };
+    }
+</script>
