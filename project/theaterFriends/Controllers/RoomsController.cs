@@ -36,7 +36,6 @@ namespace theaterFriends.Controllers
 
         protected override void ValidaDados(RoomsViewModel model, string operacao)
         {
-            base.ValidaDados(model, operacao);
             if (string.IsNullOrEmpty(model.Name))
                 ModelState.AddModelError("Name", "Nome inválido!");
 
