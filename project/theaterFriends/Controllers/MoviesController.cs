@@ -15,6 +15,11 @@ namespace theaterFriends.Controllers
             DAO = new MoviesDAO();
         }
 
+        public IActionResult Views()
+        {
+            return View();
+        }
+
         protected override void ValidaDados(MoviesViewModel model, string operacao)
         {
             //base.ValidaDados(model, operacao);
