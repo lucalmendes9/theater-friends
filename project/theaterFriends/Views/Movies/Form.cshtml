@@ -1,5 +1,76 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
+﻿@model MoviesViewModel
 @{
+    Layout = null;
 }
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <TITLE>Registro de Salas</TITLE>
+    <link href="asserts/stylesheets/stilize/stilize.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="~/css/client_func_login.css">
+</head>
+<body>
+    <header>
+        <div class="showcase-top">
+            <img src="~/imagens/logo.png" alt="" />
+        </div>
+        <form action="Salvar" enctype="multipart/form-data">
+
+            <label for="Name" class="control-label">Nome</label>
+            <input asp-for="Name" class="form-control" />
+            <span asp-validation-for="Name" class="text-danger"></span>
+            <br />
+
+            <label for="Description" class="control-label">Descrição</label>
+            <input asp-for="Description" class="form-control" />
+            <span asp-validation-for="Description" class="text-danger"></span>
+            <br />
+
+            <div class="form-group">
+                <br />
+                <label for="Cover" class="control-label">Capa</label>
+                <input type="file" name="Cover" id="Cover" onchange="exibirImagem()" class="btn">
+                <br />
+                <br />
+                <img id="imgPreview" src="data:image/jpeg;base64,@Model.ImagemEmByte" class="img-responsive"
+                     width="200">
+            </div>
+            <br />
+            <label for="Type" class="control-label">Genero</label>
+            <input asp-for="Type" class="form-control" />
+            <span asp-validation-for="Type" class="text-danger"></span>
+            <br />
+            <label for="Length" class="control-label">Tamanho</label>
+            <input asp-for="Length" class="form-control" />
+            <span asp-validation-for="Length" class="text-danger"></span>
+            <br />
+            <label for="Min_Age" class="control-label">Descrição</label>
+            <input asp-for="Min_age" class="form-control" />
+            <span asp-validation-for="Min_age" class="text-danger"></span>
+            <br />
+            <label for="Language" class="control-label">Linguagem</label>
+            <input asp-for="Language" class="form-control" />
+            <span asp-validation-for="Language" class="text-danger"></span>
+            <br />
+            <div class="mt-2">
+                <label for="PlacaGrafica" class="control-label">Placa Gráfica</label>
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" id="AffectsUsersYes" asp-for="Subtitle" type="radio" value="true" />
+                    <label class="form-check-label" for="AffectsUsersYes">Sim</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" id="AffectsUsersNo" asp-for="Subtitle" type="radio" value="false" />
+                    <label class="form-check-label" for="AffectsUsersNo">Não</label>
+                </div>
+            </div>
+            <input type="submit" value="Salvar Dados" class="btn btn-lg" />
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="/Notebooks/Index" class="btn btn-lg">Voltar</a>
+        </form>
+
+    </header>
+</body>
+</html>
+

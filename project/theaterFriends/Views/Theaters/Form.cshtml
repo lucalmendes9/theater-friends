@@ -26,27 +26,23 @@
 
             <div class="form-group">
                 <label for="Description" class="control-label">Descrição</label>
-                <input class="form-control" name="Description" type="text" id="Description">
-                <span asp-validation-for="Description" class="text-danger"></span>
+                <input class="form-control" name="Description" type="text" id="Description" >
             </div><br>
 
             <div class="form-group">
                 <label for="Theaters_id" class="control-label">Código do Local</label>
                 <select asp-for="Localization_id" asp-items="@ViewBag.location" class="form-control"></select>
-                <span asp-validation-for="Localization_id" class="text-danger"></span>
             </div><br>
 
 
             <div class="form-group">
                 <label for="Open_hour" class="control-label">Hora de Abertura</label>
                 <input asp-for="Open_hour" class="form-control" />
-                <span asp-validation-for="Open_hour" class="text-danger"></span>
             </div><br>
 
             <div class="form-group">
                 <label for="Close_hour" class="control-label">Hora de Fechamento</label>
                 <input asp-for="Close_hour" class="form-control" />
-                <span asp-validation-for="Close_hour" class="text-danger"></span>
             </div><br>
 
             <input type="submit" class="btn btn-lg" value="Enviar" />
