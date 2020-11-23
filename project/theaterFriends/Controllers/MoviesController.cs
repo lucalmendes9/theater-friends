@@ -20,23 +20,9 @@ namespace theaterFriends.Controllers
             return View();
         }
 
-        /*private void PreencheComboBoxCidade()
-        {
-            var daoCidade = new CidadeDAO();
-
-            ViewBag.cidades = new List<SelectListItem>();
-            ViewBag.cidades.Add(new SelectListItem("Selecione uma cidade...", "0"));
-
-            foreach (CidadeViewModel cid in daoCidade.Listagem())
-            {
-                var elemento = new SelectListItem(cid.Nome, cid.Id.ToString());
-                ViewBag.cidades.Add(elemento);
-            }
-        }*/
-
         protected override void ValidaDados(MoviesViewModel model, string operacao)
         {
-            base.ValidaDados(model, operacao);
+            //base.ValidaDados(model, operacao);
             if (string.IsNullOrEmpty(model.Name))
                 ModelState.AddModelError("Name", "Nome inválido!");
 
@@ -49,13 +35,13 @@ namespace theaterFriends.Controllers
             if (model.Length <= 0)
             {
                 ModelState.Remove("Length");
-                ModelState.AddModelError("Lenght", "Duração Invalida");
+                ModelState.AddModelError("Length", "Duração Invalida");
             } 
 
             if (model.Min_age < 0 || model.Min_age > 18)
             {
                 ModelState.Remove("Min_Age");
-                ModelState.AddModelError("Min_age", "Idade minima Invalida");
+                ModelState.AddModelError("Min_age", "Idade mínima deve estar entre 0 e 18");
             }
 
             if (string.IsNullOrEmpty(model.Language))

@@ -1,18 +1,18 @@
 @model List<MoviesViewModel>
 @{
 }
-<h1>Listagem de Filmes</h1>
+<h1>Lista de Filmes</h1>
 
 <a href="/Movies/create">Novo Registro</a>
 <br />
 
-<table class="table table-bordered table-responsive">
+<table class="table table-bordered table-responsive text-center">
     <tr>
         <td><b>Ações</b></td>
-        <td><b>Id</b></td>
+        <td><b>Código</b></td>
         <td><b>Name</b></td>
         <td><b>Descrição</b></td>
-        <td><b>Genero</b></td>
+        <td><b>Gênero</b></td>
         <td><b>Duração</b></td>
         <td><b>Idade Minima</b></td>
         <td><b>Linguagem</b></td>
@@ -36,8 +36,6 @@
             <td>@Filmes.Language</td>
             <td>@Filmes.Subtitle</td>
         </tr>
-
-
     }
 
 </table>
