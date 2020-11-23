@@ -77,7 +77,8 @@ body {
 	top: 200px;
 	left: 50%;
 	margin-right: -50%;
-	transform: translateX(-50%) 
+	text-align: center;
+	transform: translateX(-50%)
 }
 
 .btn {

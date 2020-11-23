@@ -23,8 +23,8 @@ namespace theaterFriends.Controllers
 
         protected override void ValidaDados(EmployerViewModel model, string operacao)
         {
-            if (operacao != "I")
-                base.ValidaDados(model, operacao);
+            //if (operacao != "I")
+            //    base.ValidaDados(model, operacao);
 
             if (string.IsNullOrEmpty(model.Name))
                 ModelState.AddModelError("Name", "Nome inválido!");
@@ -33,16 +33,16 @@ namespace theaterFriends.Controllers
                 ModelState.AddModelError("Email", "Email inválido!");
 
             if (string.IsNullOrEmpty(model.Password) || model.Password.Length < 7)
-                ModelState.AddModelError("Password", "Senha inválido (tamanho mínimo de 8 caracteres!");
-
-            if (string.IsNullOrEmpty(model.ConfirmPassword) || model.ConfirmPassword.Length < 7)
-                ModelState.AddModelError("ConfirmPassword", "Senha inválido (tamanho mínimo de 8 caracteres!");
+                ModelState.AddModelError("Password", "Senha inválida (mínimo de 8 caracteres!)");
 
             if (model.Password != model.ConfirmPassword)
                 ModelState.AddModelError("Password", "As senhas não batem!");
 
-            if (string.IsNullOrEmpty(model.Employer_role))
-                ModelState.AddModelError("Employer_role", "Cargo Inválido!");
+            if(ViewBag.Opecao == "I")
+            {
+                if (string.IsNullOrEmpty(model.Employer_role))
+                    ModelState.AddModelError("Employer_role", "Cargo Inválido!");
+            }
 
             if (ModelState["Hired_At"].ValidationState == ModelValidationState.Invalid || model.Hired_At > DateTime.Now)
             {
@@ -69,7 +69,7 @@ namespace theaterFriends.Controllers
                         DAO.Insert(model);
                     else
                         DAO.Update(model);
-                    return RedirectToAction("Index", "Administracao");
+                    return RedirectToAction(ViewParaListagem);
                 }
             }
             catch (Exception erro)
