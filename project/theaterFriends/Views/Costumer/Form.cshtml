@@ -8,7 +8,7 @@
     <meta charset="UTF-8">
     <TITLE>Registro de Clientes </TITLE>
     <link href="asserts/stylesheets/stilize/stilize.min.css" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="~/css/client_func_login.css?v=1.0.2">
+    <link rel="stylesheet" href="~/css/client_func_login.css?v=1.0.3">
 </head>
 <body>
     <header class="showcase">
@@ -17,24 +17,24 @@
         </div>
 
         <form action="/Costumer/Salvar" method="post" class="showcase-content ">
+            <div asp-validation-summary="All" class="text-danger"></div>
             <input type="hidden" name="Operacao" value="I" />
 
-
             <div class="form-group">
-                <input class="form-control" name="Name" type="text" id="Name" placeholder="Nome" >
-                <span asp-validation-for="Name" class="text-danger"></span>
+                <label for="Name">Nome</label>
+                <input class="form-control" style="width:358px" required name="Name" type="text" id="Name" placeholder="Ex: Glauber">
             </div><br>
             <div class="form-group">
-                <input class="form-control" name="Email" type="text" id="Email" placeholder="E-mail" >
-                <span asp-validation-for="Email" class="text-danger"></span>
+                <label for="Email">Email</label> 
+                <input class="form-control" style="width:358px" required name="Email" type="text" id="Email" placeholder="glauber@email.com">
             </div><br>
             <div class="form-group">
-                <input class="form-control" name="Password" type="password" id="Password" placeholder="Senha" >
-                <span asp-validation-for="Password" class="text-danger"></span>
+                <label for="Password">Senha</label>
+                <input class="form-control" style="width:358px" required name="Password" type="password" id="Password" placeholder="#$%¨">
             </div><br>
             <div class="form-group">
-                <input class="form-control" name="ConfirmPassword" type="password" id="ConfirmPassword" placeholder="Confirme a senha" >
-                <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+                <label for="ConfirmPassword">Confirme a Senha</label>
+                <input class="form-control" style="width:358px" required name="ConfirmPassword" type="password" id="ConfirmPassword" placeholder="#$%¨">
             </div><br>
             <input type="submit" class="btn btn-lg" value="Enviar" />
             <a href="/Login/Index" class="btn btn-lg">Voltar</a>
