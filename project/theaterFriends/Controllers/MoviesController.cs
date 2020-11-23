@@ -41,7 +41,7 @@ namespace theaterFriends.Controllers
             if (model.Min_age < 0 || model.Min_age > 18)
             {
                 ModelState.Remove("Min_Age");
-                ModelState.AddModelError("Min_age", "Idade mínima deve estar entre 0 e 18");
+                ModelState.AddModelError("Min_age", "Idade mínima deve estar entre 0 e 18)");
             }
 
             if (string.IsNullOrEmpty(model.Language))

@@ -33,10 +33,7 @@ namespace theaterFriends.Controllers
                 ModelState.AddModelError("Email", "Email inválido!");
 
             if (string.IsNullOrEmpty(model.Password) || model.Password.Length < 7)
-                ModelState.AddModelError("Password", "Senha inválido (tamanho mínimo de 8 caracteres!");
-
-            if (string.IsNullOrEmpty(model.ConfirmPassword) || model.ConfirmPassword.Length < 7)
-                ModelState.AddModelError("ConfirmPassword", "Senha inválido (tamanho mínimo de 8 caracteres!");
+                ModelState.AddModelError("Password", "Senha inválida (tamanho mínimo de 8 caracteres!");
 
             if (model.Password != model.ConfirmPassword)
                 ModelState.AddModelError("Password", "As senhas não batem!");

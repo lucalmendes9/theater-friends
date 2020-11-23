@@ -28,16 +28,18 @@
             </div><br>
             <input class="form-control" name="table" type="hidden" id="table" value="@ViewBag.table">
             <input type="submit" class="btn btn-lg" value="Entrar" />
+            <a href="/Home/Index" class="btn btn-lg">Voltar</a>
+            <br />
             @if (@ViewBag.table != "Employer")
             {
-                <a href="/Costumer/Create" class="btn btn-lg">Cadastre-se</a>
+                <a href="/Costumer/Create" class="btn btn-lg row col-xs-12 col-sm-12 col-md-12 col-lg-12 " align="center" style="margin-top: 100px;">Cadastre-se</a>
             }
-            <a href="/Home/Index" class="btn btn-lg">Voltar</a>
             @if (ViewBag.Erro != null)
             {
                 <p style="background-color: red;text-align: center;color: #FFF;border-radius: 20px;">@ViewBag.Erro</p>
             }
         </form>
     </header>
+    
 </body>
 </html>
