@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using theaterFriends.DAO;
 using theaterFriends.Models;
 
 namespace theaterFriends.Controllers
@@ -11,7 +12,22 @@ namespace theaterFriends.Controllers
     {
         public MoviesController()
         {
-            //DAO = new MoviesDAO();
+            DAO = new MoviesDAO();
+        }
+
+        
+        public IActionResult Views(string id)
+        {
+            var list = DAO.ConsultaHorario(Convert.ToInt32(id));
+            var movie = DAO.Consulta(Convert.ToInt32(id));
+            ViewBag.Name = movie.Name;
+            ViewBag.Description = movie.Description;
+            ViewBag.Image = movie.ImagemEmBase64;
+            ViewBag.Type = movie.Type;
+            ViewBag.Min_age = movie.Min_age;
+            ViewBag.Language = movie.Language;
+
+            return View("Views", list);
         }
 
         /*private void PreencheComboBoxCidade()
