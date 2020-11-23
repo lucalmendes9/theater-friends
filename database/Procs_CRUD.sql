@@ -1,4 +1,4 @@
---------------- CREATE PROC'S PRADï¿½O ---------------
+--------------- CREATE PROC'S PRADÃO ---------------
 
 create procedure spDelete
 (@id int, @tabela varchar(max)) as
@@ -46,7 +46,7 @@ create procedure spInsert_Employer
 (@id int,@name varchar(max), @email varchar(max), @password varchar(max), @employer_role varchar(20), @hired_at date) as
 begin
 	insert into Employer("name", email, "password", employer_role, hired_at)
-	values (@name, @email, @password, @employer_role,@hired_at)
+	values (@name, @email, @password, @employer_role, @hired_at)
 end
 GO
 
@@ -80,6 +80,15 @@ begin
 end
 go
 
+--Insert new Localization
+create procedure spInsert_Localization
+(@id int,@phone varchar(max), @address varchar(max), @number int, @neighbourhood varchar(max),
+ @city varchar(max),@state varchar(max)) as
+begin
+	insert into Localization(phone, "address", number, neighbourhood, city, "state")
+	values (@phone, @address, @number, @neighbourhood, @city, @state)
+end
+
 
 --------------- CREATE PROC'S UPDATE ---------------
 
@@ -106,8 +115,8 @@ GO
 
 
 --Alter a theater
-create procedure spUpdate_Theaters
-(@id int, @description varchar, @localization_id int, @open_hour varchar, @close_hour varchar, @work_days int) as
+alter procedure spUpdate_Theaters
+(@id int, @description varchar(max), @localization_id int, @open_hour varchar(max), @close_hour varchar(max), @work_days int) as
 begin
 	update Theaters set
 		"description" = @description, localization_id = @localization_id, open_hour = @open_hour, close_hour = @close_hour, work_days = @work_days
@@ -116,7 +125,7 @@ end
 go
 
 
---Insert new Room
+--Alter a room
 create procedure spUpdate_Rooms
 (@id int,@name varchar(max), @seats int, @theaters_id int) as
 begin
@@ -128,29 +137,33 @@ GO
 
 
 --Alter a Movie
-create procedure spUpdate_Movies
-(@id int, @description varchar, @cover varbinary(max), @type varchar, @length int, @min_age int, @language varchar(max), @subtitle bit) as
+alter procedure spUpdate_Movies
+(@id int, @description varchar(max), @cover varbinary(max), @type varchar(max), @length int, @min_age int, @language varchar(max), @subtitle bit) as
 begin
 	update Movies set
-		"description" = @description, cover = @cover, "type" = @type, "length" = @length, min_age,
+		"description" = @description, cover = @cover, "type" = @type, "length" = @length, min_age = @min_age,
 		"language" = @language, subtitle = @subtitle
 	where id = @id
 end
 go
 
 
---Criar login
-create procedure spLogin
-( @email varchar(max), @pass varchar(max), @tabela varchar(max) ) as
+--Alter a Localization
+create procedure spUpdate_Localization
+(@id int,@phone varchar(max), @address varchar(max), @number int, @neighbourhood varchar(max),
+ @city varchar(max),@state varchar(max)) as
 begin
-	declare @sql varchar(1000);
-	set @sql = ' where ';
-	exec('select * from ' + @tabela +
-		 ' where "email" = ''' + @email + ''' and "password" = '''+ @pass +''' ' )
+	update Localization set
+		phone = @phone, "address" = @address, number = @number, 
+		neighbourhood = @neighbourhood, city = @city, "state" = @state
+	where id = @id
 end
-go
+
 
 ------------------------------ TESTING AREA ------------------------------
 exec spInsert_Costumer 1, 'Heitor', 'heitor@gmail.com', 'japones', '10/10/2020'
-exec spInsert_Costumer 2, 'Joï¿½o', 'joao@gmail.com', 'joaozinho', '08/08/2020'
-select * from Costumer
+exec spInsert_Costumer 2, 'João', 'joao@gmail.com', 'joaozinho', '08/08/2020'
+
+exec spInsert_Employer 1, 'Admin', 'admin@email.com', 'admin1234', 'Administrador','08/08/2020'
+exec spInsert_Employer 2, 'João', 'joao@gmail.com', 'joaozinho', 'Pipoqueiro', '08/08/2020'
+select * from Employer
