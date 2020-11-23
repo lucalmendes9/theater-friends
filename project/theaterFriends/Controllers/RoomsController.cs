@@ -36,12 +36,11 @@ namespace theaterFriends.Controllers
 
         protected override void ValidaDados(RoomsViewModel model, string operacao)
         {
-            base.ValidaDados(model, operacao);
             if (string.IsNullOrEmpty(model.Name))
                 ModelState.AddModelError("Name", "Nome inválido!");
 
             if (model.Seats < 10 || model.Seats > 100)
-                ModelState.AddModelError("Seats", "Quantidade de assentos inválidos (Mínimo 10 assentos, Máximo 100!");
+                ModelState.AddModelError("Seats", "Assentos inválidos (Mín 10 , Máx 100!)");
 
             if (model.Theaters_id <= 0)
             {

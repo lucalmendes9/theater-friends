@@ -7,7 +7,7 @@
 <a href="/Theaters/create">Novo Registro</a>
 <br />
 
-<table class="table table-bordered table-responsive">
+<table class="table table-bordered table-responsive text-center">
     <tr>
         <td><b>Ações</b></td>
         <td><b>Id</b></td>
@@ -15,7 +15,6 @@
         <td><b>ID Localização</b></td>
         <td><b>Hora de Abertura</b></td>
         <td><b>Hora de Fechamento</b></td>
-        <td><b>Dias de Trabalho</b></td>
     </tr>
 
     @foreach (var Cinema in Model)
@@ -30,9 +29,6 @@
             <td>@Cinema.Localization_id</td>
             <td>@Cinema.Open_hour</td>
             <td>@Cinema.Close_hour</td>
-            <td>@Cinema.Work_days</td>
-
-
         </tr>
 
     }

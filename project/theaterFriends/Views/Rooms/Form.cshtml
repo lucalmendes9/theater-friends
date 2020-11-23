@@ -8,46 +8,42 @@
     <meta charset="UTF-8">
     <TITLE>Registro de Salas</TITLE>
     <link href="asserts/stylesheets/stilize/stilize.min.css" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="~/css/client_func_login.css">
+    <link rel="stylesheet" href="~/css/client_func_login.css?v=1.0.3">
 </head>
 <body>
-    <header class="showcase">
+    <header>
         <div class="showcase-top">
             <img src="~/imagens/logo.png" alt="" />
         </div>
         <form action="/Rooms/Salvar" method="post" class="showcase-content ">
+            <div asp-validation-summary="All" class="text-danger"></div>
             <input type="hidden" name="Operacao" value="@ViewBag.Operacao" />
 
             @if (ViewBag.Operacao == "A")
             {
                 <label for="Id">Código da Sala</label>
-                <input asp-for="Id" readonly class="form-control disabled" />
+                <input asp-for="Id" readonly class="form-control disabled" style="width:358px" />
             }
 
             <div class="form-group">
                 <label for="Name" class="control-label">Nome</label>
-                <input class="form-control" name="Name" type="text" id="Name" placeholder="Xtreme">
-                <span asp-validation-for="Name" class="text-danger"></span>
+                <input class="form-control" asp-for="Name" placeholder="Xtreme" style="width:358px" required>
             </div><br>
 
             <div class="form-group">
                 <label for="Seats" class="control-label">Quantidade de Assentos</label>
-                <input asp-for="Seats" class="form-control" />
-                <span asp-validation-for="Seats" class="text-danger"></span>
+                <input asp-for="Seats" class="form-control" style="width:358px" required />
             </div><br>
 
             <div class="form-group">
                 <label for="Theaters_id" class="control-label">Código do Cinema</label>
-                <select asp-for="Theaters_id" asp-items="@ViewBag.Theaters" class="form-control"></select>
-                <span asp-validation-for="Theaters_id" class="text-danger"></span>
+                <select asp-for="Theaters_id" asp-items="@ViewBag.Theaters" class="form-control" style="width:386px"></select>
             </div><br>
 
             <input type="submit" class="btn btn-lg" value="Enviar" />
             <a href="/Rooms/Index" class="btn btn-lg">Voltar</a>
 
-
         </form>
     </header>
-    <script type="text/javascript" src="~/js/cadastroFunc.js"></script>
 </body>
 </html>
