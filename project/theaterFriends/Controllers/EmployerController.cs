@@ -35,14 +35,15 @@ namespace theaterFriends.Controllers
             if (string.IsNullOrEmpty(model.Password) || model.Password.Length < 7)
                 ModelState.AddModelError("Password", "Senha inválida (mínimo de 8 caracteres!)");
 
-            if (model.Password != model.ConfirmPassword)
-                ModelState.AddModelError("Password", "As senhas não batem!");
-
-            if(ViewBag.Opecao == "I")
+            if(ViewBag.Operacao == "I")
             {
-                if (string.IsNullOrEmpty(model.Employer_role))
-                    ModelState.AddModelError("Employer_role", "Cargo Inválido!");
+                if (model.Password != model.ConfirmPassword)
+                    ModelState.AddModelError("Password", "As senhas não batem!");
             }
+            
+
+            if (string.IsNullOrEmpty(model.Employer_role))
+                ModelState.AddModelError("Employer_role", "Cargo Inválido!");
 
             if (ModelState["Hired_At"].ValidationState == ModelValidationState.Invalid || model.Hired_At > DateTime.Now)
             {
