@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Filters;
 using theaterFriends.DAO;
 using theaterFriends.Models;
 
@@ -45,6 +46,10 @@ namespace theaterFriends.Controllers
         {
             HttpContext.Session.Clear();
             return RedirectToAction("index", "Home");
+        }
+        public override void OnActionExecuting(ActionExecutingContext context)
+        {
+            //Metodo sobrescrito pois as telas dessa controler podem ser acessadas sem login
         }
     }
 }
