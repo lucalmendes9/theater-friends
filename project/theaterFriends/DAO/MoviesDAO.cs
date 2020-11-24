@@ -14,7 +14,7 @@ namespace theaterFriends.DAO
         {
             object imgByte = model.ImagemEmByte;
             if (imgByte == null)
-                imgByte = new byte[0];  //DBNull.Value;
+                imgByte = DBNull.Value;
 
             List<SqlParameter> parameters = new List<SqlParameter>();
             parameters.Add(new SqlParameter("id", model.Id));
@@ -29,25 +29,7 @@ namespace theaterFriends.DAO
 
             return parameters.ToArray();
         }
-
-        //public override List<MoviesViewModel> Listagem()
-        //{
-        //    var p = new SqlParameter[]
-        //       {
-        //        new SqlParameter("tabela", Tabela),
-        //        new SqlParameter("Ordem", "id")
-        //       };
-        //    var tabela = HelperDAO.ExecutaProcSelect("sp_ListagemExibicao", p);
-        //    List<MoviesViewModel> lista = new List<MoviesViewModel>();
-        //    foreach (DataRow registro in tabela.Rows)
-        //    {
-        //        lista.Add(MontaModel(registro));
-        //    }
-        //    return lista;
-
-        //}
-
-      
+    
         protected override MoviesViewModel MontaModel(DataRow registro)
         {
             MoviesViewModel movie = new MoviesViewModel
