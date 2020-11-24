@@ -16,6 +16,12 @@ namespace theaterFriends.Models
         public string Language { get; set; }
         public bool Subtitle { get; set; }
 
+        //Atributos não mapeados
+
+        public string City { get; set; }
+        public string Description_Theater { get; set; }
+        public DateTime Start_Date { get; set; }
+
         //For Cover = Image
 
         public IFormFile Imagem { get; set; } //Imagem recebida do form pelo controller

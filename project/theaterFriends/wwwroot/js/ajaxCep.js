@@ -2,6 +2,8 @@
 $(document).ready(function () {
 
     $('input[name=Number]').mask('0#####');
+    $('input[name=Open_hour]').mask('00:00');
+    $('input[name=Close_hour]').mask('00:00');
     $('input[name=State]').mask('AA');
     $('input[name=Cep]').mask('00000-000');
     $('input[name=Phone]').mask('(00) 0000-0000#');

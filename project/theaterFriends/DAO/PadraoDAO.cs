@@ -16,7 +16,6 @@ namespace theaterFriends.DAO
             SetTabela();
         }
         protected string Tabela { get; set; }
-
         protected string NomeProcedureListagem { get; set; } = "spListagem";
         protected abstract SqlParameter[] CriaParametros(T model);
         protected abstract T MontaModel(DataRow registro);
@@ -67,6 +66,23 @@ namespace theaterFriends.DAO
                 return null;
             else
                 return MontaModel(tabela.Rows[0]);
+        }
+
+
+        public virtual List<T> ConsultaHorario(int id)
+        {
+            var p = new SqlParameter[]
+            {
+                new SqlParameter("id", id),
+                //new SqlParameter("tabela", Tabela)
+            };
+            var tabela = HelperDAO.ExecutaProcSelect("sp_ListagemExibicao", p);
+            List<T> lista = new List<T>();
+            foreach (DataRow registro in tabela.Rows)
+            {
+                lista.Add(MontaModel(registro));
+            }
+            return lista;
         }
 
         public virtual List<T> Listagem()
