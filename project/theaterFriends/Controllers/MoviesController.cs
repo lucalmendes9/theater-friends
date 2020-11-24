@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Filters;
 using theaterFriends.DAO;
 using theaterFriends.Models;
 
@@ -15,25 +16,24 @@ namespace theaterFriends.Controllers
             DAO = new MoviesDAO();
         }
 
-        
+
         public IActionResult Views(string id)
         {
             var list = DAO.ConsultaHorario(Convert.ToInt32(id));
-            var movie = DAO.Consulta(Convert.ToInt32(id));
-            ViewBag.Name = movie.Name;
-            ViewBag.Description = movie.Description;
-            ViewBag.Image = movie.ImagemEmBase64;
-            ViewBag.Type = movie.Type;
-            ViewBag.Min_age = movie.Min_age;
-            ViewBag.Language = movie.Language;
+            var tabela = DAO.Consulta(Convert.ToInt32(id));
+
+            ViewBag.Name = tabela.Name;
+            ViewBag.ImagemEmBase64 = tabela.ImagemEmBase64;
+            ViewBag.Description = tabela.Description;
+            ViewBag.Length = tabela.Length;
+            ViewBag.Min_age = tabela.Min_age;
+            ViewBag.Type = tabela.Type;
+            ViewBag.Language = tabela.Language;
 
             return View("Views", list);
         }
 
-        public IActionResult Views()
-        {
-            return View();
-        }
+
 
         protected override void ValidaDados(MoviesViewModel model, string operacao)
         {
@@ -51,7 +51,7 @@ namespace theaterFriends.Controllers
             {
                 ModelState.Remove("Length");
                 ModelState.AddModelError("Length", "Duração Invalida");
-            } 
+            }
 
             if (model.Min_age < 0 || model.Min_age > 18)
             {
@@ -61,6 +61,10 @@ namespace theaterFriends.Controllers
 
             if (string.IsNullOrEmpty(model.Language))
                 ModelState.AddModelError("Language", "Linguagem inválida!");
+        }
+        public override void OnActionExecuting(ActionExecutingContext context)
+        {
+            //Metodo sobrescrito pois as telas dessa controler podem ser acessadas sem login
         }
     }
 }
