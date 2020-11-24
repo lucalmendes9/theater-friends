@@ -18,7 +18,7 @@ namespace theaterFriends.Controllers
         protected string ViewParaCadastro { get; set; } = "Form";
 
 
-        public virtual IActionResult Index(string table = "")
+        public virtual IActionResult Index(string table = "", string value = "", string option = "")
         {
             var lista = DAO.Listagem();
             return View(ViewParaListagem, lista);
