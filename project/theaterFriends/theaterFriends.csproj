@@ -31,4 +31,9 @@
     <Folder Include="Views\Schedule_Exhibition\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Include="wwwroot\lib\SweetAlert\sweetalert.js" />
+    <None Include="wwwroot\lib\SweetAlert\sweetalert.min.js" />
+  </ItemGroup>
+
 </Project>

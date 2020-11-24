@@ -3,8 +3,23 @@
 }
 <h1>Lista de Funcionários</h1>
 
-<a href="/Employer/create">Novo Registro</a>
-<br />
+<a class="btn btn-success" href="/Employer/create">Novo Registro</a>
+<br /><br />
+
+<form action="/Employer/Index" method="get">
+    <label for="value">Pesquisa</label>
+    <div class="form-row">
+        <input class="form-inline" type="text" name="value" placeholder="digite aqui..." required />&nbsp;
+        <select name="option" class="form-inline form-control-sm" required>
+            <option value="">Selecione</option>
+            <option value="name">Nome</option>
+            <option value="email">E-mail</option>
+            <option value="employer_role">Cargo</option>
+        </select>&nbsp;
+        <input type="submit" class="btn btn-primary btn-sm" value="Buscar" />
+    </div>
+    <br /> 
+</form>
 
 <table class="table table-bordered table-responsive text-center">
     <tr>

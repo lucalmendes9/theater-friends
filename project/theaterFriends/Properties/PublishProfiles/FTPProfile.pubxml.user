@@ -80,13 +80,13 @@ ao editar este arquivo MSBuild. Para saber mais sobre isso, visite https://go.mi
       <publishTime>07/26/2018 18:17:08</publishTime>
     </File>
     <File Include="Microsoft.CodeAnalysis.CSharp.Workspaces.dll">
-      <publishTime>04/30/2018 16:29:02</publishTime>
+      <publishTime>08/25/2020 19:40:27</publishTime>
     </File>
     <File Include="Microsoft.CodeAnalysis.Workspaces.dll">
-      <publishTime>04/30/2018 16:29:04</publishTime>
+      <publishTime>08/25/2020 19:40:32</publishTime>
     </File>
     <File Include="Microsoft.DotNet.PlatformAbstractions.dll">
-      <publishTime>05/15/2018 21:01:34</publishTime>
+      <publishTime>08/25/2020 19:40:31</publishTime>
     </File>
     <File Include="Microsoft.EntityFrameworkCore.Abstractions.dll">
       <publishTime>11/10/2019 22:28:10</publishTime>
@@ -104,7 +104,7 @@ ao editar este arquivo MSBuild. Para saber mais sobre isso, visite https://go.mi
       <publishTime>11/10/2019 22:28:58</publishTime>
     </File>
     <File Include="Microsoft.Extensions.DependencyModel.dll">
-      <publishTime>05/15/2018 21:01:34</publishTime>
+      <publishTime>08/25/2020 19:40:15</publishTime>
     </File>
     <File Include="Microsoft.VisualStudio.Web.BrowserLink.dll">
       <publishTime>07/06/2018 00:26:52</publishTime>
@@ -131,10 +131,14 @@ ao editar este arquivo MSBuild. Para saber mais sobre isso, visite https://go.mi
       <publishTime>09/24/2019 19:57:30</publishTime>
     </File>
     <File Include="NuGet.Frameworks.dll">
-      <publishTime>04/24/2018 21:27:10</publishTime>
+      <publishTime>08/25/2020 19:40:19</publishTime>
     </File>
     <File Include="Remotion.Linq.dll">
+<<<<<<< HEAD
       <publishTime>06/02/2018 22:25:00</publishTime>
+=======
+      <publishTime>08/25/2020 19:40:20</publishTime>
+>>>>>>> c076ef30ebd9101b74014308707a9e7677c2424d
     </File>
     <File Include="runtimes/unix/lib/netcoreapp2.0/System.Security.Principal.Windows.dll">
       <publishTime>09/18/2018 19:38:10</publishTime>
@@ -161,7 +165,7 @@ ao editar este arquivo MSBuild. Para saber mais sobre isso, visite https://go.mi
       <publishTime>09/18/2018 19:38:16</publishTime>
     </File>
     <File Include="System.Interactive.Async.dll">
-      <publishTime>11/21/2016 14:05:54</publishTime>
+      <publishTime>08/25/2020 19:40:14</publishTime>
     </File>
     <File Include="System.IO.Pipelines.dll">
       <publishTime>11/29/2018 15:39:14</publishTime>
@@ -374,16 +378,16 @@ ao editar este arquivo MSBuild. Para saber mais sobre isso, visite https://go.mi
       <publishTime>11/20/2020 20:28:47</publishTime>
     </File>
     <File Include="wwwroot/lib/jquery-validation/dist/additional-methods.js">
-      <publishTime>11/16/2020 19:22:25</publishTime>
+      <publishTime>11/16/2020 21:44:11</publishTime>
     </File>
     <File Include="wwwroot/lib/jquery-validation/dist/additional-methods.min.js">
-      <publishTime>11/16/2020 19:22:25</publishTime>
+      <publishTime>11/16/2020 21:44:11</publishTime>
     </File>
     <File Include="wwwroot/lib/jquery-validation/dist/jquery.validate.js">
-      <publishTime>11/16/2020 19:22:25</publishTime>
+      <publishTime>11/16/2020 21:44:11</publishTime>
     </File>
     <File Include="wwwroot/lib/jquery-validation/dist/jquery.validate.min.js">
-      <publishTime>11/16/2020 19:22:25</publishTime>
+      <publishTime>11/16/2020 21:44:11</publishTime>
     </File>
     <File Include="wwwroot/lib/jquery-validation/LICENSE.md">
       <publishTime>11/20/2020 20:28:47</publishTime>

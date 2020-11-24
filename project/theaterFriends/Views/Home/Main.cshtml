@@ -1,6 +1,4 @@
 ﻿@model List<MoviesViewModel>
-
-
 @{
     Layout = null;
 }
@@ -25,6 +23,7 @@
             @if (HttpContextAccessor.HttpContext.Session.GetString("Logado") == "true")
             {
                 <p style="text-align: right; position: absolute; right: 25px; ">Olá, @HttpContextAccessor.HttpContext.Session.GetString("Name")</p>
+                <br />
                 <a href="/Login/LogOff" class="btn btn-rounded">Sair</a>
             }
             else
@@ -33,11 +32,11 @@
             }
         </div>
         <div class="showcase-content">
-            <img src="~/imagens/harakiri.jpg" />
-            <img src="~/imagens/devoltaprofuturo.jpeg" />
-            <img src="~/imagens/pierrot.jpg" />
-            <img src="~/imagens/edward.jpg" />
-            <img src="~/imagens/exorcista.jpg" />
+            <a href="/Movies/Views?id=4"><img src="~/imagens/harakiri.jpg" /></a>
+            <a href="/Movies/Views?id=5"><img src="~/imagens/devoltaprofuturo.jpeg" /></a>
+            <a href="/Movies/Views?id=6"><img src="~/imagens/pierrot.jpg" /></a>
+            <a href="/Movies/Views?id=7"><img src="~/imagens/edward.jpg" /></a>
+            <a href="/Movies/Views?id=13"><img src="~/imagens/exorcista.jpg" /></a>           
         </div>
     </header>
     <section class="tabs">
@@ -65,14 +64,25 @@
                         <p class="text-lg">
                             Veja se nosso cinema já está em sua cidade.
                         </p>
-                        <a id="myBtn" class="btn btn-lg">Clique aqui!</a>
+                        <div>
 
-                        <div id="myModal" class="modal">
+                            <table style="table-layout:auto" class="table table-responsive">
+                                <tr>
+                                    <td>Cinema</td>
+                                    <td>Localização</td>
+                                </tr>
 
-                            <div class="modal-content">
-                                <span class="close">&times;</span>
-                                <p>Some text in the Modal..</p>
-                            </div>
+                                @if (ViewBag.lista != null)
+                                {
+                                    @foreach (var m in ViewBag.lista)
+                                    {
+                                        <tr>
+                                            <td>@m.Description</td>
+                                            <td>@m.City</td>
+                                        </tr>
+                                    }
+                                }
+                            </table>
 
                         </div>
                     </div>
@@ -131,9 +141,10 @@
 
                 </div>
                 <form>
-                    <table style="table-layout:auto" class="table table-responsive">
+                    <table style="table-layout:auto; color:azure" class="table table-responsive">
                         <tr>
                             <td>Título</td>
+                            <td>Gênero</td>
                             <td>Duração</td>
                             <td>Idioma</td>
                             <td>Legenda</td>
@@ -142,17 +153,17 @@
                         @if (Model != null)
                         {
 
-                            @foreach (var m in Model)
+                            @foreach (var filmes in Model)
                             {
                                 <tr>
                                     <td>
-                                        <a href="theaterFriends/Views/Movies/Index?id=@m.Id">@m.Name</a>
+                                        <a href="/Movies/Views?id=@filmes.Id">@filmes.Name</a>
                                     </td>
-                                    <td>@m.Type</td>
-                                    <td>@m.Length.ToString()</td>
-                                    <td>@m.Language</td>
+                                    <td>@filmes.Type</td>
+                                    <td>@filmes.Length</td>
+                                    <td>@filmes.Language</td>
                                     <td>
-                                        @if (m.Subtitle == true)
+                                        @if (filmes.Subtitle == true)
                                         {
                                             <p>LEGENDADO</p>
                                         }
@@ -171,6 +182,8 @@
 
         </div>
     </section>
+
+    <br /><br /><br /><br />
 
     <footer class="footer">
         <div class="footer-cols">

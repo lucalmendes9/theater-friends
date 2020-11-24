@@ -18,7 +18,7 @@ namespace theaterFriends.Controllers
         protected string ViewParaCadastro { get; set; } = "Form";
 
 
-        public virtual IActionResult Index(string table = "")
+        public virtual IActionResult Index(string table = "", string value = "", string option = "")
         {
             var lista = DAO.Listagem();
             return View(ViewParaListagem, lista);
@@ -103,10 +103,8 @@ namespace theaterFriends.Controllers
             }
         }
 
-
-        //Colocar em Controllers que não possam ser acessada sem login
-
-        /*public override void OnActionExecuting(ActionExecutingContext context)
+        //Colocar em Controllers herdam e ser acessada sem login
+        public override void OnActionExecuting(ActionExecutingContext context)
         {
             if (!HelperController.VerificaUserLogado(HttpContext.Session))
                 context.Result = RedirectToAction("Index", "Login");
@@ -115,6 +113,6 @@ namespace theaterFriends.Controllers
                 ViewBag.Logado = true;
                 base.OnActionExecuting(context);
             }
-        }*/
+        }
     }
 }

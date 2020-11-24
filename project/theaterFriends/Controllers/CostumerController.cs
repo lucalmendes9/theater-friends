@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Filters;
 using theaterFriends.DAO;
 using theaterFriends.Models;
 
@@ -70,6 +71,12 @@ namespace theaterFriends.Controllers
                 PreencheDadosParaView(Operacao, model);
                 return View(ViewParaCadastro, model);
             }
+
+
+        }
+        public override void OnActionExecuting(ActionExecutingContext context)
+        {
+            //Metodo sobrescrito pois as telas dessa controler podem ser acessadas sem login
         }
     }
 }
