@@ -13,15 +13,15 @@ namespace theaterFriends.Controllers
     public class HomeController : PadraoController<MoviesViewModel>
     {
         TheatersDAO DAOT = new TheatersDAO();
-        //public IActionResult Index()
-        //{
-        //    ViewBag.lista = DAOT.Listagem();
-        //    return View();
-        //}
+        public IActionResult Main()
+        {
+            ViewBag.lista = DAOT.Listagem();
+            var lista = DAO.Listagem();
+            return View(lista);
+        }
 
         public HomeController()
         {
-            ViewBag.lista = DAOT.Listagem();
             DAO = new MoviesDAO();
         }
 
