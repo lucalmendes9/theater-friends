@@ -12,7 +12,7 @@ namespace theaterFriends.Controllers
     public class LoginController : PadraoController<PadraoViewModel>
     {
 
-        public override IActionResult Index(string table)
+        public override IActionResult Index(string table, string value = "", string option = "")
         {
             ViewBag.table = table;
             if (TempData["table"] != null)

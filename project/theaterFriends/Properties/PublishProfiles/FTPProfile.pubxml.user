@@ -23,7 +23,7 @@ ao editar este arquivo MSBuild. Para saber mais sobre isso, visite https://go.mi
       <publishTime>07/26/2018 18:17:04</publishTime>
     </File>
     <File Include="Microsoft.AspNetCore.dll">
-      <publishTime>12/06/2018 23:21:56</publishTime>
+      <publishTime>06/12/2018 23:21:56</publishTime>
     </File>
     <File Include="Microsoft.AspNetCore.Mvc.Abstractions.dll">
       <publishTime>09/20/2018 15:08:28</publishTime>
@@ -62,13 +62,13 @@ ao editar este arquivo MSBuild. Para saber mais sobre isso, visite https://go.mi
       <publishTime>09/20/2018 15:08:22</publishTime>
     </File>
     <File Include="Microsoft.AspNetCore.Server.IISIntegration.dll">
-      <publishTime>12/06/2018 23:21:38</publishTime>
+      <publishTime>06/12/2018 23:21:38</publishTime>
     </File>
     <File Include="Microsoft.AspNetCore.Server.Kestrel.Core.dll">
       <publishTime>07/26/2018 18:17:10</publishTime>
     </File>
     <File Include="Microsoft.AspNetCore.Server.Kestrel.dll">
-      <publishTime>07/26/2018 18:17:00</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Microsoft.AspNetCore.Server.Kestrel.Https.dll">
       <publishTime>07/26/2018 18:17:06</publishTime>
@@ -89,25 +89,25 @@ ao editar este arquivo MSBuild. Para saber mais sobre isso, visite https://go.mi
       <publishTime>05/15/2018 21:01:34</publishTime>
     </File>
     <File Include="Microsoft.EntityFrameworkCore.Abstractions.dll">
-      <publishTime>10/11/2019 22:28:10</publishTime>
+      <publishTime>11/10/2019 22:28:10</publishTime>
     </File>
     <File Include="Microsoft.EntityFrameworkCore.Design.dll">
-      <publishTime>10/11/2019 22:26:02</publishTime>
+      <publishTime>11/10/2019 22:26:02</publishTime>
     </File>
     <File Include="Microsoft.EntityFrameworkCore.dll">
-      <publishTime>10/11/2019 22:26:00</publishTime>
+      <publishTime>11/10/2019 22:26:00</publishTime>
     </File>
     <File Include="Microsoft.EntityFrameworkCore.Relational.dll">
-      <publishTime>10/11/2019 22:24:58</publishTime>
+      <publishTime>11/10/2019 22:24:58</publishTime>
     </File>
     <File Include="Microsoft.EntityFrameworkCore.SqlServer.dll">
-      <publishTime>10/11/2019 22:28:58</publishTime>
+      <publishTime>11/10/2019 22:28:58</publishTime>
     </File>
     <File Include="Microsoft.Extensions.DependencyModel.dll">
       <publishTime>05/15/2018 21:01:34</publishTime>
     </File>
     <File Include="Microsoft.VisualStudio.Web.BrowserLink.dll">
-      <publishTime>06/07/2018 00:26:52</publishTime>
+      <publishTime>07/06/2018 00:26:52</publishTime>
     </File>
     <File Include="Microsoft.VisualStudio.Web.CodeGeneration.Contracts.dll">
       <publishTime>09/24/2019 19:57:20</publishTime>
@@ -134,7 +134,7 @@ ao editar este arquivo MSBuild. Para saber mais sobre isso, visite https://go.mi
       <publishTime>04/24/2018 21:27:10</publishTime>
     </File>
     <File Include="Remotion.Linq.dll">
-      <publishTime>02/06/2018 22:25:00</publishTime>
+      <publishTime>06/02/2018 22:25:00</publishTime>
     </File>
     <File Include="runtimes/unix/lib/netcoreapp2.0/System.Security.Principal.Windows.dll">
       <publishTime>09/18/2018 19:38:10</publishTime>
@@ -143,19 +143,19 @@ ao editar este arquivo MSBuild. Para saber mais sobre isso, visite https://go.mi
       <publishTime>09/18/2018 19:38:10</publishTime>
     </File>
     <File Include="System.Composition.AttributedModel.dll">
-      <publishTime>11/05/2016 04:55:42</publishTime>
+      <publishTime>05/11/2016 04:55:42</publishTime>
     </File>
     <File Include="System.Composition.Convention.dll">
-      <publishTime>11/05/2016 04:55:42</publishTime>
+      <publishTime>05/11/2016 04:55:42</publishTime>
     </File>
     <File Include="System.Composition.Hosting.dll">
-      <publishTime>11/05/2016 04:55:42</publishTime>
+      <publishTime>05/11/2016 04:55:42</publishTime>
     </File>
     <File Include="System.Composition.Runtime.dll">
-      <publishTime>11/05/2016 04:55:44</publishTime>
+      <publishTime>05/11/2016 04:55:44</publishTime>
     </File>
     <File Include="System.Composition.TypedParts.dll">
-      <publishTime>11/05/2016 04:55:46</publishTime>
+      <publishTime>05/11/2016 04:55:46</publishTime>
     </File>
     <File Include="System.Diagnostics.DiagnosticSource.dll">
       <publishTime>09/18/2018 19:38:16</publishTime>
@@ -167,37 +167,64 @@ ao editar este arquivo MSBuild. Para saber mais sobre isso, visite https://go.mi
       <publishTime>11/29/2018 15:39:14</publishTime>
     </File>
     <File Include="System.Runtime.CompilerServices.Unsafe.dll">
-      <publishTime>09/18/2018 19:38:10</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="System.Security.Principal.Windows.dll">
       <publishTime>09/18/2018 19:38:10</publishTime>
     </File>
     <File Include="theaterFriends.deps.json">
-      <publishTime>11/20/2020 22:56:43</publishTime>
+      <publishTime>11/24/2020 00:38:37</publishTime>
     </File>
     <File Include="theaterFriends.dll">
-      <publishTime>11/20/2020 22:56:31</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="theaterFriends.pdb">
-      <publishTime>11/20/2020 22:56:31</publishTime>
+      <publishTime>11/24/2020 00:38:05</publishTime>
     </File>
     <File Include="theaterFriends.runtimeconfig.json">
-      <publishTime>11/20/2020 22:56:32</publishTime>
+      <publishTime>11/24/2020 00:38:23</publishTime>
     </File>
     <File Include="theaterFriends.Views.dll">
-      <publishTime>11/20/2020 22:56:32</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="theaterFriends.Views.pdb">
-      <publishTime>11/20/2020 22:56:32</publishTime>
+      <publishTime>11/24/2020 00:38:22</publishTime>
     </File>
     <File Include="web.config">
-      <publishTime>11/20/2020 22:56:43</publishTime>
+      <publishTime>11/24/2020 00:38:37</publishTime>
+    </File>
+    <File Include="wwwroot/css/bootstrap-theme.css">
+      <publishTime>11/22/2020 03:12:07</publishTime>
+    </File>
+    <File Include="wwwroot/css/bootstrap-theme.css.map">
+      <publishTime>11/22/2020 03:12:07</publishTime>
+    </File>
+    <File Include="wwwroot/css/bootstrap-theme.min.css">
+      <publishTime>11/22/2020 03:12:07</publishTime>
+    </File>
+    <File Include="wwwroot/css/bootstrap-theme.min.css.map">
+      <publishTime>11/22/2020 03:12:07</publishTime>
+    </File>
+    <File Include="wwwroot/css/bootstrap.css">
+      <publishTime>11/22/2020 03:12:07</publishTime>
+    </File>
+    <File Include="wwwroot/css/bootstrap.css.map">
+      <publishTime>11/22/2020 03:12:03</publishTime>
+    </File>
+    <File Include="wwwroot/css/bootstrap.min.css">
+      <publishTime>11/22/2020 03:12:03</publishTime>
+    </File>
+    <File Include="wwwroot/css/bootstrap.min.css.map">
+      <publishTime>11/22/2020 03:12:03</publishTime>
     </File>
     <File Include="wwwroot/css/client_func_login.css">
-      <publishTime>11/20/2020 21:54:50</publishTime>
+      <publishTime>11/24/2020 00:26:53</publishTime>
     </File>
     <File Include="wwwroot/css/home.css">
-      <publishTime>11/20/2020 21:54:50</publishTime>
+      <publishTime>11/24/2020 00:26:53</publishTime>
+    </File>
+    <File Include="wwwroot/css/movie.css">
+      <publishTime>11/22/2020 03:12:02</publishTime>
     </File>
     <File Include="wwwroot/css/site.css">
       <publishTime>11/16/2020 19:22:25</publishTime>
@@ -226,11 +253,20 @@ ao editar este arquivo MSBuild. Para saber mais sobre isso, visite https://go.mi
     <File Include="wwwroot/imagens/exorcista.jpg">
       <publishTime>11/20/2020 21:54:50</publishTime>
     </File>
+    <File Include="wwwroot/imagens/facacoisacerta.jpg">
+      <publishTime>11/22/2020 03:12:02</publishTime>
+    </File>
+    <File Include="wwwroot/imagens/harakiri.jpg">
+      <publishTime>11/22/2020 03:12:02</publishTime>
+    </File>
     <File Include="wwwroot/imagens/instintoPredador.jpg">
       <publishTime>11/20/2020 21:54:50</publishTime>
     </File>
     <File Include="wwwroot/imagens/logo.png">
       <publishTime>11/20/2020 21:54:50</publishTime>
+    </File>
+    <File Include="wwwroot/imagens/pierrot.jpg">
+      <publishTime>11/22/2020 03:12:02</publishTime>
     </File>
     <File Include="wwwroot/imagens/predator.jpg">
       <publishTime>11/20/2020 21:54:50</publishTime>
@@ -250,14 +286,17 @@ ao editar este arquivo MSBuild. Para saber mais sobre isso, visite https://go.mi
     <File Include="wwwroot/images/banner3.svg">
       <publishTime>11/16/2020 19:22:25</publishTime>
     </File>
+    <File Include="wwwroot/js/ajaxCep.js">
+      <publishTime>11/24/2020 00:26:53</publishTime>
+    </File>
     <File Include="wwwroot/js/cadastroFunc.js">
-      <publishTime>11/20/2020 21:54:50</publishTime>
+      <publishTime>11/24/2020 00:26:53</publishTime>
     </File>
     <File Include="wwwroot/js/home.js">
       <publishTime>11/20/2020 21:54:50</publishTime>
     </File>
     <File Include="wwwroot/js/site.js">
-      <publishTime>11/16/2020 19:22:25</publishTime>
+      <publishTime>11/24/2020 00:26:53</publishTime>
     </File>
     <File Include="wwwroot/js/site.min.js">
       <publishTime>11/16/2020 19:22:25</publishTime>

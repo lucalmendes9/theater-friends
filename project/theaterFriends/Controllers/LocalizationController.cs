@@ -16,7 +16,7 @@ namespace theaterFriends.Controllers
             DAO = new LocalizationDAO();
         }
 
-        public override IActionResult Index(string table)
+        public override IActionResult Index(string table, string value = "", string option = "")
         {
             return View();
         }

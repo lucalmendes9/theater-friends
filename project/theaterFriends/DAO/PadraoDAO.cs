@@ -17,6 +17,7 @@ namespace theaterFriends.DAO
         }
         protected string Tabela { get; set; }
         protected string NomeProcedureListagem { get; set; } = "spListagem";
+        protected string NomeProcedureListagemSearch { get; set; } = "spListagemSearch";
         protected abstract SqlParameter[] CriaParametros(T model);
         protected abstract T MontaModel(DataRow registro);
 
@@ -85,14 +86,30 @@ namespace theaterFriends.DAO
             return lista;
         }
 
-        public virtual List<T> Listagem()
+        public virtual List<T> Listagem(string val = "", string option = "")
         {
-            var p = new SqlParameter[]
+            var p = new SqlParameter[] { };
+            if (val.Length > 0 && option.Length > 0)
             {
-                new SqlParameter("tabela", Tabela),
-                new SqlParameter("Ordem", "id")
-            };
-            var tabela = HelperDAO.ExecutaProcSelect(NomeProcedureListagem, p);
+                p = new SqlParameter[]
+                {
+                    new SqlParameter("ordem", "id"),
+                    new SqlParameter("tabela", Tabela),
+                    new SqlParameter("value", val),
+                    new SqlParameter("option", option),
+                };
+            }else
+            {
+                p = new SqlParameter[]
+                {
+                    new SqlParameter("ordem", "id"),
+                    new SqlParameter("tabela", Tabela)
+                };
+            }
+
+            var tabela = HelperDAO.ExecutaProcSelect(
+                val.Length > 0 && option.Length > 0 ? NomeProcedureListagemSearch 
+                    : NomeProcedureListagem, p);
             List<T> lista = new List<T>();
             foreach (DataRow registro in tabela.Rows)
             {

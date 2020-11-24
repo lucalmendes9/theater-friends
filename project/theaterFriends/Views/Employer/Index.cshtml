@@ -6,6 +6,17 @@
 <a href="/Employer/create">Novo Registro</a>
 <br />
 
+<form action="/Employer/Index" method="get">
+    <input type="text" name="value" placeholder="digite aqui..." required/>
+    <select name="option" required>
+        <option value="">Selecione</option>
+        <option value="name">Nome</option>
+        <option value="email">E-mail</option>
+        <option value="employer_role">Cargo</option>
+    </select>
+    <input type="submit" value="Buscar" />
+</form>
+
 <table class="table table-bordered table-responsive text-center">
     <tr>
         <td><b>Ações</b></td>
