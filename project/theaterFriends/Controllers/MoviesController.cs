@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
 using theaterFriends.DAO;
@@ -33,8 +34,6 @@ namespace theaterFriends.Controllers
             return View("Views", list);
         }
 
-
-
         protected override void ValidaDados(MoviesViewModel model, string operacao)
         {
             //base.ValidaDados(model, operacao);
@@ -61,7 +60,26 @@ namespace theaterFriends.Controllers
 
             if (string.IsNullOrEmpty(model.Language))
                 ModelState.AddModelError("Language", "Linguagem inválida!");
+
+            if (model.Imagem != null && model.Imagem.Length / 1024 / 1024 >= 2)
+                ModelState.AddModelError("Imagem", "Imagem limitada a 2 mb.");
+            if (ModelState.IsValid)
+            {
+                //na alteração, se não foi informada a imagem, iremos manter a que já estava salva.
+                if (operacao == "A" && model.Imagem == null)
+                {
+                    MoviesViewModel mov = DAO.Consulta(model.Id);
+                    model.ImagemEmByte = mov.ImagemEmByte;
+                }
+                else
+                {
+                    model.ImagemEmByte = HelperController.ConvertImageToByte(model.Imagem);
+                }
+            }
+
         }
+
+
         public override void OnActionExecuting(ActionExecutingContext context)
         {
             //Metodo sobrescrito pois as telas dessa controler podem ser acessadas sem login
