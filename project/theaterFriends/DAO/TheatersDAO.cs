@@ -34,13 +34,19 @@ namespace theaterFriends.DAO
                 Open_hour = registro["open_hour"].ToString(),
                 Close_hour = registro["close_hour"].ToString(),
             };
+
+            if (registro.Table.Columns.Contains("nomeCidade"))
+                c.City = registro["nomeCidade"].ToString();
+
             return c;
         }
 
         protected override void SetTabela(string table)
         {
+
             Tabela = (table != null && table != "") ? table : "Theaters";
+            NomeProcedureListagem = "spListagemCineCity";
         }
-       
+
     }
 }
