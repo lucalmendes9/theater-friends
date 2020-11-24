@@ -61,8 +61,11 @@ namespace theaterFriends.Controllers
             if (string.IsNullOrEmpty(model.Language))
                 ModelState.AddModelError("Language", "Linguagem inválida!");
 
-            if (model.Imagem != null && model.Imagem.Length / 1024 / 1024 >= 2)
-                ModelState.AddModelError("Imagem", "Imagem limitada a 2 mb.");
+
+            if (model.Imagem == null && operacao == "I")
+                ModelState.AddModelError("Imagem", "Escolha uma imagem.");
+
+
             if (ModelState.IsValid)
             {
                 //na alteração, se não foi informada a imagem, iremos manter a que já estava salva.

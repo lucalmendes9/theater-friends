@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace theaterFriends.Controllers
 {
-    public class HelperController : Controller
+    public class HelperController //: Controller
     {
         public static Boolean VerificaUserLogado(ISession session)
         {

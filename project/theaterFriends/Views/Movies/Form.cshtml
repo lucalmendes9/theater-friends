@@ -16,7 +16,7 @@
             <img src="~/imagens/logo.png" alt="" />
         </div>
 
-        <form action="/Movies/Salvar" class="showcase-content" enctype="multipart/form-data">
+        <form asp-action="Salvar" class="showcase-content" enctype="multipart/form-data">
             <div asp-validation-summary="All" class="text-danger"></div>
             <input type="hidden" name="Operacao" value="@ViewBag.Operacao" />
 
@@ -80,7 +80,7 @@
             </div>
 
             <br />
-            <input type="submit" class="btn btn-lg" value="Enviar" />
+            <input type="submit" class="btn btn-lg" value="Save" />
             <a href="/Movies/Index" class="btn btn-lg">Voltar</a>
         </form>
 
