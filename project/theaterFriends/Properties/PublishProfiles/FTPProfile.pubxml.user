@@ -23,7 +23,7 @@ ao editar este arquivo MSBuild. Para saber mais sobre isso, visite https://go.mi
       <publishTime>07/26/2018 18:17:04</publishTime>
     </File>
     <File Include="Microsoft.AspNetCore.dll">
-      <publishTime>06/12/2018 23:21:56</publishTime>
+      <publishTime>12/06/2018 23:21:56</publishTime>
     </File>
     <File Include="Microsoft.AspNetCore.Mvc.Abstractions.dll">
       <publishTime>09/20/2018 15:08:28</publishTime>
@@ -62,7 +62,7 @@ ao editar este arquivo MSBuild. Para saber mais sobre isso, visite https://go.mi
       <publishTime>09/20/2018 15:08:22</publishTime>
     </File>
     <File Include="Microsoft.AspNetCore.Server.IISIntegration.dll">
-      <publishTime>06/12/2018 23:21:38</publishTime>
+      <publishTime>12/06/2018 23:21:38</publishTime>
     </File>
     <File Include="Microsoft.AspNetCore.Server.Kestrel.Core.dll">
       <publishTime>07/26/2018 18:17:10</publishTime>
@@ -89,19 +89,19 @@ ao editar este arquivo MSBuild. Para saber mais sobre isso, visite https://go.mi
       <publishTime>08/25/2020 19:40:31</publishTime>
     </File>
     <File Include="Microsoft.EntityFrameworkCore.Abstractions.dll">
-      <publishTime>11/10/2019 22:28:10</publishTime>
+      <publishTime>10/11/2019 22:28:10</publishTime>
     </File>
     <File Include="Microsoft.EntityFrameworkCore.Design.dll">
-      <publishTime>11/10/2019 22:26:02</publishTime>
+      <publishTime>10/11/2019 22:26:02</publishTime>
     </File>
     <File Include="Microsoft.EntityFrameworkCore.dll">
-      <publishTime>11/10/2019 22:26:00</publishTime>
+      <publishTime>10/11/2019 22:26:00</publishTime>
     </File>
     <File Include="Microsoft.EntityFrameworkCore.Relational.dll">
-      <publishTime>11/10/2019 22:24:58</publishTime>
+      <publishTime>10/11/2019 22:24:58</publishTime>
     </File>
     <File Include="Microsoft.EntityFrameworkCore.SqlServer.dll">
-      <publishTime>11/10/2019 22:28:58</publishTime>
+      <publishTime>10/11/2019 22:28:58</publishTime>
     </File>
     <File Include="Microsoft.Extensions.DependencyModel.dll">
       <publishTime>08/25/2020 19:40:15</publishTime>
@@ -167,31 +167,31 @@ ao editar este arquivo MSBuild. Para saber mais sobre isso, visite https://go.mi
       <publishTime>11/29/2018 15:39:14</publishTime>
     </File>
     <File Include="System.Runtime.CompilerServices.Unsafe.dll">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>09/18/2018 19:38:10</publishTime>
     </File>
     <File Include="System.Security.Principal.Windows.dll">
       <publishTime>09/18/2018 19:38:10</publishTime>
     </File>
     <File Include="theaterFriends.deps.json">
-      <publishTime>11/24/2020 12:50:51</publishTime>
+      <publishTime>11/24/2020 14:47:44</publishTime>
     </File>
     <File Include="theaterFriends.dll">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>11/24/2020 14:47:41</publishTime>
     </File>
     <File Include="theaterFriends.pdb">
-      <publishTime>11/24/2020 12:50:49</publishTime>
+      <publishTime>11/24/2020 14:47:41</publishTime>
     </File>
     <File Include="theaterFriends.runtimeconfig.json">
       <publishTime>11/21/2020 21:57:15</publishTime>
     </File>
     <File Include="theaterFriends.Views.dll">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>11/24/2020 14:47:43</publishTime>
     </File>
     <File Include="theaterFriends.Views.pdb">
-      <publishTime>11/24/2020 12:50:51</publishTime>
+      <publishTime>11/24/2020 14:47:43</publishTime>
     </File>
     <File Include="web.config">
-      <publishTime>11/24/2020 12:50:51</publishTime>
+      <publishTime>11/24/2020 14:47:44</publishTime>
     </File>
     <File Include="wwwroot/css/bootstrap-theme.css">
       <publishTime>11/22/2020 03:14:38</publishTime>
@@ -404,13 +404,13 @@ ao editar este arquivo MSBuild. Para saber mais sobre isso, visite https://go.mi
       <publishTime>11/16/2020 21:44:11</publishTime>
     </File>
     <File Include="wwwroot/lib/SweetAlert/sweetalert.css">
-      <publishTime>07/12/2018 22:19:03</publishTime>
+      <publishTime>12/07/2018 22:19:03</publishTime>
     </File>
     <File Include="wwwroot/lib/SweetAlert/sweetalert.js">
-      <publishTime>07/12/2018 22:19:03</publishTime>
+      <publishTime>12/07/2018 22:19:03</publishTime>
     </File>
     <File Include="wwwroot/lib/SweetAlert/sweetalert.min.js">
-      <publishTime>07/12/2018 22:19:03</publishTime>
+      <publishTime>12/07/2018 22:19:03</publishTime>
     </File>
     <File Include="wwwroot/Music/Star Wars_.mp3">
       <publishTime>01/01/0001 00:00:00</publishTime>

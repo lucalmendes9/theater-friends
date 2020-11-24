@@ -45,7 +45,7 @@ namespace theaterFriends.Controllers
         public IActionResult LogOff()
         {
             HttpContext.Session.Clear();
-            return RedirectToAction("index", "Home");
+            return RedirectToAction("Main", "Home");
         }
         public override void OnActionExecuting(ActionExecutingContext context)
         {

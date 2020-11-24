@@ -14,7 +14,7 @@ namespace theaterFriends.DAO
         {
             object imgByte = model.ImagemEmByte;
             if (imgByte == null)
-                imgByte = new byte[0];  //DBNull.Value;
+                imgByte = DBNull.Value;
 
             List<SqlParameter> parameters = new List<SqlParameter>();
             parameters.Add(new SqlParameter("id", model.Id));
