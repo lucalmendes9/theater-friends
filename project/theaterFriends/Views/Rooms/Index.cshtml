@@ -1,0 +1,33 @@
+﻿@model List<RoomsViewModel>
+@{
+}
+<h1>Listagem de Salas</h1>
+
+<a class="btn btn-success" href="/Rooms/Create">Novo Registro</a>
+<br /><br />
+
+<table class="table table-bordered table-responsive text-center">
+    <tr>
+        <td><b>Ações</b></td>
+        <td><b>Id</b></td>
+        <td><b>Nome</b></td>
+        <td><b>Assentos</b></td>
+        <td><b>Cinema ID</b></td>
+    </tr>
+
+    @foreach (var Salas in Model)
+    {
+        <tr>
+            <td>
+                <a href="/Rooms/Edit?id=@Salas.Id" class="glyphicon glyphicon-pencil"></a> &nbsp;&nbsp;
+                <a href="javascript:apagar(@Salas.Id, 'Rooms')" class="glyphicon glyphicon-trash" ></a>
+            </td>
+            <td>@Salas.Id</td>
+            <td>@Salas.Name</td>
+            <td>@Salas.Seats</td>
+            <td>@Salas.Theaters_id</td>
+        </tr>
+
+    }
+
+</table>

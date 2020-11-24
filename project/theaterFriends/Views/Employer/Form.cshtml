@@ -1,0 +1,86 @@
+﻿@model EmployerViewModel
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <TITLE>Registro de Funcionário</TITLE>
+    <link href="asserts/stylesheets/stilize/stilize.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="~/css/client_func_login.css?v=1.0.3">
+</head>
+<body>
+    <header class="showcase" style="align-items:center; justify-content:center;">
+        <div class="showcase-top">
+            <img src="~/imagens/logo.png" alt="" />
+        </div>
+
+        <form action="/Employer/Salvar" method="post" class="showcase-content">
+            <div asp-validation-summary="All" class="text-danger"></div>
+            <input type="hidden" name="Operacao" value="@ViewBag.Operacao" />
+
+            @if (ViewBag.Operacao == "A")
+            {
+                <br />
+                <label for="Id">Código do Funcionário</label>
+                <input asp-for="Id" readonly class="form-control disabled" style="width:358px"/>
+            }
+
+            <br />
+            <div class="form-group">
+                <label for="Name">Nome do Funcionário</label>
+                <input class="form-control" asp-for="Name" placeholder="Fulano de Tal" style="width:358px" required>
+
+            </div><br>
+
+            <div class="form-group">
+                <label for="Email">Email</label>
+                <input class="form-control" asp-for="Email" placeholder="fulano@email.com" style="width:358px" required>
+
+            </div><br>
+
+
+
+            @if (ViewBag.Operacao == "I")
+            {
+                <div class="form-group">
+                    <label for="Password">Senha</label>
+                    <input class="form-control" asp-for="Password" type="password" placeholder="#$%¨" style="width:358px" required>
+
+                </div><br>
+
+                <div class="form-group">
+                    <label for="ConfirmPassword">Confirme sua senha</label>
+                    <input class="form-control" asp-for="ConfirmPassword" type="password" placeholder="#$%¨" style="width:358px" required>
+
+                </div><br>
+            }
+            @if (ViewBag.Operacao == "A")
+            {
+                <div class="form-group">
+                    <label for="Password">Nova Senha</label>
+                    <input class="form-control" asp-for="Password" type="password" placeholder="#$%¨" style="width:358px" required>
+                </div><br>
+            }
+
+            <div class="form-group">
+                <label for="Employer_role">Cargo/Função</label>
+                <input class="form-control" asp-for="Employer_role" placeholder="Pipoqueiro" style="width:358px" required>
+            </div><br>
+
+            <div class="form-group">
+                <label for="Hired_at" class="control-label">Data de Admissão</label>
+                <input asp-for="Hired_At" type="date" class="form-control" style="width:358px" required value="@DateTime.Now.ToString("yyyy-MM-dd")">
+            </div><br>
+
+            <br />
+            <input type="submit" class="btn btn-lg" value="Enviar" />
+            <a href="/Employer/Index" class="btn btn-lg">Voltar</a>
+        </form>
+
+    </header>
+    <script type="text/javascript" src="~/js/cadastroFunc.js"></script>
+</body>
+</html>

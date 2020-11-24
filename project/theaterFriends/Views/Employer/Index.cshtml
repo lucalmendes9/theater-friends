@@ -1,0 +1,47 @@
+﻿@model List<EmployerViewModel>
+@{
+}
+<h1>Lista de Funcionários</h1>
+
+<a class="btn btn-success" href="/Employer/create">Novo Registro</a>
+<br /><br />
+
+<form action="/Employer/Index" method="get">
+    <label for="value">Pesquisa</label>
+    <div class="form-row">
+        <input class="form-inline" type="text" name="value" placeholder="digite aqui..." required />&nbsp;
+        <select name="option" class="form-inline form-control-sm" required>
+            <option value="">Selecione</option>
+            <option value="name">Nome</option>
+            <option value="email">E-mail</option>
+            <option value="employer_role">Cargo</option>
+        </select>&nbsp;
+        <input type="submit" class="btn btn-primary btn-sm" value="Buscar" />
+    </div>
+    <br /> 
+</form>
+
+<table class="table table-bordered table-responsive text-center">
+    <tr>
+        <td><b>Ações</b></td>
+        <td><b>Nome</b></td>
+        <td><b>Email</b></td>
+        <td><b>Cargo/Função</b></td>
+        <td><b>Data de Contratação</b></td>
+    </tr>
+
+    @foreach (var Empregado in Model)
+    {
+        <tr>
+            <td>
+                <a href="/Employer/Edit?id=@Empregado.Id" class="glyphicon glyphicon-pencil"></a> &nbsp;&nbsp;
+                <a href="javascript:apagar(@Empregado.Id, 'Employer')" class="glyphicon glyphicon-trash"></a>
+            </td>
+            <td>@Empregado.Name</td>
+            <td>@Empregado.Email</td>
+            <td>@Empregado.Employer_role</td>
+            <td>@Empregado.Hired_At.ToShortDateString()</td>
+        </tr>
+    }
+
+</table>
