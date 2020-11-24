@@ -11,10 +11,10 @@ ao editar este arquivo MSBuild. Para saber mais sobre isso, visite https://go.mi
   </PropertyGroup>
   <ItemGroup>
     <File Include="appsettings.Development.json">
-      <publishTime>11/16/2020 19:22:24</publishTime>
+      <publishTime>11/20/2020 21:20:36</publishTime>
     </File>
     <File Include="appsettings.json">
-      <publishTime>11/16/2020 19:22:24</publishTime>
+      <publishTime>11/20/2020 21:20:36</publishTime>
     </File>
     <File Include="dotnet-aspnet-codegenerator-design.dll">
       <publishTime>09/24/2019 19:57:52</publishTime>
@@ -23,7 +23,7 @@ ao editar este arquivo MSBuild. Para saber mais sobre isso, visite https://go.mi
       <publishTime>07/26/2018 18:17:04</publishTime>
     </File>
     <File Include="Microsoft.AspNetCore.dll">
-      <publishTime>12/06/2018 23:21:56</publishTime>
+      <publishTime>06/12/2018 23:21:56</publishTime>
     </File>
     <File Include="Microsoft.AspNetCore.Mvc.Abstractions.dll">
       <publishTime>09/20/2018 15:08:28</publishTime>
@@ -32,109 +32,109 @@ ao editar este arquivo MSBuild. Para saber mais sobre isso, visite https://go.mi
       <publishTime>09/20/2018 15:08:26</publishTime>
     </File>
     <File Include="Microsoft.AspNetCore.Mvc.Core.dll">
-      <publishTime>09/20/2018 15:08:26</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Microsoft.AspNetCore.Mvc.Cors.dll">
-      <publishTime>09/20/2018 15:08:22</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Microsoft.AspNetCore.Mvc.DataAnnotations.dll">
-      <publishTime>09/20/2018 15:08:30</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Microsoft.AspNetCore.Mvc.dll">
-      <publishTime>09/20/2018 15:08:28</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Microsoft.AspNetCore.Mvc.Formatters.Json.dll">
-      <publishTime>09/20/2018 15:08:30</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Microsoft.AspNetCore.Mvc.Localization.dll">
-      <publishTime>09/20/2018 15:08:22</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Microsoft.AspNetCore.Mvc.Razor.dll">
-      <publishTime>09/20/2018 15:08:28</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Microsoft.AspNetCore.Mvc.RazorPages.dll">
-      <publishTime>09/20/2018 15:08:24</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Microsoft.AspNetCore.Mvc.TagHelpers.dll">
-      <publishTime>09/20/2018 15:08:22</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Microsoft.AspNetCore.Mvc.ViewFeatures.dll">
-      <publishTime>09/20/2018 15:08:22</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Microsoft.AspNetCore.Server.IISIntegration.dll">
-      <publishTime>12/06/2018 23:21:38</publishTime>
+      <publishTime>06/12/2018 23:21:38</publishTime>
     </File>
     <File Include="Microsoft.AspNetCore.Server.Kestrel.Core.dll">
-      <publishTime>07/26/2018 18:17:10</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Microsoft.AspNetCore.Server.Kestrel.dll">
-      <publishTime>07/26/2018 18:17:00</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Microsoft.AspNetCore.Server.Kestrel.Https.dll">
-      <publishTime>07/26/2018 18:17:06</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Microsoft.AspNetCore.Server.Kestrel.Transport.Abstractions.dll">
-      <publishTime>07/26/2018 18:17:06</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.dll">
-      <publishTime>07/26/2018 18:17:08</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Microsoft.CodeAnalysis.CSharp.Workspaces.dll">
-      <publishTime>04/30/2018 16:29:02</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Microsoft.CodeAnalysis.Workspaces.dll">
-      <publishTime>04/30/2018 16:29:04</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Microsoft.DotNet.PlatformAbstractions.dll">
-      <publishTime>05/15/2018 21:01:34</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Microsoft.EntityFrameworkCore.Abstractions.dll">
-      <publishTime>10/11/2019 22:28:10</publishTime>
+      <publishTime>11/10/2019 22:28:10</publishTime>
     </File>
     <File Include="Microsoft.EntityFrameworkCore.Design.dll">
-      <publishTime>10/11/2019 22:26:02</publishTime>
+      <publishTime>11/10/2019 22:26:02</publishTime>
     </File>
     <File Include="Microsoft.EntityFrameworkCore.dll">
-      <publishTime>10/11/2019 22:26:00</publishTime>
+      <publishTime>11/10/2019 22:26:00</publishTime>
     </File>
     <File Include="Microsoft.EntityFrameworkCore.Relational.dll">
-      <publishTime>10/11/2019 22:24:58</publishTime>
+      <publishTime>11/10/2019 22:24:58</publishTime>
     </File>
     <File Include="Microsoft.EntityFrameworkCore.SqlServer.dll">
-      <publishTime>10/11/2019 22:28:58</publishTime>
+      <publishTime>11/10/2019 22:28:58</publishTime>
     </File>
     <File Include="Microsoft.Extensions.DependencyModel.dll">
-      <publishTime>05/15/2018 21:01:34</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Microsoft.VisualStudio.Web.BrowserLink.dll">
-      <publishTime>06/07/2018 00:26:52</publishTime>
+      <publishTime>07/06/2018 00:26:52</publishTime>
     </File>
     <File Include="Microsoft.VisualStudio.Web.CodeGeneration.Contracts.dll">
-      <publishTime>09/24/2019 19:57:20</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Microsoft.VisualStudio.Web.CodeGeneration.Core.dll">
-      <publishTime>09/24/2019 19:57:24</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Microsoft.VisualStudio.Web.CodeGeneration.dll">
-      <publishTime>09/24/2019 19:57:28</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore.dll">
-      <publishTime>09/24/2019 19:57:26</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Microsoft.VisualStudio.Web.CodeGeneration.Templating.dll">
-      <publishTime>09/24/2019 19:57:22</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Microsoft.VisualStudio.Web.CodeGeneration.Utils.dll">
-      <publishTime>09/24/2019 19:57:20</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Microsoft.VisualStudio.Web.CodeGenerators.Mvc.dll">
-      <publishTime>09/24/2019 19:57:30</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="NuGet.Frameworks.dll">
-      <publishTime>04/24/2018 21:27:10</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Remotion.Linq.dll">
-      <publishTime>02/06/2018 22:25:00</publishTime>
+      <publishTime>06/02/2018 22:25:00</publishTime>
     </File>
     <File Include="runtimes/unix/lib/netcoreapp2.0/System.Security.Principal.Windows.dll">
       <publishTime>09/18/2018 19:38:10</publishTime>
@@ -143,55 +143,55 @@ ao editar este arquivo MSBuild. Para saber mais sobre isso, visite https://go.mi
       <publishTime>09/18/2018 19:38:10</publishTime>
     </File>
     <File Include="System.Composition.AttributedModel.dll">
-      <publishTime>11/05/2016 04:55:42</publishTime>
+      <publishTime>05/11/2016 04:55:42</publishTime>
     </File>
     <File Include="System.Composition.Convention.dll">
-      <publishTime>11/05/2016 04:55:42</publishTime>
+      <publishTime>05/11/2016 04:55:42</publishTime>
     </File>
     <File Include="System.Composition.Hosting.dll">
-      <publishTime>11/05/2016 04:55:42</publishTime>
+      <publishTime>05/11/2016 04:55:42</publishTime>
     </File>
     <File Include="System.Composition.Runtime.dll">
-      <publishTime>11/05/2016 04:55:44</publishTime>
+      <publishTime>05/11/2016 04:55:44</publishTime>
     </File>
     <File Include="System.Composition.TypedParts.dll">
-      <publishTime>11/05/2016 04:55:46</publishTime>
+      <publishTime>05/11/2016 04:55:46</publishTime>
     </File>
     <File Include="System.Diagnostics.DiagnosticSource.dll">
-      <publishTime>09/18/2018 19:38:16</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="System.Interactive.Async.dll">
-      <publishTime>11/21/2016 14:05:54</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="System.IO.Pipelines.dll">
-      <publishTime>11/29/2018 15:39:14</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="System.Runtime.CompilerServices.Unsafe.dll">
-      <publishTime>09/18/2018 19:38:10</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="System.Security.Principal.Windows.dll">
-      <publishTime>09/18/2018 19:38:10</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="theaterFriends.deps.json">
-      <publishTime>11/20/2020 22:56:43</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="theaterFriends.dll">
-      <publishTime>11/20/2020 22:56:31</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="theaterFriends.pdb">
-      <publishTime>11/20/2020 22:56:31</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="theaterFriends.runtimeconfig.json">
-      <publishTime>11/20/2020 22:56:32</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="theaterFriends.Views.dll">
-      <publishTime>11/20/2020 22:56:32</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="theaterFriends.Views.pdb">
-      <publishTime>11/20/2020 22:56:32</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="web.config">
-      <publishTime>11/20/2020 22:56:43</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="wwwroot/css/client_func_login.css">
       <publishTime>11/20/2020 21:54:50</publishTime>
@@ -209,7 +209,7 @@ ao editar este arquivo MSBuild. Para saber mais sobre isso, visite https://go.mi
       <publishTime>11/20/2020 21:54:50</publishTime>
     </File>
     <File Include="wwwroot/favicon.ico">
-      <publishTime>11/16/2020 19:22:25</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="wwwroot/imagens/background.png">
       <publishTime>11/20/2020 21:54:50</publishTime>

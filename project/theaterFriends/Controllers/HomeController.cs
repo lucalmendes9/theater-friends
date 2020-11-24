@@ -5,16 +5,25 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
+using theaterFriends.DAO;
 using theaterFriends.Models;
 
 namespace theaterFriends.Controllers
 {
-    public class HomeController : Controller
+    public class HomeController : PadraoController<MoviesViewModel>
     {
-        public IActionResult Index()
+        //public IActionResult Index()
+        //{
+        //    var lista = DAO.Listagem();
+        //    return View(ViewParaListagem, lista);
+        //}
+
+        public HomeController()
         {
-            return View();
+            DAO = new MoviesDAO();
         }
+
+
 
         public IActionResult About()
         {

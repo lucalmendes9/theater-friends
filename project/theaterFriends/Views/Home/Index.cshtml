@@ -1,6 +1,4 @@
 ﻿@model List<MoviesViewModel>
-
-
 @{
     Layout = null;
 }
@@ -131,9 +129,10 @@
 
                 </div>
                 <form>
-                    <table style="table-layout:auto" class="table table-responsive">
+                    <table style="table-layout:auto; color:azure" class="table table-responsive">
                         <tr>
                             <td>Título</td>
+                            <td>Gênero</td>
                             <td>Duração</td>
                             <td>Idioma</td>
                             <td>Legenda</td>
@@ -142,17 +141,17 @@
                         @if (Model != null)
                         {
 
-                            @foreach (var m in Model)
+                            @foreach (var filmes in Model)
                             {
                                 <tr>
                                     <td>
-                                        <a href="theaterFriends/Views/Movies/Index?id=@m.Id">@m.Name</a>
+                                        <a href="Movies/Views?id=@filmes.Id">@filmes.Name</a>
                                     </td>
-                                    <td>@m.Type</td>
-                                    <td>@m.Length.ToString()</td>
-                                    <td>@m.Language</td>
+                                    <td>@filmes.Type</td>
+                                    <td>@filmes.Length</td>
+                                    <td>@filmes.Language</td>
                                     <td>
-                                        @if (m.Subtitle == true)
+                                        @if (filmes.Subtitle == true)
                                         {
                                             <p>LEGENDADO</p>
                                         }

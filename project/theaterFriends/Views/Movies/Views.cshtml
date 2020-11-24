@@ -10,18 +10,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta content="width=device-width, initial-scale=1, maximum-scale=1" name="viewport" />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="~/css/movie.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
 
 
-
 <body style="background-color: black;">
 
-    <header class="showcase" style="margin: 0 0 150px 0;">
+    <header @*class="showcase"*@ style="margin: 0 0 150px 0;">
         <div class="showcase-top">
             <img src="~/imagens/logo.png" alt="" />
             <a href="/Login/Index" class="btn btn-rounded">Sign In</a>
@@ -36,28 +35,29 @@
         </section>
 
 
+
         <section class="filme-conteudo animated fadeIn delayp1">
             <div class="container" style="background-color: rgb(37, 36, 36);">
                 <div class="row">
                     <div class="col-md-12 col-xs-12">
                         <div class="page-title" style="color: blanchedalmond; text-align: center; font-family: sans-serif; background-color: rgb(37, 36, 36);">
                             <br>
-                            <h2>@ViewBag.Name</h2>
+                            <h2><b>@ViewBag.Name</b></h2>
                             <br>
                         </div>
                     </div>
                     <div class="col-md-3 text-center" style="background-color: rgb(37, 36, 36)" ;>
-                        @*<img class="media-object" max-height="50%" max-width="100%" src="data:image/jpeg;base64,@ViewBag.Consulta.ImagemEmBase64">*@
+                        <img class="media-object" max-height="50%" max-width="100%" src="data:image/jpeg;base64,@ViewBag.ImagemEmBase64">
                         <p><br></p>
                     </div>
                     <div class="col-md-6 " style="color: blanchedalmond;   background-color: rgb(37, 36, 36) ">
                         <p>
-                            @*@ViewBag.Consulta.Description;*@
+                            @ViewBag.Description
                         </p>
-                        <p>Duração: <span class="color-destaque "><i class="fa fa-clock-o "></i>@*@ViewBag.Consulta.Length*@</span></p>
-                        <p>Genero: <span class="color-destaque ">@*@ViewBag.Consulta.Type*@</span></p>
-                        <p>Idade mínima permitida: <span class="color-destaque ">@*@ViewBag.Consulta.Min_age*@</span></p>
-                        <p>Idioma:<span class="color-destaque ">@*@ViewBag.Consulta.Language*@</span></p>
+                        <p><b>Duração: </b><span class="color-destaque "><i class="fa fa-clock-o "></i>@ViewBag.Length</span></p>
+                        <p><b>Gênero: </b><span class="color-destaque ">@ViewBag.Type</span></p>
+                        <p><b>Idade mínima permitida: </b><span class="color-destaque ">@ViewBag.Min_age</span></p>
+                        <p><b>Idioma: </b><span class="color-destaque ">@ViewBag.Language</span></p>
                     </div>
 
                 </div>
@@ -71,7 +71,7 @@
     <div class="container" style="background-color: rgb(37, 36, 36);">
         <br>
         <br>
-        <button type="button" class="btn btn-rounded" data-toggle="collapse" data-target="#demo">Sessões</button>
+        <button style="margin: 0 0 20px 0;" type="button" class="btn btn-rounded" data-toggle="collapse" data-target="#demo">Sessões</button>
         <div id="demo" class="collapse" style="color: red">
 
             <table style="table-layout:auto" class="table table-responsive">
@@ -103,6 +103,9 @@
         </div>
 
     </div>
+
+
+
 
     <footer class="footer">
         <br>
