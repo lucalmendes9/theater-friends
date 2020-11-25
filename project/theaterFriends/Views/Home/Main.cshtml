@@ -32,11 +32,22 @@
             }
         </div>
         <div class="showcase-content">
-            <a href="/Movies/Views?id=27"><img src="~/imagens/harakiri.jpg" /></a>
-            <a href="/Movies/Views?id=19"><img src="~/imagens/devoltaprofuturo.jpeg" /></a>
-            <a href="/Movies/Views?id=20"><img src="~/imagens/pierrot.jpg" /></a>
-            <a href="/Movies/Views?id=21"><img src="~/imagens/edward.jpg" /></a>
-            <a href="/Movies/Views?id=22"><img src="~/imagens/exorcista.jpg" /></a>           
+            @if (Model == null)
+            {
+                <a href="/Movies/Views?id=27"><img src="~/imagens/harakiri.jpg" /></a>
+                <a href="/Movies/Views?id=19"><img src="~/imagens/devoltaprofuturo.jpeg" /></a>
+                <a href="/Movies/Views?id=20"><img src="~/imagens/pierrot.jpg" /></a>
+                <a href="/Movies/Views?id=21"><img src="~/imagens/edward.jpg" /></a>
+                <a href="/Movies/Views?id=22"><img src="~/imagens/exorcista.jpg" /></a>
+            }
+            else
+            {
+                @for (int i = 0; i < 5; i++)
+                {
+                    <a href="/Movies/Views?id=@Model[i].Id"><img src="data:image/jpeg;base64,@Model[i].ImagemEmBase64"></a>
+                }
+            }
+
         </div>
     </header>
     <section class="tabs">
