@@ -33,7 +33,7 @@ namespace theaterFriends.Controllers
                 HttpContext.Session.SetString("Logado", "true");
                 HttpContext.Session.SetString("Name", respUser.Name);
                 HttpContext.Session.SetString("Type", table == "Employer" ? "Employer" : "Costumer");
-                return RedirectToAction("index", table == "Employer" ? "Administracao" : "Home");
+                return RedirectToAction("Main", table == "Employer" ? "Administracao" : "Home");
             }
             else
             {
