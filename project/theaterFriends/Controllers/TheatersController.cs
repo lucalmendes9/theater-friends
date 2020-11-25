@@ -15,6 +15,11 @@ namespace theaterFriends.Controllers
         {
            DAO = new TheatersDAO();
         }
+        public override IActionResult Index(string table = "", string value = "", string option = "")
+        {
+            var lista = DAO.Listagem(value, option);
+            return View(ViewParaListagem, lista);
+        }
 
         protected override void PreencheDadosParaView(string Operacao, TheatersViewModel model)
         {
@@ -34,6 +39,35 @@ namespace theaterFriends.Controllers
             {
                 var elemento = new SelectListItem(loc.City, loc.Id.ToString());
                 ViewBag.location.Add(elemento);
+            }
+        }
+
+        public override IActionResult Edit(int id)
+        {
+            try
+            {
+                ViewBag.Operacao = "A";
+                var model = DAO.Consulta(id);
+
+                if (model == null)
+                    return RedirectToAction(ViewParaListagem);
+                else
+                {
+                    var mdl = new LocalizationDAO().Consulta(model.Localization_id);
+                    ViewBag.Phone = mdl.Phone;
+                    ViewBag.Address = mdl.Address;
+                    ViewBag.Number = mdl.Number;
+                    ViewBag.Neighbourhood = mdl.Neighbourhood;
+                    ViewBag.City = mdl.City;
+                    ViewBag.State = mdl.State;
+
+                    PreencheDadosParaView("A", model);
+                    return View(ViewParaCadastro, model);
+                }
+            }
+            catch
+            {
+                return RedirectToAction(ViewParaListagem);
             }
         }
 
