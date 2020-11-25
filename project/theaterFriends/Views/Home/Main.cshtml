@@ -34,11 +34,11 @@
         <div class="showcase-content">
             @if (Model == null)
             {
-                <a href="/Movies/Views?id=27"><img src="~/imagens/harakiri.jpg" /></a>
-                <a href="/Movies/Views?id=19"><img src="~/imagens/devoltaprofuturo.jpeg" /></a>
-                <a href="/Movies/Views?id=20"><img src="~/imagens/pierrot.jpg" /></a>
-                <a href="/Movies/Views?id=21"><img src="~/imagens/edward.jpg" /></a>
-                <a href="/Movies/Views?id=22"><img src="~/imagens/exorcista.jpg" /></a>
+                <a href=""><img src="~/imagens/harakiri.jpg" /></a>
+                <a href=""><img src="~/imagens/devoltaprofuturo.jpeg" /></a>
+                <a href=""><img src="~/imagens/pierrot.jpg" /></a>
+                <a href=""><img src="~/imagens/edward.jpg" /></a>
+                <a href=""><img src="~/imagens/exorcista.jpg" /></a>
             }
             else
             {
@@ -203,7 +203,7 @@
                 <li><a href="/Home/About">Sobre</a></li>
                 @if (HttpContextAccessor.HttpContext.Session.GetString("Logado") == "true")
                 {
-                    <li><a href="/Administracao/Index">Administrativo</a></li>
+                    <li><a href="/Administracao/Main">Administrativo</a></li>
                 }
                 else
                 {

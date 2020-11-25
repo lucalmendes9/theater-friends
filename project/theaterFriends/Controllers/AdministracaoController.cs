@@ -8,7 +8,7 @@ namespace theaterFriends.Controllers
 {
     public class AdministracaoController : Controller
     {
-        public IActionResult Index()
+        public IActionResult Main()
         {
             return View();
         }
