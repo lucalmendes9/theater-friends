@@ -16,6 +16,11 @@ namespace theaterFriends.Controllers
         {
             DAO = new MoviesDAO();
         }
+        public override IActionResult Index(string table = "", string value = "", string option = "")
+        {
+            var lista = DAO.Listagem(value, option);
+            return View(ViewParaListagem, lista);
+        }
 
 
         public IActionResult Views(string id)

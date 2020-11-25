@@ -15,6 +15,11 @@ namespace theaterFriends.Controllers
         {
             DAO = new RoomsDAO();
         }
+        public override IActionResult Index(string table = "", string value = "", string option = "")
+        {
+            var lista = DAO.Listagem(value, option);
+            return View(ViewParaListagem, lista);
+        }
 
         protected override void PreencheDadosParaView(string Operacao, RoomsViewModel model)
         {

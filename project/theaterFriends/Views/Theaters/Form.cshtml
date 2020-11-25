@@ -26,58 +26,58 @@
 
             <div class="form-group">
                 <label for="Description" class="control-label">Nome</label>
-                <input class="form-control" name="Description" type="text" id="Description" required>
+                <input class="form-control" asp-for="Description" type="text" id="Description" required>
                 <span asp-validation-for="Description" class="text-danger"></span>
             </div><br>
 
             <div class="form-group">
                 <label for="Phone" class="control-label">Telefone</label>
-                <input name="Phone" class="form-control" required />
+                <input name="Phone" class="form-control" required @ViewBag.Phone ? value="@ViewBag.Phone" : "" />
             </div><br>
 
             <div class="form-group">
                 <label for="Open_hour" class="control-label">Hora de Abertura</label>
-                <input name="Open_hour" class="form-control" required />
+                <input asp-for="Open_hour" class="form-control" required />
                 <span asp-validation-for="Open_hour" class="text-danger"></span>
             </div><br>
 
             <div class="form-group">
                 <label for="Close_hour" class="control-label">Hora de Fechamento</label>
-                <input name="Close_hour" class="form-control" required />
+                <input asp-for="Close_hour" class="form-control" required />
                 <span asp-validation-for="Close_hour" class="text-danger"></span>
             </div><br>
 
             <div class="form-group">
                 <label for="Cep" class="control-label">CEP</label>
-                <input name="Cep" type="text" id="Cep" class="form-control" required />
-                <input name="Localization_id" type="hidden" id="Localization_id" class="form-control" />
+                <input name="Cep" type="text" id="Cep" class="form-control" required @ViewBag.Cep ? value="@ViewBag.Cep" : "" />
+                <input asp-for="Localization_id" type="hidden" id="Localization_id" class="form-control" />
                 <br />
                 <a href="#" id="search-cep" class="btn btn-group-lg">Buscar</a>
             </div><br>
 
             <div class="form-group">
                 <label for="Address" class="control-label">Endereço</label>
-                <input name="Address" type="text" id="Address" class="form-control" required />
+                <input name="Address" type="text" id="Address" class="form-control" required @ViewBag.Address ? value="@ViewBag.Address" : "" />
             </div><br>
 
             <div class="form-group">
                 <label for="Number" class="control-label">Numero</label>
-                <input name="Number" type="text" id="Number" class="form-control" required />
+                <input name="Number" type="text" id="Number" class="form-control" required @ViewBag.Number ? value="@ViewBag.Number" : "" />
             </div><br>
 
             <div class="form-group">
                 <label for="Neighbourhood" class="control-label">Bairro</label>
-                <input name="Neighbourhood" type="text" id="Neighbourhood" class="form-control" required />
+                <input name="Neighbourhood" type="text" id="Neighbourhood" class="form-control" required @ViewBag.Neighbourhood ? value="@ViewBag.Neighbourhood" : "" />
             </div><br>
 
             <div class="form-group">
                 <label for="City" class="control-label">Cidade</label>
-                <input name="City" type="text" id="City" class="form-control" required />
+                <input name="City" type="text" id="City" class="form-control" required @ViewBag.City ? value="@ViewBag.City" : "" />
             </div><br>
 
             <div class="form-group">
                 <label for="State" class="control-label">Estado</label>
-                <input name="State" type="text" id="State" class="form-control" required />
+                <input name="State" type="text" id="State" class="form-control" required @ViewBag.State ? value="@ViewBag.State" : "" />
             </div><br>
 
             @*<input type="submit" class="btn btn-lg" value="Enviar" />*@

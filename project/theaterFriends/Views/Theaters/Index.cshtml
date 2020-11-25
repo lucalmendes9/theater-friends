@@ -5,7 +5,20 @@
 <h1>Listagem de Cinemas</h1>
 
 <a class="btn btn-success" href="/Theaters/create">Novo Registro</a>
-<br /><br />
+<br />
+<br />
+
+<form action="/Theaters/Index" method="get">
+    <label for="value">Pesquisa</label>
+    <div class="form-row">
+        <input class="form-inline" type="text" name="value" placeholder="digite aqui..." required />&nbsp;
+        <select name="option" class="form-inline form-control-sm" required>
+            <option value="description">Nome</option>
+        </select>&nbsp;
+        <input type="submit" class="btn btn-primary btn-sm" value="Buscar" />
+    </div>
+    <br />
+</form>
 
 <table class="table table-bordered table-responsive text-center">
     <tr>

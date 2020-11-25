@@ -62,7 +62,8 @@ $(document).ready(function () {
                 State: $('input[name=State]').val(),
                 Number: $('input[name=Number]').val(),
                 Phone: $('input[name=Phone]').val(),
-                Operacao: "I",
+                Id: $('input#Id').val() ? $('input#Localization_id').val() : -1,
+                Operacao: $('input#Id').val() ? "A" : "I",
             },
         })
         .done(function (msg) {

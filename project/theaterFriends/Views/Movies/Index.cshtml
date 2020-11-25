@@ -4,7 +4,25 @@
 <h1>Lista de Filmes</h1>
 
 <a class="btn btn-success" href="/Movies/create">Novo Registro</a>
-<br /><br />
+<br />
+<br />
+
+<form action="/Movies/Index" method="get">
+    <label for="value">Pesquisa</label>
+    <div class="form-row">
+        <input class="form-inline" type="text" name="value" placeholder="digite aqui..." required />&nbsp;
+        <select name="option" class="form-inline form-control-sm" required>
+            <option value="">Selecione</option>
+            <option value="name">Nome</option>
+            <option value="description">Descrição</option>
+            <option value="type">Gênero</option>
+            <option value="language">Linguagem</option>
+            <option value="length">Duração</option>
+        </select>&nbsp;
+        <input type="submit" class="btn btn-primary btn-sm" value="Buscar" />
+    </div>
+    <br />
+</form>
 
 <table class="table table-bordered table-responsive text-center">
     <tr>
