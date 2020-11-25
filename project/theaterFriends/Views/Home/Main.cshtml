@@ -201,7 +201,7 @@
             <ul>
                 <li>Perguntas? Ligue o Viotti</li>
                 <li><a href="/Home/About">Sobre</a></li>
-                @if (HttpContextAccessor.HttpContext.Session.GetString("Logado") == "true")
+                @if (HttpContextAccessor.HttpContext.Session.GetString("Type") == "Employer")
                 {
                     <li><a href="/Administracao/Main">Administrativo</a></li>
                 }
