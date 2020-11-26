@@ -70,7 +70,7 @@ $(document).ready(function () {
             if (msg == "error") {
                 alert("Erro ao cadastrar endereço.");
             } else {
-                $('input#Localization_id').val(msg);
+                !$('input#Id').val() ? $('input#Localization_id').val(msg) : '';
                 $('form').submit();
             }
             console.log('msgg done', msg);
