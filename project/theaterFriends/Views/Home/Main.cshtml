@@ -1,0 +1,276 @@
+﻿@model List<MoviesViewModel>
+@{
+    Layout = null;
+}
+
+@using Microsoft.AspNetCore.Http
+@inject IHttpContextAccessor HttpContextAccessor
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>Theater Friends</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1" name="viewport" />
+    <link href="~/css/home.css" rel="stylesheet">
+
+</head>
+<body>
+    <header class="showcase">
+        <div class="showcase-top">
+            <img src="~/imagens/logo.png" alt="" />
+            @if (HttpContextAccessor.HttpContext.Session.GetString("Logado") == "true")
+            {
+                <p style="text-align: right; position: absolute; right: 25px; ">Olá, @HttpContextAccessor.HttpContext.Session.GetString("Name")</p>
+                <br />
+                <a href="/Login/LogOff" class="btn btn-rounded">Sair</a>
+            }
+            else
+            {
+                <a href="/Login/Index?table=Costumer" class="btn btn-rounded">Sign In</a>
+            }
+        </div>
+        <div class="showcase-content">
+            @if (Model == null)
+            {
+                <a href=""><img src="~/imagens/harakiri.jpg" /></a>
+                <a href=""><img src="~/imagens/devoltaprofuturo.jpeg" /></a>
+                <a href=""><img src="~/imagens/pierrot.jpg" /></a>
+                <a href=""><img src="~/imagens/edward.jpg" /></a>
+                <a href=""><img src="~/imagens/exorcista.jpg" /></a>
+            }
+            else
+            {
+                @for (int i = 0; i < 5; i++)
+                {
+                    <a href="/Movies/Views?id=@Model[i].Id"><img src="data:image/jpeg;base64,@Model[i].ImagemEmBase64"></a>
+                }
+            }
+
+        </div>
+    </header>
+    <section class="tabs">
+        <div class="container">
+            <div id="tab-1" class="tab-item tab-border">
+                <i class="fas fa-door-open fa-3x"></i>
+                <p class="hide-sm">Rede de Cinemas</p>
+            </div>
+            <div id="tab-2" class="tab-item">
+                <i class="fas fa-tablet-alt fa-3x"></i>
+                <p class="hide-sm">Recomendados para a quarentena</p>
+            </div>
+            <div id="tab-3" class="tab-item">
+                <i class="fas fa-tags fa-3x"></i>
+                <p class="hide-sm">Catálogo de Filmes</p>
+            </div>
+        </div>
+    </section>
+    <section class="tab-content">
+        <div class="container">
+            <!-- Tab Content 1 -->
+            <div id="tab-1-content" class="tab-content-item show">
+                <div class="tab-1-content-inner">
+                    <div>
+                        <p class="text-lg">
+                            Veja se nosso cinema já está em sua cidade.
+                        </p>
+                        <div>
+
+                            <table style="table-layout:auto" class="table table-responsive">
+                                <tr>
+                                    <td>Cinema</td>
+                                    <td>Localização</td>
+                                </tr>
+
+                                @if (ViewBag.lista != null)
+                                {
+                                    @foreach (var m in ViewBag.lista)
+                                    {
+                                        <tr>
+                                            <td>@m.Description</td>
+                                            <td>@m.City</td>
+                                        </tr>
+                                    }
+                                }
+                            </table>
+
+                        </div>
+                    </div>
+                    <img src="~/imagens/logo.png" alt="" />
+                </div>
+            </div>
+
+            <!-- Tab Content 2 -->
+            <div id="tab-2-content" class="tab-content-item">
+                <div class="tab-2-content-top">
+                    <p class="text-lg">
+                        Aqui estão algumas recomendações dos nossos criadores.
+                    </p>
+                </div>
+                <div class="tab-2-content-bottom">
+                    <div>
+                        <img src="~/imagens/pulpfiction.jpg" alt="" />
+                        <p class="text-md">
+                            Pulp Fiction
+                        </p>
+                        <p class="text-dark">
+                            Pulp Fiction narra três histórias diferentes, todavia entrelaçadas, sobre dois assassinos profissionais,
+                            o gângster que os chefia e sua esposa, um pugilista pago para perder uma luta e um casal assaltando um restaurante, em Los Angeles na década de 1990.
+                        </p>
+                    </div>
+                    <div>
+                        <img src="~/imagens/predator.jpg" alt="" />
+                        <p class="text-md">
+                            O Predador
+                        </p>
+                        <p class="text-dark">
+                            O Predador (em inglês: Predator) é um filme americano de ficção científica de 1987 dirigido por John McTiernan. Ele é estrelado por
+                            Arnold Schwarzenegger como o líder de uma equipe de forças especiais de elite que estão em uma missão
+                            para resgatar reféns do território guerrilheiro na América Central.
+                        </p>
+                    </div>
+                    <div>
+                        <img src="~/imagens/rocky.jpg" alt="" />
+                        <p class="text-md">
+                            Rocky
+                        </p>
+                        <p class="text-dark">
+                            Rocky é um filme de drama esportivo estadunidense de 1976 dirigido por John G. Avildsen e escrito e estrelado por Sylvester Stallone como Rocky Balboa, um pugilista ítalo-estadunidense de classe trabalhadora, sem instrução, mas bondoso,
+                            que trabalha como cobrador de dívidas de um agiota nas favelas da Filadélfia. Rocky, um lutador de clube de pequeno porte, recebe uma chance no campeonato mundial de pesos pesados.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tab Content 3 -->
+            <div id="tab-3-content" class="tab-content-item">
+                <div class="text-center">
+                    <p class="text-lg">
+                        Lista de Filmes em Cartaz
+                    </p>
+
+                </div>
+                <form>
+                    <table style="table-layout:auto; color:azure" class="table table-responsive">
+                        <tr>
+                            <td>Título</td>
+                            <td>Gênero</td>
+                            <td>Duração</td>
+                            <td>Idioma</td>
+                            <td>Legenda</td>
+                        </tr>
+
+                        @if (Model != null)
+                        {
+
+                            @foreach (var filmes in Model)
+                            {
+                                <tr>
+                                    <td>
+                                        <a href="/Movies/Views?id=@filmes.Id">@filmes.Name</a>
+                                    </td>
+                                    <td>@filmes.Type</td>
+                                    <td>@filmes.Length</td>
+                                    <td>@filmes.Language</td>
+                                    <td>
+                                        @if (filmes.Subtitle == true)
+                                        {
+                                            <p>LEGENDADO</p>
+                                        }
+                                        else
+                                        {
+                                            <p>SEM LEGENDA</p>
+                                        }
+                                    </td>
+                                </tr>
+                            }
+                        }
+                    </table>
+
+                </form>
+            </div>
+
+        </div>
+    </section>
+
+    <br /><br /><br /><br />
+
+    <footer class="footer">
+        <div class="footer-cols">
+            <ul>
+                <li>Perguntas? Ligue o Viotti</li>
+                <li><a href="/Home/About">Sobre</a></li>
+                @if (HttpContextAccessor.HttpContext.Session.GetString("Type") == "Employer")
+                {
+                    <li><a href="/Administracao/Main">Administrativo</a></li>
+                }
+                else
+                {
+                    <li><a href="/Login/Index?table=Employer">Administrativo</a></li>
+                }
+            </ul>
+            <ul>
+                <li>Entre em contato: </li>
+                <li>+55 11 4002-8922</li>&nbsp;
+                <li>theaterfriends@theaterfriends.com</li>&nbsp;
+                <li>Rua dos Bobos, Nº0, 09000-584  SP - Brasil</li>
+            </ul>
+            <ul>
+                <li><a href="#">Central de Ajuda</a></li>
+                <li><a href="#">Minha conta</a></li>
+            </ul>
+            <ul>
+                <li><a href="#">Redes Sociais:</a></li>
+                <li>Instagram: theatherfriends</li>
+                <li>Facebook: theatherfriends</li>
+            </ul>
+
+        </div>
+
+
+
+    </footer>
+    <script src="~/js/home.js"></script>
+    <style>
+        .container-cards {
+            color: white;
+            padding-top: 2rem;
+        }
+
+        .container-cards-scrolling {
+            overflow-x: scroll;
+            overflow-y: hidden;
+            white-space: nowrap;
+            padding: 1rem;
+        }
+
+        .container-cards-item {
+            display: inline-block;
+            transition: all .2 ease-in-out;
+            max-width: 15rem;
+            max-height: 10rem;
+        }
+
+            .container-cards-item:hover {
+                transform: scale(1.2);
+                border-color: white;
+                border-style: solid;
+                border-width: 2px;
+            }
+
+            .container-cards-item img {
+                height: 100%;
+                width: 100%;
+            }
+
+        .container-cards-title {
+            margin-left: 1rem;
+        }
+
+        ::-webkit-scrollbar {
+            display: none;
+        }
+    </style>
+</body>
+</html>

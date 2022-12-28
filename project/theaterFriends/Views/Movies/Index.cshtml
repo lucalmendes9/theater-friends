@@ -1,0 +1,56 @@
+@model List<MoviesViewModel>
+@{
+}
+<h1>Lista de Filmes</h1>
+
+<a class="btn btn-success" href="/Movies/create">Novo Registro</a>
+<br />
+<br />
+
+<form action="/Movies/Index" method="get">
+    <label for="value">Pesquisa</label>
+    <div class="form-row">
+        <input class="form-inline" type="text" name="value" placeholder="digite aqui..." required />&nbsp;
+        <select name="option" class="form-inline form-control-sm" required>
+            <option value="">Selecione</option>
+            <option value="name">Nome</option>
+            <option value="description">Descrição</option>
+            <option value="type">Gênero</option>
+            <option value="language">Linguagem</option>
+            <option value="length">Duração</option>
+        </select>&nbsp;
+        <input type="submit" class="btn btn-primary btn-sm" value="Buscar" />
+    </div>
+    <br />
+</form>
+
+<table class="table table-bordered table-responsive text-center">
+    <tr>
+        <td><b>Ações</b></td>
+        <td><b>Nome</b></td>
+        <td><b>Descrição</b></td>
+        <td><b>Gênero</b></td>
+        <td><b>Duração</b></td>
+        <td><b>Idade Minima</b></td>
+        <td><b>Linguagem</b></td>
+        <td><b>Legenda</b></td>
+    </tr>
+
+    @foreach (var Filmes in Model)
+    {
+        <tr>
+            <td>
+                <a href="/Movies/Edit?id=@Filmes.Id" class="glyphicon glyphicon-pencil"></a> &nbsp;&nbsp;
+                <a href="javascript:apagar(@Filmes.Id, 'Movies')" class="glyphicon glyphicon-trash"></a>
+            </td>
+            <td>@Filmes.Name</td>
+            <td>@Filmes.Description</td>
+            <td>@Filmes.Type</td>
+            <td>@Filmes.Length</td>
+            <td>@Filmes.Min_age.</td>
+            <td>@Filmes.Language</td>
+            <td>@Filmes.Subtitle</td>
+        </tr>
+    }
+
+</table>

@@ -4,15 +4,25 @@ using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Filters;
+using theaterFriends.DAO;
 using theaterFriends.Models;
 
 namespace theaterFriends.Controllers
 {
-    public class HomeController : Controller
+    public class HomeController : PadraoController<MoviesViewModel>
     {
-        public IActionResult Index()
+        TheatersDAO DAOT = new TheatersDAO();
+        public IActionResult Main()
         {
-            return View();
+            ViewBag.lista = DAOT.Listagem();
+            var lista = DAO.Listagem();
+            return View(lista);
+        }
+
+        public HomeController()
+        {
+            DAO = new MoviesDAO();
         }
 
         public IActionResult About()
@@ -22,22 +32,15 @@ namespace theaterFriends.Controllers
             return View();
         }
 
-        public IActionResult Contact()
-        {
-            ViewData["Message"] = "Your contact page.";
-
-            return View();
-        }
-
-        public IActionResult Privacy()
-        {
-            return View();
-        }
-
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+        }
+
+        public override void OnActionExecuting(ActionExecutingContext context)
+        {
+            //Metodo sobrescrito pois as telas dessa controler podem ser acessadas sem login
         }
     }
 }
