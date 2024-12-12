@@ -1,0 +1,40 @@
+@model List<MoviesViewModel>
+@{
+}
+<h1>Lista de Filmes</h1>
+
+<a class="btn btn-success" href="/Movies/create">Novo Registro</a>
+<br /><br />
+
+<table class="table table-bordered table-responsive text-center">
+    <tr>
+        <td><b>Ações</b></td>
+        <td><b>Código</b></td>
+        <td><b>Name</b></td>
+        <td><b>Descrição</b></td>
+        <td><b>Gênero</b></td>
+        <td><b>Duração</b></td>
+        <td><b>Idade Minima</b></td>
+        <td><b>Linguagem</b></td>
+        <td><b>Legenda</b></td>
+    </tr>
+
+    @foreach (var Filmes in Model)
+    {
+        <tr>
+            <td>
+                <a href="/Movies/Edit?id=@Filmes.Id" class="glyphicon glyphicon-pencil"></a> &nbsp;&nbsp;
+                <a href="javascript:apagar(@Filmes.Id, 'Movies')" class="glyphicon glyphicon-trash"></a>
+            </td>
+            <td>@Filmes.Id</td>
+            <td>@Filmes.Name</td>
+            <td>@Filmes.Description</td>
+            <td>@Filmes.Type</td>
+            <td>@Filmes.Length</td>
+            <td>@Filmes.Min_age.</td>
+            <td>@Filmes.Language</td>
+            <td>@Filmes.Subtitle</td>
+        </tr>
+    }
+
+</table>

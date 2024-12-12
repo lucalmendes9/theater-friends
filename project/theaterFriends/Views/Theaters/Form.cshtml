@@ -1,0 +1,128 @@
+﻿@model TheatersViewModel
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <TITLE>Cadastro de Cinemas</TITLE>
+    <link href="asserts/stylesheets/stilize/stilize.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="~/css/client_func_login.css?v=1.0.3">
+</head>
+<body>
+    <header class="showcase">
+        <div class="showcase-top">
+            <img src="~/imagens/logo.png" alt="" />
+        </div>
+        <form action="/Theaters/Salvar" method="post" class="showcase-content ">
+            <input type="hidden" name="Operacao" value="@ViewBag.Operacao" />
+
+            @if (ViewBag.Operacao == "A")
+            {
+                <label for="Id">Código do Cinema</label>
+                <input asp-for="Id" readonly class="form-control disabled" />
+            }
+
+            <div class="form-group">
+                <label for="Description" class="control-label">Nome</label>
+                <input class="form-control" name="Description" type="text" id="Description" required>
+                <span asp-validation-for="Description" class="text-danger"></span>
+            </div><br>
+
+            <div class="form-group">
+                <label for="Phone" class="control-label">Telefone</label>
+                <input name="Phone" class="form-control" required />
+            </div><br>
+
+            <div class="form-group">
+                <label for="Open_hour" class="control-label">Hora de Abertura</label>
+                <input name="Open_hour" class="form-control" required />
+                <span asp-validation-for="Open_hour" class="text-danger"></span>
+            </div><br>
+
+            <div class="form-group">
+                <label for="Close_hour" class="control-label">Hora de Fechamento</label>
+                <input name="Close_hour" class="form-control" required />
+                <span asp-validation-for="Close_hour" class="text-danger"></span>
+            </div><br>
+
+            <div class="form-group">
+                <label for="Cep" class="control-label">CEP</label>
+                <input name="Cep" type="text" id="Cep" class="form-control" required />
+                <input name="Localization_id" type="hidden" id="Localization_id" class="form-control" />
+                <br />
+                <a href="#" id="search-cep" class="btn btn-group-lg">Buscar</a>
+            </div><br>
+
+            <div class="form-group">
+                <label for="Address" class="control-label">Endereço</label>
+                <input name="Address" type="text" id="Address" class="form-control" required />
+            </div><br>
+
+            <div class="form-group">
+                <label for="Number" class="control-label">Numero</label>
+                <input name="Number" type="text" id="Number" class="form-control" required />
+            </div><br>
+
+            <div class="form-group">
+                <label for="Neighbourhood" class="control-label">Bairro</label>
+                <input name="Neighbourhood" type="text" id="Neighbourhood" class="form-control" required />
+            </div><br>
+
+            <div class="form-group">
+                <label for="City" class="control-label">Cidade</label>
+                <input name="City" type="text" id="City" class="form-control" required />
+            </div><br>
+
+            <div class="form-group">
+                <label for="State" class="control-label">Estado</label>
+                <input name="State" type="text" id="State" class="form-control" required />
+            </div><br>
+
+            @*<input type="submit" class="btn btn-lg" value="Enviar" />*@
+            <a href="javascript:void(0)" class="btn btn-lg submit-form">Enviar</a>
+            <a href="/Theaters/Index" class="btn btn-lg">Voltar</a>
+
+            <div style="background-color: red;text-align: center;color: #FFF;border-radius: 20px;" asp-validation-summary="All"></div>
+
+        </form>
+    </header>
+    <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-3.3.1.min.js"
+            asp-fallback-src="~/lib/jquery/dist/jquery.min.js"
+            asp-fallback-test="window.jQuery"
+            crossorigin="anonymous"
+            integrity="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"
+            asp-fallback-src="~/lib/bootstrap/dist/js/bootstrap.min.js"
+            asp-fallback-test="window.jQuery && window.jQuery.fn && window.jQuery.fn.modal"
+            crossorigin="anonymous"
+            integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd">
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js" integrity="sha512-pHVGpX7F/27yZ0ISY+VVjyULApbDlD0/X0rgGbTqCE7WFW5MezNTWG/dnhtbBuICzsd0WQPgpE4REBLv+UqChw==" crossorigin="anonymous"></script>
+
+    <script type="text/javascript" src="~/js/cadastroFunc.js"></script>
+
+    <script type="text/javascript" src="~/js/ajaxCep.js"></script>
+
+    <script>
+
+        function write_content(conteudo) {
+            if (!("erro" in conteudo)) {
+                $('input[name=Address]').val(conteudo.logradouro);
+                $('input[name=Neighbourhood]').val(conteudo.bairro);
+                $('input[name=City]').val(conteudo.localidade);
+                $('input[name=State]').val(conteudo.uf);
+            }
+            else {
+                clear_form_cep();
+                alert("CEP não encontrado.");
+            }
+        }
+
+    </script>
+
+</body>
+</html>
